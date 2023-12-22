@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Feeds</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto my-8 p-8 bg-white max-w-md rounded shadow-lg">
+        <form method="post" action="{% url 'radioai:mixing_sources' %}">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="rss_url1" class="block text-gray-700 text-sm font-bold mb-2">RSS Feed URL 1:</label>
+                <input type="text" name="rss_url1" required
+                    class="w-full px-4 py-2 leading-5 border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 rounded-md shadow-sm text-sm placeholder-gray-400">
+            </div>
+
+            <div class="mb-4">
+                <label for="rss_url2" class="block text-gray-700 text-sm font-bold mb-2">RSS Feed URL 2:</label>
+                <input type="text" name="rss_url2" required
+                    class="w-full px-4 py-2 leading-5 border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 rounded-md shadow-sm text-sm placeholder-gray-400">
+            </div>
+
+            <div class="mb-4">
+                <label for="limit" class="block text-gray-700 text-sm font-bold mb-2">Limit of the no of stories:</label>
+                <input type="number" name="limit" id="limit" required
+                    class="w-full px-4 py-2 mt-2 leading-5 border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 rounded-md shadow-sm text-sm placeholder-gray-400">
+            </div>
+
+            <div class="flex flex-wrap -mx-4">
+                <!-- SFTP Host -->
+                <div class="w-full md:w-1/2 px-4 mb-4">
+                    <label for="sftp_host" class="block text-gray-700 font-semibold mb-2">SFTP Host:</label>
+                    <input type="text" id="sftp_host" name="sftp_host" required
+                        class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                </div>
+
+                <!-- SFTP Port -->
+                <div class="w-full md:w-1/2 px-4 mb-4">
+                    <label for="sftp_port" class="block text-gray-700 font-semibold mb-2">SFTP Port:</label>
+                    <input type="number" id="sftp_port" name="sftp_port" required
+                        class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                </div>
+
+                <!-- SFTP Username -->
+                <div class="w-full md:w-1/2 px-4 mb-4">
+                    <label for="sftp_username" class="block text-gray-700 font-semibold mb-2">SFTP Username:</label>
+                    <input type="text" id="sftp_username" name="sftp_username" required
+                        class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                </div>
+
+                <!-- SFTP Password -->
+                <div class="w-full md:w-1/2 px-4 mb-4">
+                    <label for="sftp_password" class="block text-gray-700 font-semibold mb-2">SFTP Password:</label>
+                    <input type="password" id="sftp_password" name="sftp_password" required
+                        class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                </div>
+
+                <!-- SFTP Remote Path -->
+                <div class="w-full px-4 mb-4">
+                    <label for="sftp_remote_path" class="block text-gray-700 font-semibold mb-2">SFTP Remote
+                        Path</label>
+                    <input type="text" id="sftp_remote_path" name="sftp_remote_path" required
+                        class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                </div>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                Mix Feeds and Convert to Audio
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

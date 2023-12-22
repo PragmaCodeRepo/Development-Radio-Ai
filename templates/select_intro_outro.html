@@ -1,0 +1,20 @@
+
+
+    <label for="intro_user" class="block text-sm font-medium text-black-700">Introduction:</label>
+  
+    <select id="intro_user" name="intro_user" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 w-full bg-black text-white">
+      {% for value in intros %}
+      <option value="{{value}}">{{value}}</option>
+      {% endfor %}
+    </select>
+  
+    <label for="outro_user" class="block mt-4 text-sm font-medium text-black-700">Outros:</label>
+  
+    <select id="outro_user" name="outro_user" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 w-full bg-black text-white">
+      {% for value in outros %}
+      <option value="{{value}}">{{value}}</option>
+      {% endfor %}
+    </select>
+  
+  
+  

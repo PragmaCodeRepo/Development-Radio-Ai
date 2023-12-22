@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Speech Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Dark Mode styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      body.dark-mode a {
+        color: #78c0a8;
+      }
+      body.dark-mode a:hover {
+        color: #48a999;
+      }
+      .system{
+        margin-top: 30rem;
+        
+      }
+      /* Add more dark mode styles as needed */
+    </style>
+   
+  </head>
+
+  <body class="bg-gray-200 flex justify-center items-center h-screen dark-mode ">
+    
+     <header class="fixed top-0 left-0 right-0 z-50 bg-black">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1 ">
+              <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Groundrushlabs</span>
+                  <img class="h-8 w-auto bg-white" src="https://github.com/PragmaCodeRepo/Images/blob/main/Groundrushlabs_logo.png?raw=true" alt="pranjal" />
+              </a>
+          </div>
+          <div class="flex lg:hidden">
+              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+              </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+              <a href="/weather" class="text-sm font-semibold leading-6 text-gray-900">Weather</a>
+              <a href="/news" class="text-sm font-semibold leading-6 text-gray-900">News</a>
+              <a href="/contactus" class="text-sm font-semibold leading-6 text-gray-900">Contact us</a>
+              <a href="/chatbot" class="text-sm font-semibold leading-6 text-gray-900">Chatbot</a>
+              <a href="/aboutus" class="text-sm font-semibold leading-6 text-gray-900">About us</a>
+              <a href="/weather-zipcode" class="text-sm font-semibold leading-6 text-gray-900">Weather by zipcode</a>
+              {% if user.is_authenticated %}
+              <p class="text-lg text-black-800">
+                  Welcome,
+                  <span class="text-blue-500 font-semibold">{{ user.username }}</span>!
+              </p>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+  
+          <a href="{% url 'rss_to_audio_app:logout' %}" class="px-4 py-2 bg-red-500 text-white rounded hover-bg-red-600 text-black">Logout</a>
+          {% else %}
+          <!-- Your login form here -->
+          {% endif %}
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5">
+                      <span class="sr-only">Groundrush labs</span>
+                      <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                  </a>
+                  <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                      <span class="sr-only">Close menu</span>
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                  </button>
+              </div>
+              <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-gray-500/10">
+                      <div class="space-y-2 py-6">
+                          <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover-bg-gray-50">Product</a>
+                          <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover-bg-gray-50">Features</a>
+                          <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover-bg-gray-50">Marketplace</a>
+                          <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover-bg-gray-50">Company</a>
+                      </div>
+                      <div class="py-6">
+                          <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover-bg-gray-50">Log in</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+  
+  </header>
+  
+    <div class="bg-black p-8 rounded-lg shadow-md w-106 mt-10 system mb-10 " >
+      <form method="post" action="{% url 'rss_to_audio_app:generate_speech' %}"class="mt-5">
+        {% csrf_token %}
+
+        {% comment %} <h1 class="text-2xl font-bold mb-0 text-gray-700 p-8">
+          Weather Speech Generator
+        </h1> {% endcomment %}
+        <p class="text-lg leading-8 text-black-600 text-center">
+          SELECT CITIES TO GENRATE THEIR WEATHER REPORT
+        </p>
+
+        <div class="mb-4 ">
+          <label class="inline-flex items-center">
+            <input
+              type="checkbox"
+              class="form-checkbox text-blue-500"
+              name="cities"
+              value="Atlanta"
+            />
+            <span class="ml-2 text-black-700">Atlanta</span>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input
+              type="checkbox"
+              class="form-checkbox text-blue-500"
+              name="cities"
+              value="Los Angeles"
+            />
+            <span class="ml-2 text-black-700">Los Angeles</span>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input
+              type="checkbox"
+              class="form-checkbox text-blue-500"
+              name="cities"
+              value="Chicago"
+            />
+            <span class="ml-2 text-black-700">Chicago</span>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input
+              type="checkbox"
+              class="form-checkbox text-blue-500"
+              name="cities"
+              value="Philadelphia"
+            />
+            <span class="ml-2 text-black-700">Philadelphia</span>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input
+              type="checkbox"
+              class="form-checkbox text-blue-500"
+              name="cities"
+              value="Phoenix"
+            />
+            <span class="ml-2 text-black-700">Phoenix</span>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input
+              type="checkbox"
+              class="form-checkbox text-blue-500"
+              name="cities"
+              value="San Antonio"
+            />
+            <span class="ml-2 text-black-700">San Antonio</span>
+          </label>
+        </div>
+        
+        <!-- Add similar checkboxes for other cities -->
+        
+        <label class="block font-medium text-black-700"
+          >Select Voice Gender:</label
+        >
+        <select
+          name="voice_gender"
+          class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:border-indigo-500 focus:outline-none focus:ring-opacity-50 mb-10 bg-black"
+        >
+          <option value="NEUTRAL">Neutral</option>
+          <option value="FEMALE">Female</option>
+          <option value="MALE">Male</option>
+        </select>
+        {% include "select_intro_outro.html" %}
+        <div class="flex justify-center mt-5 mb-5 text-black">
+          <a href="/intro-text" class="inline-block px-4 py-2  bg-blue-500 rounded hover:bg-blue-600 transition duration-300"><p class="text-white">Edit Your Intros</p></a>
+          <a href="/outro-text" class="ml-4 inline-block px-4 py-2  bg-green-500 rounded hover:bg-green-600 transition duration-300"><p class="text-white">Edit Your Outros</p></a>
+      </div>
+        {% comment %} sftp {% endcomment %}
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-1/2 px-4">
+            <div class="mb-4">
+              <label for="sftp_host" class="block text-black-700 font-semibold mb-2">SFTP Host:</label>
+              <input
+                type="text"
+                id="sftp_host"
+                name="sftp_host"
+                required
+                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+              />
+            </div>
+          </div>
+        
+          <div class="w-1/2 px-4">
+            <div class="mb-4">
+              <label for="sftp_port" class="block text-black-700 font-semibold mb-2">SFTP Port:</label>
+              <input
+                type="number"
+                id="sftp_port"
+                name="sftp_port"
+                required
+                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+              />
+            </div>
+          </div>
+        
+          <div class="w-1/2 px-4">
+            <div class="mb-4">
+              <label for="sftp_username" class="block text-black-700 font-semibold mb-2">SFTP Username:</label>
+              <input
+                type="text"
+                id="sftp_username"
+                name="sftp_username"
+                required
+                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+              />
+            </div>
+          </div>
+        
+          <div class="w-1/2 px-4">
+            <div class="mb-4">
+              <label for="sftp_password" class="block text-black-700 font-semibold mb-2">SFTP Password:</label>
+              <input
+                type="password"
+                id="sftp_password"
+                name="sftp_password"
+                required
+                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+              />
+            </div>
+          </div>
+        
+          <div class="w-1/2 px-4">
+            <div class="mb-4">
+              <label for="sftp_remote_path" class="block text-black-700 font-semibold mb-2">SFTP Remote Path</label>
+              <input
+                type="text"
+                id="sftp_remote_path"
+                name="sftp_remote_path"
+                required
+                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+              />
+            </div>
+          </div>
+        </div>
+        <label
+                  for="schedule_time"
+                  class="block text-sm font-medium text-black-700"
+                  >Schedule Time:</label
+                >
+                <input
+                  type="datetime-local"
+                  id="schedule_time"
+                  name="schedule_time"
+                  class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black"
+                />
+
+                <label
+                  for="recurrence_type"
+                  class="block text-sm font-medium text-black-700"
+                  >Recurrence Type:</label
+                >
+                <select
+                  id="recurrence_type"
+                  name="recurrence_type"
+                  class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black"
+                >
+                  <option value="onetime">One time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="everyhour">Every Hour</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+
+                <button
+                  type="submit"
+                  class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+                >
+                  Submit
+                </button>
+        
+        
+        <button
+          type="submit"
+          class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mt-4"
+        >
+          Generate Weather Speech
+        </button>
+      </form>
+    </div>
+   
+
+    <script>
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const body = document.body;
+
+      darkModeToggle.addEventListener('click', () => {
+        // Toggle the 'dark-mode' class on the HTML element
+        document.documentElement.classList.toggle('dark-mode');
+
+        // Store the user's preference in local storage
+        if (document.documentElement.classList.contains('dark-mode')) {
+          localStorage.setItem('darkMode', 'enabled');
+        } else {
+          localStorage.setItem('darkMode', 'disabled');
+        }
+      });
+
+      // Check user's preference from local storage
+      if (localStorage.getItem('darkMode') === 'enabled') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
+  </body>
+  
+</html>

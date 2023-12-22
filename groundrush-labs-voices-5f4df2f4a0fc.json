@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "groundrush-labs-voices",
+  "private_key_id": "5f4df2f4a0fc34bf34e55406143f7cd99ac95e78",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC07wr6f875rqsZ\nSH/PhE3bctbalFegg+dI9tcUHwQVb+akyAqFjOgLWSlDDZkzwTyg93ViAICmJfn5\n/dJ2LcHRjWQCuE9wu3iP3Ph5iFXS6vkeUwEMM4O6Oyd7LDvftghMODfwBt+LYQzo\nO6WKqfMQoE5LgDTFYC3pBEZPIqdEN464Dryk0trkXPkv3rNHrri6PGE1gI7AEsy3\ng0Hml510LAxWIV+ayqIl8dInOC6PoGr1ebEqiIaMCU2QGZnGSuR+wM0I2xXKg8Gm\nArThM04HBtHm5zws+5E1aAw9wwalMy8t/r0qU39qk7RgV6EZ4SyrwP9Oix92Plze\nmmUFvjQRAgMBAAECggEAClbd561PrX/WUBE/GQOia5m9FoPrOz1oZUhyR1iDpCo3\nKdfS1pmEDdh2MbpMZLtMWLY1ZXCaCWySg682FHnmSVBZLIjd5Mc4wy9VXWQNo/o4\nmsuTW/AybQ0p8xlmsUCyqhDdHPS2l+1XhoqYidNPBBZmDP1WPqhxrS746dclC/JA\nOywi8sZe4CF6NeqN83D86rL+x7X6qikjp16QloyTa8FYSEPM/VUvun9eThnqDTPR\nntJ+5G9WWVooKvx9CKzcF2h9h2MEt+dHilVE5uJUaKj0ljVszLYdAquZ0Whn7qBA\nm+VtgfRtHvkaYFr1lHd2Y9dEYBpCsgWLqFW+dhROgQKBgQD3CJWy9JRGD2/Xj4Fa\nnU6m+zraQkTGz0oVI7gnmwyzusUFFwXF7FwjhDoBbrnx8SZNGC7lztj2XePqq/QR\n7rURxQFCznxI3WEAb8Nc/XCexr8AZKb8z+N83UJZnYY/iKa+MRY62D3bmObtU6dm\nRJtweaJKd8wALGWJi+fNK7LhkQKBgQC7gEO1BZ8agMw+3EYhmal21BziUOuDXogB\nKr1nhZQ8t2xduRfZVFNTxbbJT3Geaqm425i/wDSmvOIGENzPgdbNtoRcNgSUYAN4\n+yqGhRMvNyoJViA9KrrM2GBzfDGhJmesz6uzFp1OPk3RrXdJ8wJJE0JNGXQRTZTi\nQANZYazqgQKBgHDa5yjeO27WVo3v7XRsMSZv168mXy1EPd/ydYsCdocVaDSvE+Ab\n3uwK2EUXRLOXK5xE1AgAu3Wx5xGqhNI8b1Qy4CSZGIZhPJNqe6Hb1rtyqIeRdAhD\nIPZGTq2KHW6hCywQWMuBRqEv9S+u6+b4qNp1dwL2P6hEoA56b+d3cz1BAoGAY+6D\np4o8dxKoSOR7mFLeiA+a6V/5dcW/NOgDlJYUIJwd7IHG3TTdSGu69OYbhzQQCw83\nBRO6vBc1W8hG922a/37EYqUDodTeZO9whcuNIwACroExo4gPkTfNiB9sEBh47xir\nyUJHSrlYHmWWi1oyIKJcFt13B/XSYRd+8XdmgoECgYEArzwwsAh/OUdiovX1ZW7f\nyXMm3YlNcQ66SxgDDtv1lzedha0ghWGK4sFbaA7B6PxZzOWSbg8tgPQ+9esffg0y\nauLKGWzE7Ptai1iyIGzC05nzu3CkI6S1h+79wM0zV8is2UGCZ0Lo0AkEiZKGCSK1\nuEs6qV+qg453HPo5ei4k9WE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "text-to-speech-app@groundrush-labs-voices.iam.gserviceaccount.com",
+  "client_id": "110646193448275314882",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/text-to-speech-app%40groundrush-labs-voices.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

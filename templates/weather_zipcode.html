@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Weather by ZIP Code</title>
+    <!-- Add the Tailwind CSS CDN link here or include it locally -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Dark Mode styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      body.dark-mode a {
+        color: #78c0a8;
+      }
+      body.dark-mode a:hover {
+        color: #48a999;
+      }
+      .system {
+        margin-top: 8rem;
+        margin-bottom:8rem
+        
+      }
+      
+
+      /* Add more dark mode styles as needed */
+    </style>
+  </head>
+
+  <body
+    class="bg-black bg-cover bg-center bg-fixed min-h-screen flex items-center justify-center  dark-mode"
+  >
+    <!-- Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1 dark-mode">
+          <a href="/" class="-m-1.5 p-1.5">
+            <span class="sr-only">Groundrushlabs</span>
+            <img
+                class="h-8 w-auto bg-white"
+                src="{% static 'images\Groundrushlabs_logo.png' %}"
+                alt="groundrushlabs-logo"
+              />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          {% comment %} <a
+            href="/weather"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >Weather</a
+          > {% endcomment %}
+          <a
+            href="/weather-zipcode"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >Weather-by-zipcode</a
+          >
+          <a
+            href="/news"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >News</a
+          >
+          
+          <a
+            href="/contactus"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >Contact us</a
+          >
+          <a
+            href="/aboutus"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >About us</a
+          >
+          <a
+            href="/chatbot"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >Chatbot</a
+          >
+          {% if user.is_authenticated %}
+          <p class="text-lg text-black-800">
+            Welcome,
+            <span class="text-blue-500 font-semibold"
+              >{{ user.username }}</span
+            >!
+          </p>
+          <a
+              href="/admin"
+              class="text-sm font-semibold leading-6 text-black-900"
+              >Admin Panel</a
+            >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+
+        <a
+          href="{% url 'rss_to_audio_app:logout' %}"
+          class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+          >Logout</a
+        >
+
+        {% else %}
+        <!-- Your login form here -->
+        {% endif %}
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between dark-mode">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Groundrush labs</span>
+              <img
+                class="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-black-700"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
+                  >Product</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
+                  >Features</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
+                  >Marketplace</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
+                  >Company</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
+                  >Log in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Section -->
+    
+    <div
+      class=" top-0 left-0 w-full h-full flex items-center justify-center system "
+    >
+    
+      <div class=" p-6 bg-black rounded-lg shadow-md ">
+        <div class="mt-5 mb-5 {% if flag %}border-dotted border-2 border-gray-400 p-4 rounded-lg{% endif %}">
+          {% if flag %}
+              <div class="flex justify-center mb-5">
+                  <h1 class="text-2xl sm:text-2xl lg:text-2xl font-bold text-center">
+                      Task scheduled successfully for 
+                      {% if recurr_type == "weekly" %}
+                          <span class="text-blue-500">Every Week</span> at {{ time_to_show }}!
+                      {% elif recurr_type == "monthly" %}
+                          <span class="text-green-500">Every Month</span> at {{ time_to_show }}!
+                      {% elif recurr_type == "everyhour" %}
+                          <span class="text-yellow-500">Every Hour</span> at {{ time_to_show }}!
+                      {% else %}
+                      <span class="text-red-500">One time</span> at {{ time_to_show }}!
+                      {% endif %}
+                  </h1>
+              </div>
+          {% endif %}
+      </div>
+        <h1 class="text-2xl font-semibold mb-4 text-white text-center">Fetch Weather by ZIP Code</h1>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="flex flex-col space-y-4">
+            <div class="mb-4">
+              <label for="zip_code" class="block text-black-700">Enter ZIP Code:</label>
+              <input type="text" id="city_zipcode" name="city_zipcode" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 bg-black" />
+            </div>
+            
+            <div class="mb-4">
+              <label for="voice_gender" class="block text-black-700">Select Voices :</label>
+              <select id="voice_gender" name="voice" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 bg-black">
+                <option value="Joanna">Joanna</option>
+                <option value="Matthew">Matthew</option>
+                <option value="Ivy">Ivy</option>
+                <option value="Justin">Justin</option>
+                <option value="Kendra">Kendra</option>
+                <option value="Kimberly">Kimberly</option>
+                <option value="Salli">Salli</option>
+                <option value="Joey">Joey</option>
+                <option value="Nicole">Nicole</option>
+                <option value="Russell">Russell</option>
+                <option value="Amy">Amy</option>
+                <option value="Brian">Brian</option>
+                <option value="Emma">Emma</option>
+                <option value="Daniella">Daniella</option>
+                <option value="Ruth">Ruth</option>
+                <option value="Gregory">Gregory</option>
+                <option value="Kevin">Kevin</option>
+                <option value="Joey">Joey</option>
+                <option value="Stephan">Stephan</option>
+              </select>
+            </div>
+            
+            {% include "select_intro_outro.html" %}
+            
+            <div class="flex justify-center mb-4">
+              <a href="/intro-text-weather" class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 transition duration-300">
+                <p class="text-white">Edit Your Intros</p>
+              </a>
+              <a href="/outro-text-weather" class="ml-4 inline-block px-4 py-2 bg-green-500 rounded hover:bg-green-600 transition duration-300">
+                <p class="text-white">Edit Your Outros</p>
+              </a>
+            </div>
+            
+        
+            <div class="flex flex-col space-y-4">
+              <div class="mb-4">
+                <label for="sftp_host" class="block text-black-700 font-semibold mb-2">SFTP Host:</label>
+                <input type="text" id="sftp_host" name="sftp_host" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black " />
+              </div>
+        
+              <div class="mb-4">
+                <label for="sftp_port" class="block text-black-700 font-semibold mb-2">SFTP Port:</label>
+                <input type="number" id="sftp_port" name="sftp_port" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+              </div>
+        
+              <div class="mb-4">
+                <label for="sftp_username" class="block text-black-700 font-semibold mb-2">SFTP Username:</label>
+                <input type="text" id="sftp_username" name="sftp_username" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+              </div>
+        
+              <div class="mb-4">
+                <label for="sftp_password" class="block text-black-700 font-semibold mb-2">SFTP Password:</label>
+                <input type="password" id="sftp_password" name="sftp_password" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+              </div>
+        
+              <div class="mb-4">
+                <label for="sftp_remote_path" class="block text-black-700 font-semibold mb-2">SFTP Remote Path</label>
+                <input type="text" id="sftp_remote_path" name="sftp_remote_path" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+              </div>
+            </div>
+        
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+              Fetch Weather
+            </button>
+        
+            <div class="flex flex-col space-y-4">
+              <label for="schedule_time" class="block text-sm font-medium text-white-700">Schedule Time:</label>
+              <input type="datetime-local" id="schedule_time" name="schedule_time" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black" />
+        
+              <label for="recurrence_type" class="block text-sm font-medium text-black-700">Recurrence Type:</label>
+              <select id="recurrence_type" name="recurrence_type" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black">
+                <option value="onetime">One time</option>
+                <option value="weekly">Weekly</option>
+                <option value="everyhour">Every Hour</option>
+                <option value="monthly">Monthly</option>
+              </select>
+        
+              <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+    
+  </body>
+  <div>
+    
+</div>
+</html>
