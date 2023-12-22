@@ -1,0 +1,28 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+    strategy:
+      max-parallel: 4
+      matrix:
+        python3-version: [3.10.7]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Dependencies
+      run: |
+        pip3 install virtualenv
+        python3 -m virtualenv venv
+        source venv/bin/activate
+        pip3 install -r requirements.txt
