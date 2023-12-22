@@ -39,7 +39,6 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "groundrush-labs-voices-5f4df2f4a
 # SFTP_PASSWORD = "RawNotesandBeats$!"
 # SFTP_REMOTE_PATH = "/ANNOUNCEMENTS_FOLDER"
 
-
 # Constants
 
 # for intros and outros
