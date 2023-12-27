@@ -6752,3 +6752,390 @@ INFO 2023-12-22 12:26:14,532 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2023-12-22 12:26:18,309 basehttp "POST / HTTP/1.1" 302 0
 INFO 2023-12-22 12:26:18,342 basehttp "GET /news/ HTTP/1.1" 200 23045
 INFO 2023-12-22 12:26:18,363 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2023-12-26 12:03:25,022 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 12:04:16,504 basehttp "GET / HTTP/1.1" 302 0
+INFO 2023-12-26 12:04:16,806 basehttp "GET /news/ HTTP/1.1" 200 23046
+INFO 2023-12-26 12:04:16,966 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+WARNING 2023-12-26 12:04:18,182 log Not Found: /favicon.ico
+WARNING 2023-12-26 12:04:18,183 basehttp "GET /favicon.ico HTTP/1.1" 404 4938
+INFO 2023-12-26 12:15:07,232 basehttp "GET /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 12:15:07,460 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+WARNING 2023-12-26 12:15:08,440 log Not Found: /favicon.ico
+WARNING 2023-12-26 12:15:08,442 basehttp "GET /favicon.ico HTTP/1.1" 404 4938
+INFO 2023-12-26 13:43:49,159 basehttp "GET /news/ HTTP/1.1" 200 23045
+WARNING 2023-12-26 13:43:49,743 log Not Found: /favicon.ico
+WARNING 2023-12-26 13:43:49,745 basehttp "GET /favicon.ico HTTP/1.1" 404 4938
+INFO 2023-12-26 14:01:47,533 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:34:36,035 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:34:44,153 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2023-12-26 18:34:44,428 basehttp "GET /static/images/Vesion_1.png HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:52,280 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2023-12-26 18:34:52,468 basehttp "GET /static/images/Vesion_1.png HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:56,746 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2023-12-26 18:34:56,940 basehttp "GET /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 200 4230
+INFO 2023-12-26 18:34:57,058 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:57,058 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:57,058 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:57,058 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:57,060 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:57,071 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:34:57,078 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,390 basehttp "POST /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2023-12-26 18:35:06,523 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10401
+INFO 2023-12-26 18:35:06,622 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,650 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-26 18:35:06,694 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,694 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,695 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,698 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,699 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,699 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,707 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,714 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,738 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,793 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:06,794 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:10,030 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10401
+INFO 2023-12-26 18:35:10,052 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-26 18:35:14,535 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 200 9288
+INFO 2023-12-26 18:35:14,557 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:15,964 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2023-12-26 18:35:15,987 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 9354
+INFO 2023-12-26 18:35:16,013 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-26 18:35:16,055 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2023-12-26 18:35:24,329 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2023-12-26 18:35:26,337 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2023-12-26 18:35:29,967 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 9210
+INFO 2023-12-26 18:35:29,994 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-26 18:35:39,107 basehttp "POST / HTTP/1.1" 302 0
+INFO 2023-12-26 18:35:39,156 basehttp "GET /news/ HTTP/1.1" 200 23045
+ERROR 2023-12-26 18:35:48,922 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 329, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text, voice)
+NameError: name 'convert_text_to_audio' is not defined
+ERROR 2023-12-26 18:35:48,925 basehttp "POST /news/ HTTP/1.1" 500 96377
+INFO 2023-12-26 18:35:59,406 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:36:01,006 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:36:08,696 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:36:57,923 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:36:59,562 autoreload Watching for file changes with StatReloader
+ERROR 2023-12-26 18:37:10,277 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 329, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text, voice)
+TypeError: convert_text_to_audio() takes 1 positional argument but 2 were given
+ERROR 2023-12-26 18:37:10,281 basehttp "POST /news/ HTTP/1.1" 500 95966
+INFO 2023-12-26 18:39:26,334 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:39:27,798 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:39:36,651 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:39:53,079 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:40:32,568 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:40:44,657 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:41:21,674 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:41:22,945 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:41:33,258 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:41:34,645 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:41:45,756 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:42:04,953 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:42:06,321 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:42:16,644 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:43:37,882 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:43:39,183 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:43:52,257 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:43:53,647 autoreload Watching for file changes with StatReloader
+ERROR 2023-12-26 18:44:03,727 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 327, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text)
+NameError: name 'convert_text_to_audio' is not defined
+ERROR 2023-12-26 18:44:03,731 basehttp "POST /news/ HTTP/1.1" 500 96486
+INFO 2023-12-26 18:44:15,394 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:44:16,649 autoreload Watching for file changes with StatReloader
+ERROR 2023-12-26 18:44:26,708 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 327, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text)
+TypeError: convert_text_to_audio() missing 1 required positional argument: 'api_key'
+ERROR 2023-12-26 18:44:26,712 basehttp "POST /news/ HTTP/1.1" 500 96330
+INFO 2023-12-26 18:44:37,158 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:44:38,520 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:44:49,862 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:44:50,043 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2023-12-26 18:44:50,800 log Not Found: /favicon.ico
+WARNING 2023-12-26 18:44:50,801 basehttp "GET /favicon.ico HTTP/1.1" 404 4938
+INFO 2023-12-26 18:45:47,978 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:45:49,515 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:46:10,416 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:48:32,458 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:48:34,040 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:48:48,332 basehttp "POST /news/ HTTP/1.1" 200 23045
+INFO 2023-12-26 18:58:23,934 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-26 18:58:33,701 autoreload Watching for file changes with StatReloader
+INFO 2023-12-26 18:58:51,265 views INSIDE CONVERT TO AUDIO
+INFO 2023-12-26 18:59:06,387 basehttp "POST /news/ HTTP/1.1" 200 1177644
+INFO 2023-12-27 12:24:22,976 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 12:25:15,662 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 12:25:17,328 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 12:25:27,585 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2023-12-27 12:25:39,312 basehttp "POST / HTTP/1.1" 200 3044
+INFO 2023-12-27 12:25:45,297 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2023-12-27 12:25:45,763 basehttp "GET /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 200 4230
+INFO 2023-12-27 12:25:46,155 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2023-12-27 12:25:46,157 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:25:46,159 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2023-12-27 12:25:46,157 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2023-12-27 12:25:46,157 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2023-12-27 12:25:46,160 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2023-12-27 12:25:46,164 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:26:05,385 basehttp "POST /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 200 4391
+INFO 2023-12-27 12:50:38,874 basehttp "POST /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2023-12-27 12:50:38,978 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10401
+INFO 2023-12-27 12:50:39,151 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,152 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,158 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,159 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,160 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,167 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 12:50:39,167 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,177 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,195 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,241 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,341 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,544 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:39,578 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:44,274 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 200 9288
+INFO 2023-12-27 12:50:44,307 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:46,176 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2023-12-27 12:50:46,200 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 9354
+INFO 2023-12-27 12:50:46,225 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 12:50:46,260 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2023-12-27 12:50:50,095 basehttp "POST / HTTP/1.1" 200 3044
+INFO 2023-12-27 12:51:01,390 basehttp "POST / HTTP/1.1" 302 0
+INFO 2023-12-27 12:51:01,432 basehttp "GET /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:03:59,238 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:08:12,158 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:08:13,957 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:08:22,987 views INSIDE CONVERT TO AUDIO
+INFO 2023-12-27 13:08:34,396 basehttp "POST /news/ HTTP/1.1" 200 1517862
+INFO 2023-12-27 13:20:28,959 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:20:37,686 basehttp "GET / HTTP/1.1" 302 0
+INFO 2023-12-27 13:20:37,743 basehttp "GET /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:20:53,592 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:21:10,186 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:21:31,542 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:31:47,183 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:31:54,245 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:32:17,370 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:32:56,768 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:32:58,179 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:33:11,833 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:34:55,243 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:34:56,760 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:35:05,900 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:38:36,072 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:38:37,592 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:38:48,791 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:39:38,252 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:39:39,779 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:39:51,318 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:40:16,021 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:40:17,406 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:40:30,300 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:41:23,687 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:41:25,318 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:41:29,407 basehttp "GET / HTTP/1.1" 302 0
+INFO 2023-12-27 13:41:29,422 basehttp "GET /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:41:40,852 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:43:48,442 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:43:49,959 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:44:02,159 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:48:41,719 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\app\settings.py changed, reloading.
+INFO 2023-12-27 13:48:43,165 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:49:43,116 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\app\settings.py changed, reloading.
+INFO 2023-12-27 13:49:44,354 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:49:52,808 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:49:54,326 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:50:05,680 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:51:48,637 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:51:50,080 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:52:10,323 basehttp "POST /news/ HTTP/1.1" 200 23046
+INFO 2023-12-27 13:52:45,003 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:52:46,222 autoreload Watching for file changes with StatReloader
+ERROR 2023-12-27 13:52:56,613 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 323, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 152, in convert_text_to_audio
+    "xi-api-key": ELEVEN_API_KEY
+NameError: name 'ELEVEN_API_KEY' is not defined
+ERROR 2023-12-27 13:52:56,620 basehttp "POST /news/ HTTP/1.1" 500 105729
+INFO 2023-12-27 13:53:45,824 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:53:47,087 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:54:30,677 basehttp "POST /news/ HTTP/1.1" 200 1641160
+INFO 2023-12-27 13:55:33,278 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:55:34,984 autoreload Watching for file changes with StatReloader
+ERROR 2023-12-27 13:55:42,771 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 318, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 152, in convert_text_to_audio
+    "xi-api-key": ELEVEN_API_KEY
+NameError: name 'ELEVEN_API_KEY' is not defined
+ERROR 2023-12-27 13:55:42,774 basehttp "POST /news/ HTTP/1.1" 500 106362
+INFO 2023-12-27 13:55:51,655 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 13:55:53,157 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 13:56:22,051 basehttp "POST /news/ HTTP/1.1" 200 1110352
+INFO 2023-12-27 14:03:09,044 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 14:03:10,633 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 14:03:47,384 basehttp "POST /news/ HTTP/1.1" 200 1565510
+INFO 2023-12-27 14:05:34,887 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 14:05:36,223 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 14:06:19,933 basehttp "POST /news/ HTTP/1.1" 200 1452243
+INFO 2023-12-27 14:15:48,804 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 14:15:50,033 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 14:16:24,506 basehttp "POST /news/ HTTP/1.1" 200 1492367
+INFO 2023-12-27 14:28:56,217 basehttp "GET / HTTP/1.1" 302 0
+INFO 2023-12-27 14:28:56,247 basehttp "GET /news/ HTTP/1.1" 200 23089
+INFO 2023-12-27 14:29:38,230 basehttp "POST /news/ HTTP/1.1" 200 1513683
+INFO 2023-12-27 14:30:38,077 basehttp "POST /news/ HTTP/1.1" 200 1659133
+INFO 2023-12-27 14:31:45,234 basehttp "POST /news/ HTTP/1.1" 200 1718483
+INFO 2023-12-27 14:32:31,480 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 14:32:32,765 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 14:33:03,288 basehttp "GET /news/ HTTP/1.1" 200 23101
+ERROR 2023-12-27 14:33:14,325 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 320, in convert_to_audio
+    audio_content = convert_text_to_audio(all_news_text,voice)
+TypeError: convert_text_to_audio() takes 1 positional argument but 2 were given
+ERROR 2023-12-27 14:33:14,328 basehttp "POST /news/ HTTP/1.1" 500 98102
+INFO 2023-12-27 14:33:55,623 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2023-12-27 14:33:57,183 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 14:34:24,413 basehttp "POST /news/ HTTP/1.1" 200 1107426
+INFO 2023-12-27 14:36:49,857 basehttp "GET /news/ HTTP/1.1" 200 23101
+INFO 2023-12-27 15:15:52,338 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10401
+INFO 2023-12-27 15:15:52,507 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,509 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,519 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,521 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,524 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,535 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,537 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,543 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:15:52,551 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,552 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,553 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,560 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,565 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,574 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,637 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,656 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,676 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,750 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:52,757 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2023-12-27 15:15:56,505 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 76811
+INFO 2023-12-27 15:15:56,535 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:15:56,563 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2023-12-27 15:16:00,225 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 200 19202
+INFO 2023-12-27 15:16:00,257 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:16:11,693 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 302 0
+INFO 2023-12-27 15:16:11,745 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9372
+INFO 2023-12-27 15:16:11,767 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:16:11,785 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2023-12-27 15:17:25,209 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\models.py changed, reloading.
+INFO 2023-12-27 15:17:26,515 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 15:18:14,996 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 15:18:26,473 basehttp "GET /news/ HTTP/1.1" 200 23314
+INFO 2023-12-27 15:18:26,497 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2023-12-27 15:18:34,265 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9224
+INFO 2023-12-27 15:18:34,291 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:18:59,484 basehttp "POST /news/ HTTP/1.1" 200 736697
+INFO 2023-12-27 15:19:02,261 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 13200
+INFO 2023-12-27 15:19:02,297 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:25:09,750 basehttp "GET /news/ HTTP/1.1" 200 23314
+INFO 2023-12-27 15:25:50,737 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 15:25:59,429 basehttp "GET /news/ HTTP/1.1" 200 23314
+INFO 2023-12-27 15:26:24,196 basehttp "POST /news/ HTTP/1.1" 200 770133
+INFO 2023-12-27 15:26:54,829 basehttp "POST /news/ HTTP/1.1" 200 648925
+INFO 2023-12-27 15:27:34,893 basehttp "POST /news/ HTTP/1.1" 200 824050
+INFO 2023-12-27 15:27:48,580 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 16441
+INFO 2023-12-27 15:27:48,606 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:34:23,486 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\models.py changed, reloading.
+INFO 2023-12-27 15:34:24,774 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 15:34:51,730 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 14891
+INFO 2023-12-27 15:35:09,150 basehttp "POST /weather-zipcode/ HTTP/1.1" 200 347159
+INFO 2023-12-27 15:35:11,060 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 31319
+INFO 2023-12-27 15:35:11,090 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:35:18,137 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 13339
+INFO 2023-12-27 15:35:21,774 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2023-12-27 15:35:21,827 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 13324
+INFO 2023-12-27 15:35:21,852 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:38:01,483 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/41/change/ HTTP/1.1" 200 19013
+INFO 2023-12-27 15:38:01,529 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:38:01,531 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:38:01,534 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:38:01,553 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2023-12-27 15:38:01,562 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2023-12-27 15:38:03,915 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/41/change/ HTTP/1.1" 200 19164
+INFO 2023-12-27 15:38:03,945 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:38:07,374 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/41/change/ HTTP/1.1" 302 0
+INFO 2023-12-27 15:38:07,422 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 13465
+INFO 2023-12-27 15:38:07,445 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 15:38:49,498 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 13172
+INFO 2023-12-27 15:38:49,532 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 16:26:13,453 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 11900
+INFO 2023-12-27 16:26:13,478 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 16:26:19,037 basehttp "POST /admin/radioai/intros/ HTTP/1.1" 200 9379
+INFO 2023-12-27 16:26:20,358 basehttp "POST /admin/radioai/intros/ HTTP/1.1" 302 0
+INFO 2023-12-27 16:26:20,381 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 11496
+INFO 2023-12-27 16:26:20,402 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 16:26:21,504 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 11006
+INFO 2023-12-27 16:26:21,529 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 16:26:24,207 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 12882
+INFO 2023-12-27 16:26:24,229 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 16:26:35,268 basehttp "POST /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9361
+INFO 2023-12-27 16:26:36,494 basehttp "POST /admin/radioai/schedulingtasksweather/ HTTP/1.1" 302 0
+INFO 2023-12-27 16:26:36,546 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9432
+INFO 2023-12-27 16:26:36,568 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343

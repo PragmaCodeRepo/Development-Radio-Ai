@@ -155,6 +155,8 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False  # Use True for SSL
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+ELEVEN_API_KEY = os.getenv('ELEVEN_API_KEY')
+ELEVEN_API_URL = os.getenv('ELEVEN_API_URL')
 
 # logging
 LOGGING = {

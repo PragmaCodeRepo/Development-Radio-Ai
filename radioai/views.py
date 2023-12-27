@@ -28,6 +28,7 @@ from .serializers import AudioConversionRequestSerializer
 from decouple import config
 import boto3
 from django.http import JsonResponse
+from requests.exceptions import RequestException
 
 
 # logging
@@ -38,6 +39,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "groundrush-labs-voices-5f4df2f4a
 # SFTP_USERNAME = "haljordan"
 # SFTP_PASSWORD = "RawNotesandBeats$!"
 # SFTP_REMOTE_PATH = "/ANNOUNCEMENTS_FOLDER"
+
 
 # Constants
 
@@ -54,8 +56,8 @@ OUTROS_LIST = [
 
 
 # OPENAI_API_KEY = "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"
-ELEVEN_API_URL = "https://api.elevenlabs.io/v1/text-to-speech/EdRbIefwv6OnQZLNqQKI"
-ELEVEN_API_KEY = "52336052b968f9a2cf5b75b888f518a0"
+
+ELEVEN_API_KEY = "f94fb64d2d4db67ec4f7dcee39d05e17"
 CHUNK_SIZE = 1024
 MUSIC_PATH = "music.mp3"  # Replace with the path to your music file on the server
 
@@ -134,48 +136,33 @@ def rewrite_with_chatgpt(text):
 #     return response.audio_content
 
 
-def convert_text_to_audio(text, voice_gender):
+def convert_text_to_audio(text,voice):
+    voice_id=voice
+    ELEVEN_API_URL = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"    
     try:
-        logger.info("INSIDE CONVERT TO AUDIO")
-        aws_access_key_id = config('AWS_ACCESS_KEY_ID')
-        aws_secret_access_key = config('AWS_SECRET_ACCESS_KEY')
-        aws_region = config('AWS_REGION', default='us-west-2')
-        print(
-            f'the credentials are access key is {aws_access_key_id} and aws_secret key is {aws_secret_access_key} and region is {aws_region}')
-        # Initialize an AWS Polly client with access key, secret key, and region.
-        client = boto3.client(
-            'polly',
-            aws_access_key_id=aws_access_key_id,
-            aws_secret_access_key=aws_secret_access_key,
-            region_name=aws_region
-        )
-
-        # Determine voice name based on gender preference
-        # Polly has different voice IDs for male and female voices
-
-        voice_id = voice_gender
-        rate = "slow"
-        print(voice_id)
-        if rate == "slow":
-            rate_value = "100%"
-
-        # Construct the SSML with pitch, speed, and other attributes.
-        # ssml = f'<speak><prosody rate="medium" pitch="-1st">{text}</prosody></speak>'
-
-        # Request the synthesis with SSML.
-        response = client.synthesize_speech(
-            Engine='neural',
-            OutputFormat='mp3',
-            Text=f'<speak><prosody rate="{rate_value}">{text}</prosody></speak>',
-            VoiceId=voice_id,
-            TextType='ssml',
-
-        )
-
-        # Return the audio content
-        return response['AudioStream'].read()
-    except Exception as e:
+        data = {
+            "text": text,
+            "model_id": "eleven_monolingual_v1",
+            "voice_settings": {
+                "stability": 0.5,
+                "similarity_boost": 0.5
+            }
+        }
+        headers = {
+            "Accept": "audio/mpeg",
+            "Content-Type": "application/json",
+            "xi-api-key": ELEVEN_API_KEY
+        }
+        response = requests.post(ELEVEN_API_URL, json=data, headers=headers)
+        
+        if response.status_code == 200:
+            return response.content
+        else:
+            print(f"Failed to convert text to audio. Status code: {response.status_code}")
+            return None
+    except RequestException as e:
         print(f"An error occurred: {str(e)}")
+        return None
 
 
 def overlay_background_music(news_content, music_file_path, output_file):
@@ -330,7 +317,7 @@ def convert_to_audio(request):
         all_news_text += f'<break time="1s"/>{outro_user}'
 
         # Convert text to audio using the selected voice gender
-        audio_content = convert_text_to_audio(all_news_text, voice)
+        audio_content = convert_text_to_audio(all_news_text,voice)
 
         if audio_content:
             # Overlay background music
