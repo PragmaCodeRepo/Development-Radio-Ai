@@ -7139,3 +7139,758 @@ INFO 2023-12-27 16:26:35,268 basehttp "POST /admin/radioai/schedulingtasksweathe
 INFO 2023-12-27 16:26:36,494 basehttp "POST /admin/radioai/schedulingtasksweather/ HTTP/1.1" 302 0
 INFO 2023-12-27 16:26:36,546 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9432
 INFO 2023-12-27 16:26:36,568 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-12-27 17:37:04,674 autoreload Watching for file changes with StatReloader
+INFO 2023-12-27 17:41:00,389 basehttp "GET / HTTP/1.1" 302 0
+INFO 2023-12-27 17:41:00,536 basehttp "GET /news/ HTTP/1.1" 200 23111
+INFO 2023-12-27 17:41:00,597 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2023-12-27 17:41:02,652 basehttp "GET /news/ HTTP/1.1" 200 23111
+INFO 2023-12-27 17:41:07,362 basehttp "GET /news/ HTTP/1.1" 200 23111
+INFO 2023-12-27 17:41:14,531 basehttp "GET /news/ HTTP/1.1" 200 23111
+INFO 2023-12-27 17:41:14,652 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2023-12-27 17:41:14,944 log Not Found: /favicon.ico
+WARNING 2023-12-27 17:41:14,945 basehttp "GET /favicon.ico HTTP/1.1" 404 4938
+INFO 2023-12-27 17:43:26,233 basehttp "GET /news/ HTTP/1.1" 200 23220
+INFO 2024-01-03 11:44:44,188 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 11:45:38,531 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 302 0
+INFO 2024-01-03 11:45:38,822 basehttp "GET /admin/login/?next=/admin/radioai/intros/ HTTP/1.1" 200 4216
+INFO 2024-01-03 11:46:58,978 basehttp "POST /admin/login/?next=/admin/radioai/intros/ HTTP/1.1" 200 4377
+INFO 2024-01-03 11:47:07,344 basehttp "POST /admin/login/?next=/admin/radioai/intros/ HTTP/1.1" 302 0
+INFO 2024-01-03 11:47:07,649 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 11359
+INFO 2024-01-03 11:47:08,390 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 11:47:12,337 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-01-03 11:47:13,118 basehttp "GET /static/images/Vesion_1.png HTTP/1.1" 304 0
+INFO 2024-01-03 11:47:26,361 basehttp "POST / HTTP/1.1" 200 3065
+INFO 2024-01-03 11:47:31,158 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10401
+INFO 2024-01-03 11:47:31,242 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 11:47:39,174 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 200 9288
+INFO 2024-01-03 11:47:40,700 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2024-01-03 11:47:40,855 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 9354
+INFO 2024-01-03 11:47:40,899 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 11:47:45,836 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-01-03 11:47:46,094 basehttp "GET /news/ HTTP/1.1" 200 23220
+INFO 2024-01-03 11:47:46,512 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2024-01-03 12:01:42,672 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:01:47,983 basehttp "GET /news/ HTTP/1.1" 200 23220
+INFO 2024-01-03 12:01:54,856 basehttp "GET /Newscasters/ HTTP/1.1" 200 1250
+INFO 2024-01-03 12:01:58,350 basehttp "GET /add_newscaster HTTP/1.1" 301 0
+INFO 2024-01-03 12:01:58,360 basehttp "GET /add_newscaster/ HTTP/1.1" 200 1698
+INFO 2024-01-03 12:02:02,550 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:02:02,568 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-03 12:02:02,579 basehttp "GET /Newscasters/ HTTP/1.1" 200 2551
+INFO 2024-01-03 12:02:04,872 basehttp "GET /add_newscaster/ HTTP/1.1" 200 1698
+INFO 2024-01-03 12:02:19,059 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:02:19,079 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-03 12:02:19,093 basehttp "GET /Newscasters/ HTTP/1.1" 200 3849
+INFO 2024-01-03 12:02:21,084 basehttp "GET /add_newscaster/ HTTP/1.1" 200 1698
+INFO 2024-01-03 12:02:32,920 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:02:32,939 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-03 12:02:32,950 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 12:02:38,390 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10709
+INFO 2024-01-03 12:02:38,419 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:04:49,824 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 12281
+INFO 2024-01-03 12:04:49,860 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:04:53,296 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23220
+INFO 2024-01-03 12:05:03,217 basehttp "GET /intro-text/ HTTP/1.1" 200 8072
+WARNING 2024-01-03 12:05:03,308 log Not Found: /intro-text/style.css
+WARNING 2024-01-03 12:05:03,310 basehttp "GET /intro-text/style.css HTTP/1.1" 404 5329
+WARNING 2024-01-03 12:05:03,312 log Not Found: /intro-text/index.js
+WARNING 2024-01-03 12:05:03,313 basehttp "GET /intro-text/index.js HTTP/1.1" 404 5326
+INFO 2024-01-03 12:06:11,220 basehttp "GET /intro-text/ HTTP/1.1" 200 8184
+WARNING 2024-01-03 12:06:11,258 log Not Found: /intro-text/style.css
+WARNING 2024-01-03 12:06:11,262 basehttp "GET /intro-text/style.css HTTP/1.1" 404 5329
+WARNING 2024-01-03 12:06:11,269 log Not Found: /intro-text/index.js
+WARNING 2024-01-03 12:06:11,270 basehttp "GET /intro-text/index.js HTTP/1.1" 404 5326
+INFO 2024-01-03 12:06:36,006 basehttp "GET /intro-text/ HTTP/1.1" 200 8233
+WARNING 2024-01-03 12:06:36,033 log Not Found: /intro-text/style.css
+WARNING 2024-01-03 12:06:36,034 basehttp "GET /intro-text/style.css HTTP/1.1" 404 5329
+WARNING 2024-01-03 12:06:36,050 log Not Found: /intro-text/index.js
+WARNING 2024-01-03 12:06:36,051 basehttp "GET /intro-text/index.js HTTP/1.1" 404 5326
+INFO 2024-01-03 12:07:01,140 basehttp "GET /intro-text/ HTTP/1.1" 200 8284
+WARNING 2024-01-03 12:07:01,171 log Not Found: /intro-text/style.css
+WARNING 2024-01-03 12:07:01,172 basehttp "GET /intro-text/style.css HTTP/1.1" 404 5329
+WARNING 2024-01-03 12:07:01,186 log Not Found: /intro-text/index.js
+WARNING 2024-01-03 12:07:01,188 basehttp "GET /intro-text/index.js HTTP/1.1" 404 5326
+INFO 2024-01-03 12:13:19,668 basehttp "POST /intro-text/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:13:19,721 basehttp "GET /news HTTP/1.1" 301 0
+INFO 2024-01-03 12:13:19,744 basehttp "GET /news/ HTTP/1.1" 200 23268
+INFO 2024-01-03 12:13:24,152 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 12586
+INFO 2024-01-03 12:13:24,199 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:13:33,663 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:13:46,056 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:14:20,078 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 12586
+INFO 2024-01-03 12:14:20,112 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:14:51,604 basehttp "GET /intro-text/ HTTP/1.1" 200 8284
+WARNING 2024-01-03 12:14:51,661 log Not Found: /intro-text/style.css
+WARNING 2024-01-03 12:14:51,662 basehttp "GET /intro-text/style.css HTTP/1.1" 404 5329
+WARNING 2024-01-03 12:14:51,729 log Not Found: /intro-text/index.js
+WARNING 2024-01-03 12:14:51,730 basehttp "GET /intro-text/index.js HTTP/1.1" 404 5326
+ERROR 2024-01-03 12:14:58,763 log Internal Server Error: /intro-text/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 779, in enter_intro
+    news_caster=request.POST.get('news_caster',news_caster=news_caster)
+UnboundLocalError: local variable 'news_caster' referenced before assignment
+ERROR 2024-01-03 12:14:58,766 basehttp "POST /intro-text/ HTTP/1.1" 500 78957
+INFO 2024-01-03 12:17:01,955 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:17:03,583 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:17:05,225 basehttp "POST /intro-text/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:17:05,288 basehttp "GET /news HTTP/1.1" 301 0
+INFO 2024-01-03 12:17:05,305 basehttp "GET /news/ HTTP/1.1" 200 23312
+INFO 2024-01-03 12:17:08,485 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 12957
+INFO 2024-01-03 12:17:08,510 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:19:39,623 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 12:19:42,334 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 23312
+INFO 2024-01-03 12:19:50,960 basehttp "GET /admin/radioai/intros/17/change/ HTTP/1.1" 200 11160
+INFO 2024-01-03 12:19:50,994 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:19:56,508 basehttp "POST /admin/radioai/intros/17/change/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:19:56,581 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 13171
+INFO 2024-01-03 12:19:56,604 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:19:58,106 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 23312
+INFO 2024-01-03 12:20:03,795 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 12:20:05,523 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 23312
+INFO 2024-01-03 12:28:36,758 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:28:38,149 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:30:18,153 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 356, in convert_to_audio
+    return render(request, 'index.html', context={ 'intros': intros, 'all_intros': all_intros,"outros": OUTROS_LIST, "flag": flag})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:30:18,156 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 500 78983
+INFO 2024-01-03 12:32:48,664 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:32:50,448 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:32:54,828 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 358, in convert_to_audio
+    return render(request, 'index.html', context={ 'intros': intros, 'all_intros': all_intros,"outros": OUTROS_LIST, "flag": flag})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:32:54,832 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 500 78983
+ERROR 2024-01-03 12:32:56,474 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 358, in convert_to_audio
+    return render(request, 'index.html', context={ 'intros': intros, 'all_intros': all_intros,"outros": OUTROS_LIST, "flag": flag})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:32:56,478 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 500 78983
+ERROR 2024-01-03 12:33:04,898 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 358, in convert_to_audio
+    return render(request, 'index.html', context={ 'intros': intros, 'all_intros': all_intros,"outros": OUTROS_LIST, "flag": flag})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:33:04,903 basehttp "GET /news/ HTTP/1.1" 500 78260
+INFO 2024-01-03 12:33:11,155 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+ERROR 2024-01-03 12:33:13,270 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 358, in convert_to_audio
+    return render(request, 'index.html', context={ 'intros': intros, 'all_intros': all_intros,"outros": OUTROS_LIST, "flag": flag})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:33:13,273 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 500 78854
+INFO 2024-01-03 12:33:33,437 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:33:35,612 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:33:47,083 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:33:48,234 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:33:52,472 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 357, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:33:52,475 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 500 79032
+INFO 2024-01-03 12:35:27,918 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:35:29,347 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:35:32,356 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 357, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag,"news_caster": news_caster })
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:35:32,361 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 500 79108
+INFO 2024-01-03 12:37:43,337 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:37:44,974 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:37:48,398 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 357, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag,"news_caster": news_caster })
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:37:48,402 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 500 79108
+INFO 2024-01-03 12:40:56,785 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:40:58,218 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:41:01,484 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 358, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag,"news_caster": news_caster })
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:41:01,502 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 500 79083
+INFO 2024-01-03 12:42:00,574 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:42:24,089 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 358, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag,"news_caster": news_caster })
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 12:42:24,093 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 500 78938
+INFO 2024-01-03 12:43:10,915 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:43:12,787 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:43:14,158 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 359, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag,"news_caster": news_caster })
+UnboundLocalError: local variable 'all_intros' referenced before assignment
+ERROR 2024-01-03 12:43:14,162 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 500 79249
+INFO 2024-01-03 12:43:25,918 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:43:27,473 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 12:43:30,841 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 360, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros, "outros": OUTROS_LIST, "flag": flag,"news_caster": news_caster })
+UnboundLocalError: local variable 'news_caster' referenced before assignment
+ERROR 2024-01-03 12:43:30,847 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 500 79423
+INFO 2024-01-03 12:43:41,144 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:43:42,468 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:43:44,891 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22504
+INFO 2024-01-03 12:43:53,182 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 12:43:53,223 basehttp "GET /news/ HTTP/1.1" 200 22504
+INFO 2024-01-03 12:43:58,954 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 12:44:02,049 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22504
+INFO 2024-01-03 12:44:10,757 basehttp "GET /admin/radioai/intros/16/change/ HTTP/1.1" 200 11147
+INFO 2024-01-03 12:44:10,784 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:44:17,020 basehttp "POST /admin/radioai/intros/16/change/ HTTP/1.1" 302 0
+INFO 2024-01-03 12:44:17,097 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 13242
+INFO 2024-01-03 12:44:17,157 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 12:44:19,906 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22504
+INFO 2024-01-03 12:44:23,122 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22504
+INFO 2024-01-03 12:44:23,489 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22504
+INFO 2024-01-03 12:45:44,451 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:45:45,933 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:45:57,574 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 12:45:59,121 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 12:46:02,190 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22580
+INFO 2024-01-03 12:46:15,276 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 12:46:22,444 basehttp "GET /news/?newscaster=Nandita HTTP/1.1" 200 22504
+INFO 2024-01-03 13:17:38,741 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22430
+INFO 2024-01-03 13:17:58,786 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22430
+INFO 2024-01-03 13:18:04,030 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22580
+INFO 2024-01-03 13:21:43,281 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22514
+INFO 2024-01-03 13:22:26,537 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22541
+INFO 2024-01-03 13:25:20,363 basehttp "GET /news/?newscaster=Vishal HTTP/1.1" 200 22525
+INFO 2024-01-03 13:28:16,157 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 13:28:17,839 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 13:28:20,139 basehttp "GET /outro-text/ HTTP/1.1" 200 8993
+WARNING 2024-01-03 13:28:20,421 log Not Found: /outro-text/style.css
+WARNING 2024-01-03 13:28:20,422 basehttp "GET /outro-text/style.css HTTP/1.1" 404 5329
+ERROR 2024-01-03 13:28:59,773 log Internal Server Error: /outro-text/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 804, in enter_outro
+    news_caster=request.POST.get('news_caster',news_caster=news_caster)
+UnboundLocalError: local variable 'news_caster' referenced before assignment
+ERROR 2024-01-03 13:28:59,777 basehttp "POST /outro-text/ HTTP/1.1" 500 79293
+INFO 2024-01-03 13:29:31,827 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 13:29:33,245 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 13:29:34,533 basehttp "POST /outro-text/ HTTP/1.1" 302 0
+INFO 2024-01-03 13:29:34,584 basehttp "GET /news HTTP/1.1" 301 0
+ERROR 2024-01-03 13:29:34,645 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 351, in convert_to_audio
+    all_outros=Outros.object.all()
+AttributeError: type object 'Outros' has no attribute 'object'
+ERROR 2024-01-03 13:29:34,650 basehttp "GET /news/ HTTP/1.1" 500 79084
+INFO 2024-01-03 13:30:25,241 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 13:30:26,654 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 13:30:28,180 basehttp "GET /news/ HTTP/1.1" 200 22957
+INFO 2024-01-03 13:30:32,262 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 12265
+INFO 2024-01-03 13:30:32,288 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 13:30:42,185 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 13:30:43,634 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22097
+INFO 2024-01-03 13:33:16,641 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22043
+INFO 2024-01-03 13:42:01,112 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22057
+INFO 2024-01-03 13:58:10,683 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 13:58:16,493 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 13:58:21,214 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 13:58:21,238 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 13:58:23,082 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22057
+INFO 2024-01-03 14:02:21,764 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 17399
+INFO 2024-01-03 14:02:21,872 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:02:38,601 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 200 10107
+INFO 2024-01-03 14:02:40,468 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 302 0
+INFO 2024-01-03 14:02:40,498 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9988
+INFO 2024-01-03 14:02:40,540 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:04:00,551 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22057
+INFO 2024-01-03 14:06:46,952 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22431
+INFO 2024-01-03 14:07:38,009 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22449
+INFO 2024-01-03 14:07:59,510 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22454
+INFO 2024-01-03 14:08:16,507 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22463
+ERROR 2024-01-03 14:08:41,923 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasks.intros
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 245, in convert_to_audio
+    obj = SchedulingTasks.objects.create(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasks.intros
+ERROR 2024-01-03 14:08:41,936 basehttp "POST /news/ HTTP/1.1" 500 181627
+INFO 2024-01-03 14:13:44,168 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:13:45,431 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:14:07,814 basehttp "POST /news/ HTTP/1.1" 200 530643
+INFO 2024-01-03 14:14:12,344 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 13856
+INFO 2024-01-03 14:14:12,369 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:15:06,209 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:15:07,666 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 14:15:09,546 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasks.outros
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 245, in convert_to_audio
+    obj = SchedulingTasks.objects.create(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasks.outros
+ERROR 2024-01-03 14:15:09,569 basehttp "POST /news/ HTTP/1.1" 500 181770
+INFO 2024-01-03 14:15:19,047 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:15:20,536 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:15:28,870 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:15:30,110 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:16:03,303 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:16:04,547 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:16:22,613 basehttp "POST /news/ HTTP/1.1" 200 533150
+INFO 2024-01-03 14:16:24,991 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 14766
+INFO 2024-01-03 14:16:25,023 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:16:46,825 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:16:48,130 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:19:48,847 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 14:19:48,880 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 14:19:51,522 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22463
+INFO 2024-01-03 14:20:41,558 basehttp "POST /news/ HTTP/1.1" 200 640566
+INFO 2024-01-03 14:20:45,707 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 15675
+INFO 2024-01-03 14:20:45,739 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:27:37,402 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:27:38,698 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:28:09,960 basehttp "POST /news/ HTTP/1.1" 200 617996
+INFO 2024-01-03 14:28:17,845 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 16584
+INFO 2024-01-03 14:28:17,874 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:28:41,849 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 12265
+INFO 2024-01-03 14:28:41,871 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:32:37,309 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 17493
+INFO 2024-01-03 14:32:37,338 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:32:37,727 basehttp "POST /news/ HTTP/1.1" 200 559900
+INFO 2024-01-03 14:34:22,434 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 12265
+INFO 2024-01-03 14:34:22,462 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:34:51,358 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:34:52,791 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:34:57,632 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:34:59,061 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:35:17,874 basehttp "POST /news/ HTTP/1.1" 200 559900
+INFO 2024-01-03 14:36:42,777 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:36:44,005 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:37:49,410 basehttp "POST /news/ HTTP/1.1" 200 658120
+INFO 2024-01-03 14:38:42,923 basehttp "POST /news/ HTTP/1.1" 200 620086
+INFO 2024-01-03 14:38:48,297 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:38:49,907 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:39:03,504 basehttp "POST /news/ HTTP/1.1" 200 385193
+INFO 2024-01-03 14:39:06,074 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 21129
+INFO 2024-01-03 14:39:06,118 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 14:39:41,144 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 14:39:42,616 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 14:40:01,529 basehttp "POST /news/ HTTP/1.1" 200 613817
+INFO 2024-01-03 14:41:10,563 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22442
+INFO 2024-01-03 14:41:10,947 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-03 14:41:11,210 log Not Found: /favicon.ico
+WARNING 2024-01-03 14:41:11,211 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 14:41:52,375 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 22952
+INFO 2024-01-03 14:41:52,403 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-01-03 14:41:52,501 log Not Found: /favicon.ico
+WARNING 2024-01-03 14:41:52,502 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 14:42:04,794 basehttp "POST /news/ HTTP/1.1" 200 572439
+ERROR 2024-01-03 15:51:38,779 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 290, in convert_to_audio
+    return render(request, 'index.html', context={"intros": intros, "outros": OUTROS_LIST, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 15:51:38,783 basehttp "POST /news/ HTTP/1.1" 500 84430
+INFO 2024-01-03 15:52:10,437 basehttp "POST /news/ HTTP/1.1" 200 479234
+ERROR 2024-01-03 15:52:30,348 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 290, in convert_to_audio
+    return render(request, 'index.html', context={"intros": intros, "outros": OUTROS_LIST, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 15:52:30,351 basehttp "POST /news/ HTTP/1.1" 500 84429
+ERROR 2024-01-03 15:52:34,305 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 290, in convert_to_audio
+    return render(request, 'index.html', context={"intros": intros, "outros": OUTROS_LIST, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 15:52:34,311 basehttp "POST /news/ HTTP/1.1" 500 84430
+INFO 2024-01-03 15:53:59,560 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 15:54:01,350 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-03 15:54:06,077 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 290, in convert_to_audio
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
+UnboundLocalError: local variable 'intros' referenced before assignment
+ERROR 2024-01-03 15:54:06,081 basehttp "POST /news/ HTTP/1.1" 500 84557
+INFO 2024-01-03 15:55:54,026 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 15:55:55,881 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 15:55:58,821 basehttp "POST /news/ HTTP/1.1" 200 22895
+INFO 2024-01-03 15:57:22,100 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 28498
+INFO 2024-01-03 15:57:22,183 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 16:01:33,262 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 16:01:33,328 basehttp "GET /Newscasters/ HTTP/1.1" 200 5150
+INFO 2024-01-03 16:08:12,089 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 12265
+INFO 2024-01-03 16:08:12,123 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 16:08:21,341 basehttp "GET /admin/radioai/outros/add/ HTTP/1.1" 200 10889
+INFO 2024-01-03 16:08:21,378 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 16:08:29,277 basehttp "POST /admin/radioai/outros/add/ HTTP/1.1" 302 0
+INFO 2024-01-03 16:08:29,332 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 12841
+INFO 2024-01-03 16:08:29,383 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 16:10:36,350 basehttp "GET /admin/radioai/outros/add/ HTTP/1.1" 200 10889
+INFO 2024-01-03 16:16:10,681 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 28498
+INFO 2024-01-03 16:16:10,710 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 16:16:49,867 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 13028
+INFO 2024-01-03 16:16:49,916 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-03 16:17:28,529 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11579
+INFO 2024-01-03 16:17:28,590 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-01-03 16:24:32,030 log Internal Server Error: /Newscasters/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 847, in newscaster_list
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'static'. Did you forget to register or load this tag?
+ERROR 2024-01-03 16:24:32,039 basehttp "GET /Newscasters/ HTTP/1.1" 500 163216
+INFO 2024-01-03 16:24:59,110 basehttp "GET /Newscasters/ HTTP/1.1" 200 10919
+INFO 2024-01-03 16:25:43,600 basehttp "GET /Newscasters/ HTTP/1.1" 200 10611
+INFO 2024-01-03 16:28:14,544 basehttp "GET /Newscasters/ HTTP/1.1" 200 10691
+INFO 2024-01-03 16:28:20,615 basehttp "GET /Newscasters/ HTTP/1.1" 200 10655
+INFO 2024-01-03 16:28:33,530 basehttp "GET /Newscasters/ HTTP/1.1" 200 10626
+INFO 2024-01-03 16:28:43,955 basehttp "GET /Newscasters/ HTTP/1.1" 200 10655
+INFO 2024-01-03 16:29:01,418 basehttp "GET /Newscasters/ HTTP/1.1" 200 10640
+INFO 2024-01-03 16:29:16,841 basehttp "GET /Newscasters/ HTTP/1.1" 200 10652
+INFO 2024-01-03 16:29:24,586 basehttp "GET /Newscasters/ HTTP/1.1" 200 10649
+INFO 2024-01-03 16:29:39,036 basehttp "GET /Newscasters/ HTTP/1.1" 200 10658
+INFO 2024-01-03 16:29:58,680 basehttp "GET /Newscasters/ HTTP/1.1" 200 10667
+INFO 2024-01-03 16:30:00,331 basehttp "GET /Newscasters/ HTTP/1.1" 200 10667
+INFO 2024-01-03 16:30:31,743 basehttp "GET /Newscasters/ HTTP/1.1" 200 11006
+INFO 2024-01-03 16:31:01,354 basehttp "GET /Newscasters/ HTTP/1.1" 200 10998
+INFO 2024-01-03 16:31:27,309 basehttp "GET /Newscasters/ HTTP/1.1" 200 11031
+INFO 2024-01-03 16:31:49,520 basehttp "GET /Newscasters/ HTTP/1.1" 200 11058
+INFO 2024-01-03 16:32:02,003 basehttp "GET /Newscasters/ HTTP/1.1" 200 11061
+INFO 2024-01-03 16:32:02,118 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-03 16:32:02,604 log Not Found: /favicon.ico
+WARNING 2024-01-03 16:32:02,605 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 16:32:32,369 basehttp "GET /Newscasters/ HTTP/1.1" 200 11037
+INFO 2024-01-03 16:32:44,052 basehttp "GET /Newscasters/ HTTP/1.1" 200 11052
+INFO 2024-01-03 16:32:52,074 basehttp "GET /Newscasters/ HTTP/1.1" 200 11052
+INFO 2024-01-03 16:33:00,791 basehttp "GET /Newscasters/ HTTP/1.1" 200 11055
+INFO 2024-01-03 16:33:31,521 basehttp "GET /Newscasters/ HTTP/1.1" 200 11304
+INFO 2024-01-03 16:33:38,685 basehttp "GET /Newscasters/ HTTP/1.1" 200 11211
+INFO 2024-01-03 16:34:08,106 basehttp "GET /add_newscaster/ HTTP/1.1" 200 1698
+ERROR 2024-01-03 16:34:43,911 log Internal Server Error: /add_newscaster/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 861, in add_newscaster
+    return render(request, 'add_newscaster.html')  # Correct template name
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 28: 'static'. Did you forget to register or load this tag?
+ERROR 2024-01-03 16:34:43,918 basehttp "GET /add_newscaster/ HTTP/1.1" 500 159750
+INFO 2024-01-03 16:34:55,314 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7467
+INFO 2024-01-03 16:37:09,386 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7206
+INFO 2024-01-03 16:37:31,520 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7544
+INFO 2024-01-03 16:37:40,415 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7554
+INFO 2024-01-03 16:38:10,114 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7565
+INFO 2024-01-03 16:38:57,153 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7575
+INFO 2024-01-03 16:39:09,055 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7584
+INFO 2024-01-03 16:40:15,611 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7738
+INFO 2024-01-03 16:41:25,603 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7895
+INFO 2024-01-03 16:41:42,832 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7584
+INFO 2024-01-03 16:42:03,126 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7609
+INFO 2024-01-03 16:42:27,947 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7621
+INFO 2024-01-03 16:42:56,815 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7622
+INFO 2024-01-03 16:44:27,858 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7650
+INFO 2024-01-03 16:45:39,737 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7636
+INFO 2024-01-03 16:45:39,759 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-03 16:45:40,041 log Not Found: /favicon.ico
+WARNING 2024-01-03 16:45:40,042 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 16:45:51,479 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7708
+INFO 2024-01-03 16:45:56,578 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7685
+INFO 2024-01-03 16:46:51,264 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7864
+INFO 2024-01-03 16:47:35,376 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7873
+INFO 2024-01-03 16:47:37,337 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7873
+INFO 2024-01-03 16:47:49,695 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7874
+INFO 2024-01-03 16:47:56,439 basehttp "GET /add_newscaster/ HTTP/1.1" 200 7865
+INFO 2024-01-03 16:48:07,818 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-03 16:48:07,874 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-03 16:48:07,889 basehttp "GET /Newscasters/ HTTP/1.1" 200 12572
+INFO 2024-01-03 16:48:24,854 basehttp "GET /news?newscaster=Mike HTTP/1.1" 301 0
+INFO 2024-01-03 16:48:24,931 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 22405
+INFO 2024-01-03 16:48:35,278 basehttp "GET /intro-text/ HTTP/1.1" 200 8284
+WARNING 2024-01-03 16:48:35,340 log Not Found: /intro-text/style.css
+WARNING 2024-01-03 16:48:35,343 log Not Found: /intro-text/index.js
+WARNING 2024-01-03 16:48:35,344 basehttp "GET /intro-text/style.css HTTP/1.1" 404 5329
+WARNING 2024-01-03 16:48:35,345 basehttp "GET /intro-text/index.js HTTP/1.1" 404 5326
+INFO 2024-01-03 16:48:38,628 basehttp "GET /outro-text/ HTTP/1.1" 200 8993
+WARNING 2024-01-03 16:48:38,660 log Not Found: /outro-text/style.css
+WARNING 2024-01-03 16:48:38,661 basehttp "GET /outro-text/style.css HTTP/1.1" 404 5329

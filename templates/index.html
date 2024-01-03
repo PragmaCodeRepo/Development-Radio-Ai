@@ -482,6 +482,10 @@
                     </div>
                   </div>
                 </div>
+                <div class="mb-4">
+                  <label for="newscaster" class="block text-gblackray-700 font-semibold mb-2">Newscaster</label>
+                  <input type="text" id="news_caster" name="news_caster" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" value="{{ news_caster }}">
+              </div>
                 
                 <button
                   type="submit"
@@ -490,6 +494,7 @@
                  Convert to Audio( Download directly)
                 </button>
                 <br />
+
                 
                 <div class="lg p-6 bg-black rounded-md">
                   <label for="recurrence_type" class="block text-sm font-medium text-white-700">Recurrence Type:</label>
@@ -499,6 +504,8 @@
                     <option value="everyhour">Every Hour</option>
                     <option value="monthly">Monthly</option>
                   </select>
+                   
+                
                 
                   <label for="schedule_time" class="block text-sm font-medium text-white-700 mt-4">Schedule Time:</label>
                   <input type="datetime-local" id="schedule_time" name="schedule_time" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black" />

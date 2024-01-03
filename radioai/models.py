@@ -55,7 +55,8 @@ class SchedulingTasks(models.Model):
     outros = models.CharField(max_length=200, default='')
     is_pending = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    news_caster=models.CharField(max_length=200,default="")
+    # type = "halgffhf"
     def __str__(self):
         return self.sftp_username    
 
@@ -63,10 +64,12 @@ class SchedulingTasks(models.Model):
 class Intros(models.Model):
     intros=models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    news_caster=models.CharField(max_length=200,default="")
 
 class Outros(models.Model):
     outros=models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)    
+    news_caster=models.CharField(max_length=200,default="")
         
 
 
@@ -146,3 +149,15 @@ class SchedulingTasksWeatherByZipcode(models.Model):
     city_zipcode=models.CharField(max_length=200)
     is_pending = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)    
+
+
+#Newscaster    
+    
+class Newscaster(models.Model):
+    name = models.CharField(max_length=100)
+    language = models.CharField(max_length=100)
+    voice = models.CharField(max_length=100)
+    # ... add other fields as necessary
+
+    def __str__(self):
+        return self.name    

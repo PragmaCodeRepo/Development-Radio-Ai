@@ -238,9 +238,11 @@ def convert_to_audio(request):
         schedule_time = request.POST.get('schedule_time')
         recurrence_type = request.POST.get('recurrence_type', 'onetime')
         voice = request.POST.get('voice')
-        intro_user = request.POST.get('intro_user')
-        outro_user = request.POST.get('outro_user')
-
+        intro_user = request.POST.get('intros_user','')
+        outro_user = request.POST.get('outro_user',"hola")
+        news_caster = request.POST.get('news_caster')
+        print(f"outros:{outro_user}")
+        print("request.POST = ",request.POST)
         obj = SchedulingTasks.objects.create(
             sftp_host=sftp_host,
             sftp_port=sftp_port,
@@ -254,7 +256,8 @@ def convert_to_audio(request):
             voice=voice,
             intros=intro_user,
             outros=outro_user,
-            is_pending=True if schedule_time else False
+            is_pending=True if schedule_time else False,
+            news_caster = request.POST.get('news_caster')
         )
         obj.save()
         if limit == 0:
@@ -284,7 +287,19 @@ def convert_to_audio(request):
             schedule_time_datetime = datetime.strptime(schedule_time, "%Y-%m-%dT%H:%M")
             time_to_show = schedule_time_datetime.strftime("%A, %B %d, %Y %I:%M %p")
             recurr_type=recurrence_type
-            return render(request, 'index.html', context={"intros": INTROS_LIST, "outros": OUTROS_LIST, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type})
+            all_intros = Intros.objects.all()
+            all_outros=Outros.objects.all()
+        
+            if news_caster:
+             # Filter intros based on the selected newscaster name
+             intros = [intro for intro in all_intros if intro.news_caster == news_caster]
+             outros=[outro for outro in all_outros if outro.news_caster==news_caster]
+            else:
+                intros = all_intros
+                outros=all_outros
+
+
+            return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
 
 
 # main.delay(time)
@@ -344,8 +359,19 @@ def convert_to_audio(request):
             os.remove(combined_audio_path)
             print("Time = ", datetime.now() - start_time)
             return response
+    news_caster = request.GET.get('newscaster', '')
+    all_intros = Intros.objects.all()
+    all_outros=Outros.objects.all()
+        
+    if news_caster:
+        # Filter intros based on the selected newscaster name
+            intros = [intro for intro in all_intros if intro.news_caster == news_caster]
+            outros=[outro for outro in all_outros if outro.news_caster==news_caster]
+    else:
+            intros = all_intros
+            outros=all_outros
 
-    return render(request, 'index.html', context={"intros": INTROS_LIST, "outros": OUTROS_LIST, "flag": flag})
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"news_caster": news_caster })
 
 
 # weather --code
@@ -444,7 +470,7 @@ def home(request):
 
 def login_view(request):
     if request.user.is_authenticated:
-        return redirect('news/')
+        return redirect('/Newscasters')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -463,7 +489,7 @@ def login_view(request):
                 user=user, session_key=request.session.session_key)
 
             # Change 'news/' to your desired redirect URL
-            return redirect('news/')
+            return redirect('Newscasters/')
         else:
             error_message = 'Invalid login credentials'
             return render(request, 'login.html', {'error_message': error_message})
@@ -776,7 +802,8 @@ def enter_intro(request):
     All_data = Intros.objects.all() 
     if request.method == 'POST':
         intro_text = request.POST.get('intro_text')
-        Intros.objects.create(intros=intro_text)
+        news_caster=request.POST.get('news_caster')
+        Intros.objects.create(intros=intro_text,news_caster=news_caster)
        
         return redirect('/news')
 
@@ -787,7 +814,8 @@ def enter_outro(request):
     suggestions = ['Bringing you real-time updates, Im Barbara Gordon. Appreciate your attention; now, lets return to the music', 'Bringing you real-time updates, I m Barbara Gordon. Appreciate your attention; now, lets return to the music','I m Barbara Gordon, providing you with live news coverage. Thank you for being here, and lets get back to the music','For up-to-the-minute news, I m Barbara Gordon. Grateful for your audience; now, let s resume the music','This is Barbara Gordon, delivering breaking news as it happens. Your presence is appreciated; now, let s enjoy some music.' ]
     if request.method == 'POST':
         outro_text = request.POST.get('outro_text')
-        Outros.objects.create(outros=outro_text)
+        news_caster=request.POST.get('news_caster')
+        Outros.objects.create(outros=outro_text,news_caster=news_caster)
         return redirect('/news')
 
     return render(request, 'enter_outro.html',{'suggestions':suggestions})
@@ -814,3 +842,20 @@ def enter_outro_weather(request):
 
 
 
+def newscaster_list(request):
+    newscasters = Newscaster.objects.all()
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+
+def add_newscaster(request):
+    if request.method == 'POST':
+        # Retrieve form data from POST request
+        name = request.POST.get('name')
+        language = request.POST.get('language')
+        voice = request.POST.get('voice')
+
+        # Create a new Newscaster object and save it
+        Newscaster.objects.create(name=name, language=language, voice=voice)
+        
+        return redirect('/Newscasters')  # Redirect to the add_newscaster page after adding
+
+    return render(request, 'add_newscaster.html')  # Correct template name
