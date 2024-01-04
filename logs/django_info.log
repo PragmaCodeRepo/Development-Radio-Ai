@@ -8405,3 +8405,30 @@ INFO 2024-01-04 18:12:24,790 autoreload C:\VE\Micheal Johnson\copy-django\dev-ne
 INFO 2024-01-04 18:12:26,046 autoreload Watching for file changes with StatReloader
 INFO 2024-01-04 18:12:28,272 basehttp "GET /Newscasters/ HTTP/1.1" 200 13326
 INFO 2024-01-04 18:12:30,265 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15948
+INFO 2024-01-04 18:55:37,393 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 19:02:23,349 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15948
+INFO 2024-01-04 19:02:26,917 basehttp "GET /Newscasters/ HTTP/1.1" 200 13326
+INFO 2024-01-04 19:02:28,937 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23013
+INFO 2024-01-04 19:02:37,180 basehttp "GET /Newscasters/ HTTP/1.1" 200 13326
+INFO 2024-01-04 19:03:29,328 basehttp "GET /Newscasters/ HTTP/1.1" 200 13495
+INFO 2024-01-04 19:03:36,218 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2024-01-04 19:03:36,757 basehttp "GET /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 200 4230
+INFO 2024-01-04 19:04:00,396 basehttp "POST /admin/login/?next=/admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2024-01-04 19:04:00,595 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10945
+INFO 2024-01-04 19:04:00,665 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 19:05:41,504 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 200 9769
+INFO 2024-01-04 19:05:43,142 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2024-01-04 19:05:43,165 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 9663
+INFO 2024-01-04 19:05:43,190 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 19:05:47,247 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11857
+INFO 2024-01-04 19:05:47,276 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 19:05:53,529 basehttp "POST /admin/radioai/newscaster/ HTTP/1.1" 200 9552
+INFO 2024-01-04 19:05:54,524 basehttp "POST /admin/radioai/newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-04 19:05:54,576 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11711
+INFO 2024-01-04 19:05:54,615 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 19:05:56,795 basehttp "GET /Newscasters/ HTTP/1.1" 200 12082
+INFO 2024-01-04 19:06:05,975 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23013
+INFO 2024-01-04 19:07:38,603 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23013
+INFO 2024-01-04 19:07:41,045 basehttp "GET /Newscasters/ HTTP/1.1" 200 12110
+INFO 2024-01-04 19:07:43,087 basehttp "GET /Newscasters/ HTTP/1.1" 200 12110
+INFO 2024-01-04 19:08:14,554 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23194

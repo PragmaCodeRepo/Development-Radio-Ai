@@ -19,6 +19,15 @@
       body.dark-mode a:hover {
         color: #48a999;
       }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .bg-gray-800.text-white.text-center.py-4 {
+        margin-top: auto;
+      }
       /* Add more dark mode styles as needed */
     </style>
   </head>
@@ -573,8 +582,12 @@
     
     <footer class="bg-gray-800 text-white text-center py-4">
       <div class="container mx-auto">
-          <p>&copy; 2023 GroundRushLabs</p>
+        <p>&copy; <span id="currentYear"></span> - GroundRushLabs</p>
       </div>
-  </footer>
+    </footer>
+    <script>
+      // Update the current year dynamically
+      document.getElementById('currentYear').innerText = new Date().getFullYear();
+  </script>
   </body>
 </html>
