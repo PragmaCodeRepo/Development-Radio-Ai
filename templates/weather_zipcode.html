@@ -24,8 +24,10 @@
       }
       .system {
         margin-top: 8rem;
-        margin-bottom:8rem
-        
+        margin-bottom: 8rem;
+      }
+      .boxx {
+        width: 50rem;
       }
       
 
@@ -34,7 +36,7 @@
   </head>
 
   <body
-    class="bg-black bg-cover bg-center bg-fixed min-h-screen flex items-center justify-center  dark-mode"
+    class="bg-black bg-cover bg-center bg-fixed min-h-screen flex items-center justify-center dark-mode"
   >
     <!-- Navbar -->
     <header class="absolute inset-x-0 top-0 z-50">
@@ -46,10 +48,10 @@
           <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">Groundrushlabs</span>
             <img
-                class="h-8 w-auto bg-white"
-                src="{% static 'images\Groundrushlabs_logo.png' %}"
-                alt="groundrushlabs-logo"
-              />
+              class="h-8 w-auto bg-white"
+              src="{% static 'images\Groundrushlabs_logo.png' %}"
+              alt="groundrushlabs-logo"
+            />
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -75,22 +77,23 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          {% comment %} <a
+          {% comment %}
+          <a
             href="/weather"
             class="text-sm font-semibold leading-6 text-black-900"
             >Weather</a
-          > {% endcomment %}
-          <a
-            href="/weather-zipcode"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >Weather-by-zipcode</a
           >
-          <a
-            href="/news"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >News</a
-          >
-          
+          {% endcomment %}
+          <div class="flex items-center justify-center">
+            <span class="text-green-500 pr-2">&#8592;</span>
+            <!-- Left arrow emoji -->
+            <a
+              href="/Newscasters"
+              class="text-sm font-semibold leading-6 text-black-900"
+              >Newscasters</a
+            >
+          </div>
+
           <a
             href="/contactus"
             class="text-sm font-semibold leading-6 text-black-900"
@@ -109,15 +112,14 @@
           {% if user.is_authenticated %}
           <p class="text-lg text-black-800">
             Welcome,
-            <span class="text-blue-500 font-semibold"
-              >{{ user.username }}</span
+            <span class="text-blue-500 font-semibold">{{ user.username }}</span
             >!
           </p>
           <a
-              href="/admin"
-              class="text-sm font-semibold leading-6 text-black-900"
-              >Admin Panel</a
-            >
+            href="/admin"
+            class="text-sm font-semibold leading-6 text-black-900"
+            >Admin Panel</a
+          >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
 
@@ -206,48 +208,61 @@
     </header>
 
     <!-- Content Section -->
-    
+
     <div
-      class=" top-0 left-0 w-full h-full flex items-center justify-center system "
+      class="top-0 left-0 w-full h-full flex items-center justify-center system"
     >
-    
-      <div class=" p-6 bg-black rounded-lg shadow-md ">
-        <div class="mt-5 mb-5 {% if flag %}border-dotted border-2 border-gray-400 p-4 rounded-lg{% endif %}">
+      <div class="p-6 bg-black rounded-lg shadow-md boxx">
+        <div
+          class="mt-5 mb-5 {% if flag %}border-dotted border-2 border-gray-400 p-4 rounded-lg{% endif %}"
+        >
           {% if flag %}
-              <div class="flex justify-center mb-5">
-                  <h1 class="text-2xl sm:text-2xl lg:text-2xl font-bold text-center">
-                      Task scheduled successfully for 
-                      {% if recurr_type == "weekly" %}
-                          <span class="text-blue-500">Every Week</span> at {{ time_to_show }}!
-                      {% elif recurr_type == "monthly" %}
-                          <span class="text-green-500">Every Month</span> at {{ time_to_show }}!
-                      {% elif recurr_type == "everyhour" %}
-                          <span class="text-yellow-500">Every Hour</span> at {{ time_to_show }}!
-                      {% else %}
-                      <span class="text-red-500">One time</span> at {{ time_to_show }}!
-                      {% endif %}
-                  </h1>
-              </div>
+          <div class="flex justify-center mb-5">
+            <h1 class="text-2xl sm:text-2xl lg:text-2xl font-bold text-center">
+              Task scheduled successfully for {% if recurr_type == "weekly" %}
+              <span class="text-blue-500">Every Week</span> at {{ time_to_show
+              }}! {% elif recurr_type == "monthly" %}
+              <span class="text-green-500">Every Month</span> at {{ time_to_show
+              }}! {% elif recurr_type == "everyhour" %}
+              <span class="text-yellow-500">Every Hour</span> at {{ time_to_show
+              }}! {% else %} <span class="text-red-500">One time</span> at {{
+              time_to_show }}! {% endif %}
+            </h1>
+          </div>
           {% endif %}
-      </div>
-        <h1 class="text-2xl font-semibold mb-4 text-white text-center">Fetch Weather by ZIP Code</h1>
+        </div>
+        <h1 class="text-2xl font-semibold mb-4 text-white text-center">
+          Fetch Weather by ZIP Code
+        </h1>
         <form method="POST">
           {% csrf_token %}
           <div class="flex flex-col space-y-4">
             <div class="mb-4">
-              <label for="zip_code" class="block text-black-700">Enter ZIP Code:</label>
-              <input type="text" id="city_zipcode" name="city_zipcode" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 bg-black" />
+              <label for="zip_code" class="block text-black-700"
+                >Enter ZIP Code:</label
+              >
+              <input
+                type="text"
+                id="city_zipcode"
+                name="city_zipcode"
+                required
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 bg-black"
+              />
             </div>
-            
+
             <div class="mb-4">
-              <label for="voice_gender" class="block text-black-700">Select Voices :</label>
+              <label for="voice_gender" class="block text-black-700"
+                >Select Voices :</label
+              >
               <select
-                  name="voice"
-                  class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:border-indigo-500 focus:outline-none focus:ring-opacity-50 mb-10 bg-black"
-                >
-                {% comment %} <option value="Neutral">Neutral</option>
+                name="voice"
+                class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:border-indigo-500 focus:outline-none focus:ring-opacity-50 mb-10 bg-black"
+              >
+                {% comment %}
+                <option value="Neutral">Neutral</option>
                 <option value="Female">Female</option>
-                <option value="Male">Male</option> {% endcomment %}
+                <option value="Male">Male</option>
+                {% endcomment %}
                 <option value="21m00Tcm4TlvDq8ikWAM">Rachel</option>
                 <option value="29vD33N1CtxCmqQRPOHJ">Drew</option>
                 <option value="2EiwWnXFnvU5JabPnv8n">Clyde</option>
@@ -267,76 +282,164 @@
                 <option value="TX3LPaxmHKxFdv7VOQHJ">Liam</option>
                 <option value="ThT5KcBeYPX3keUQqHPh">Dorothy</option>
                 <option value="TxGEqnHWrfWFTfGW9XjX">Josh</option>
-                </select>
+              </select>
             </div>
-            
+
             {% include "select_intro_outro.html" %}
-            
+
             <div class="flex justify-center mb-4">
-              <a href="/intro-text-weather" class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 transition duration-300">
+              <a
+                href="/intro-text-weather"
+                class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 transition duration-300"
+              >
                 <p class="text-white">Edit Your Intros</p>
               </a>
-              <a href="/outro-text-weather" class="ml-4 inline-block px-4 py-2 bg-green-500 rounded hover:bg-green-600 transition duration-300">
+              <a
+                href="/outro-text-weather"
+                class="ml-4 inline-block px-4 py-2 bg-green-500 rounded hover:bg-green-600 transition duration-300"
+              >
                 <p class="text-white">Edit Your Outros</p>
               </a>
             </div>
-            
-        
+
             <div class="flex flex-col space-y-4">
               <div class="mb-4">
-                <label for="sftp_host" class="block text-black-700 font-semibold mb-2">SFTP Host:</label>
-                <input type="text" id="sftp_host" name="sftp_host" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black " />
+                <label
+                  for="sftp_host"
+                  class="block text-black-700 font-semibold mb-2"
+                  >SFTP Host:</label
+                >
+                <input
+                  type="text"
+                  id="sftp_host"
+                  name="sftp_host"
+                  required
+                  class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+                />
               </div>
-        
+
               <div class="mb-4">
-                <label for="sftp_port" class="block text-black-700 font-semibold mb-2">SFTP Port:</label>
-                <input type="number" id="sftp_port" name="sftp_port" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+                <label
+                  for="sftp_port"
+                  class="block text-black-700 font-semibold mb-2"
+                  >SFTP Port:</label
+                >
+                <input
+                  type="number"
+                  id="sftp_port"
+                  name="sftp_port"
+                  required
+                  class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+                />
               </div>
-        
+
               <div class="mb-4">
-                <label for="sftp_username" class="block text-black-700 font-semibold mb-2">SFTP Username:</label>
-                <input type="text" id="sftp_username" name="sftp_username" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+                <label
+                  for="sftp_username"
+                  class="block text-black-700 font-semibold mb-2"
+                  >SFTP Username:</label
+                >
+                <input
+                  type="text"
+                  id="sftp_username"
+                  name="sftp_username"
+                  required
+                  class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+                />
               </div>
-        
+
               <div class="mb-4">
-                <label for="sftp_password" class="block text-black-700 font-semibold mb-2">SFTP Password:</label>
-                <input type="password" id="sftp_password" name="sftp_password" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+                <label
+                  for="sftp_password"
+                  class="block text-black-700 font-semibold mb-2"
+                  >SFTP Password:</label
+                >
+                <input
+                  type="password"
+                  id="sftp_password"
+                  name="sftp_password"
+                  required
+                  class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+                />
               </div>
-        
+
               <div class="mb-4">
-                <label for="sftp_remote_path" class="block text-black-700 font-semibold mb-2">SFTP Remote Path</label>
-                <input type="text" id="sftp_remote_path" name="sftp_remote_path" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" />
+                <label
+                  for="sftp_remote_path"
+                  class="block text-black-700 font-semibold mb-2"
+                  >SFTP Remote Path</label
+                >
+                <input
+                  type="text"
+                  id="sftp_remote_path"
+                  name="sftp_remote_path"
+                  required
+                  class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+                />
               </div>
             </div>
-        
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+            <div class="mb-4">
+              <label
+                for="newscaster"
+                class="block text-gblackray-700 font-semibold mb-2"
+                >Newscaster</label
+              >
+              <input
+                type="text"
+                id="news_caster"
+                name="news_caster"
+                required
+                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
+                value="{{ news_caster }}"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            >
               Fetch Weather
             </button>
-        
+
             <div class="flex flex-col space-y-4">
-              <label for="schedule_time" class="block text-sm font-medium text-white-700">Schedule Time:</label>
-              <input type="datetime-local" id="schedule_time" name="schedule_time" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black" />
-        
-              <label for="recurrence_type" class="block text-sm font-medium text-black-700">Recurrence Type:</label>
-              <select id="recurrence_type" name="recurrence_type" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black">
+              <label
+                for="schedule_time"
+                class="block text-sm font-medium text-white-700"
+                >Schedule Time:</label
+              >
+              <input
+                type="datetime-local"
+                id="schedule_time"
+                name="schedule_time"
+                class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black"
+              />
+
+              <label
+                for="recurrence_type"
+                class="block text-sm font-medium text-black-700"
+                >Recurrence Type:</label
+              >
+              <select
+                id="recurrence_type"
+                name="recurrence_type"
+                class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black"
+              >
                 <option value="onetime">One time</option>
                 <option value="weekly">Weekly</option>
                 <option value="everyhour">Every Hour</option>
                 <option value="monthly">Monthly</option>
               </select>
-        
-              <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+
+              <button
+                type="submit"
+                class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+              >
                 Submit
               </button>
             </div>
           </div>
         </form>
-        
       </div>
     </div>
-    
   </body>
-  <div>
-    
-</div>
 </html>

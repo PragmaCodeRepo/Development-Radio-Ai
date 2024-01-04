@@ -7894,3 +7894,343 @@ WARNING 2024-01-03 16:48:35,345 basehttp "GET /intro-text/index.js HTTP/1.1" 404
 INFO 2024-01-03 16:48:38,628 basehttp "GET /outro-text/ HTTP/1.1" 200 8993
 WARNING 2024-01-03 16:48:38,660 log Not Found: /outro-text/style.css
 WARNING 2024-01-03 16:48:38,661 basehttp "GET /outro-text/style.css HTTP/1.1" 404 5329
+INFO 2024-01-03 17:02:07,955 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 17:02:21,661 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 17:02:21,687 basehttp "GET /Newscasters/ HTTP/1.1" 200 12572
+INFO 2024-01-03 17:02:24,513 basehttp "GET /logout/ HTTP/1.1" 200 3433
+INFO 2024-01-03 17:02:24,646 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-01-03 17:02:24,646 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-01-03 17:02:24,649 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-01-03 17:02:24,650 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-01-03 17:02:27,190 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-01-03 17:02:36,720 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-01-03 17:02:36,753 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 17:04:46,157 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 17:04:47,419 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 17:05:21,086 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-03 17:05:25,580 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 17:08:12,774 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 17:08:15,951 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 17:08:16,066 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+WARNING 2024-01-03 17:08:16,853 log Not Found: /favicon.ico
+WARNING 2024-01-03 17:08:16,853 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 19:55:21,524 basehttp "GET /news/ HTTP/1.1" 200 23702
+INFO 2024-01-03 20:05:40,944 autoreload Watching for file changes with StatReloader
+INFO 2024-01-03 20:05:55,573 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:06:00,004 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22441
+INFO 2024-01-03 20:08:47,973 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22277
+INFO 2024-01-03 20:08:49,167 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 20:08:49,181 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:08:51,312 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22277
+INFO 2024-01-03 20:11:46,860 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 20:11:46,876 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:11:49,354 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22277
+INFO 2024-01-03 20:11:57,418 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 14954
+INFO 2024-01-03 20:14:40,733 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 14954
+INFO 2024-01-03 20:14:48,529 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 14963
+INFO 2024-01-03 20:14:48,743 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-03 20:14:49,130 log Not Found: /favicon.ico
+WARNING 2024-01-03 20:14:49,131 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 20:14:53,855 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 14963
+INFO 2024-01-03 20:14:53,871 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-03 20:14:54,220 log Not Found: /favicon.ico
+WARNING 2024-01-03 20:14:54,221 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 20:16:09,140 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15001
+INFO 2024-01-03 20:16:20,352 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15001
+INFO 2024-01-03 20:16:41,070 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-03 20:16:41,089 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:27:43,220 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8007
+INFO 2024-01-03 20:31:03,220 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8264
+INFO 2024-01-03 20:31:58,657 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8279
+INFO 2024-01-03 20:32:14,345 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:32:15,436 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8279
+INFO 2024-01-03 20:33:17,276 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8360
+INFO 2024-01-03 20:33:36,915 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:33:43,786 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:33:53,501 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:34:07,606 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:34:17,702 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:34:24,788 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:34:33,800 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8361
+INFO 2024-01-03 20:35:06,984 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8360
+INFO 2024-01-03 20:36:29,699 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8308
+INFO 2024-01-03 20:36:31,534 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:39:59,639 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:40:01,268 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22417
+INFO 2024-01-03 20:40:02,828 basehttp "GET /Newscasters/ HTTP/1.1" 200 12571
+INFO 2024-01-03 20:40:50,690 basehttp "GET /contactus/ HTTP/1.1" 200 64511
+INFO 2024-01-03 20:40:53,697 basehttp "GET /aboutus/ HTTP/1.1" 200 5289
+INFO 2024-01-03 20:40:53,943 basehttp "GET /static/images/background.png HTTP/1.1" 200 3143670
+INFO 2024-01-03 20:41:43,478 basehttp "GET /Newscasters/ HTTP/1.1" 200 12727
+INFO 2024-01-03 20:43:02,702 basehttp "GET /Newscasters/ HTTP/1.1" 200 12748
+INFO 2024-01-03 20:43:09,252 basehttp "GET /Newscasters/ HTTP/1.1" 200 12748
+INFO 2024-01-03 20:43:09,278 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-03 20:43:09,829 log Not Found: /favicon.ico
+WARNING 2024-01-03 20:43:09,830 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-03 20:43:33,914 basehttp "GET /Newscasters/ HTTP/1.1" 200 12776
+INFO 2024-01-03 20:43:37,099 basehttp "GET /Newscasters/ HTTP/1.1" 200 12776
+INFO 2024-01-03 20:44:37,153 basehttp "GET /Newscasters/ HTTP/1.1" 200 12810
+INFO 2024-01-03 20:44:41,880 basehttp "GET /Newscasters/ HTTP/1.1" 200 12821
+INFO 2024-01-03 20:44:47,703 basehttp "GET /Newscasters/ HTTP/1.1" 200 12832
+INFO 2024-01-03 20:44:54,047 basehttp "GET /Newscasters/ HTTP/1.1" 200 12822
+INFO 2024-01-03 20:44:58,868 basehttp "GET /Newscasters/ HTTP/1.1" 200 12832
+INFO 2024-01-04 11:37:58,895 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22417
+INFO 2024-01-04 11:42:29,525 basehttp "GET /Newscasters/ HTTP/1.1" 200 13010
+INFO 2024-01-04 11:42:29,762 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-04 11:42:30,404 log Not Found: /favicon.ico
+WARNING 2024-01-04 11:42:30,408 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-04 12:18:32,037 basehttp "GET /Newscasters/ HTTP/1.1" 200 13150
+INFO 2024-01-04 12:18:38,208 basehttp "GET /Newscasters/ HTTP/1.1" 200 13150
+INFO 2024-01-04 12:18:38,237 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-04 12:18:38,614 log Not Found: /favicon.ico
+WARNING 2024-01-04 12:18:38,615 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-04 12:18:40,316 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22417
+INFO 2024-01-04 12:19:14,197 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15165
+INFO 2024-01-04 12:20:03,388 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 12:20:04,974 basehttp "GET /weather-zipcode?newscaster=Pranjal HTTP/1.1" 301 0
+INFO 2024-01-04 12:20:05,013 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15165
+INFO 2024-01-04 12:32:15,549 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\admin.py changed, reloading.
+INFO 2024-01-04 12:32:19,116 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 12:33:11,954 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 12:33:16,999 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15165
+INFO 2024-01-04 12:36:18,545 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 12:36:19,994 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 12:36:22,538 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15510
+INFO 2024-01-04 12:36:26,851 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 14025
+INFO 2024-01-04 12:36:27,034 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-01-04 12:36:27,162 log Not Found: /favicon.ico
+WARNING 2024-01-04 12:36:27,163 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-04 12:36:32,311 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 9752
+INFO 2024-01-04 12:36:34,337 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-01-04 12:36:34,362 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10133
+INFO 2024-01-04 12:36:34,384 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-01-04 12:36:47,783 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasksweatherbyzipcode.intros
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 639, in zipcode_weather
+    obj = SchedulingTasksWeatherByZipcode.objects.create(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasksweatherbyzipcode.intros
+ERROR 2024-01-04 12:36:47,918 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 500 176538
+INFO 2024-01-04 12:37:18,010 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 12:37:20,371 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-04 12:37:24,470 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasksweatherbyzipcode.intros
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 639, in zipcode_weather
+    obj = SchedulingTasksWeatherByZipcode.objects.create(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: radioai_schedulingtasksweatherbyzipcode.intros
+ERROR 2024-01-04 12:37:24,511 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 500 175489
+INFO 2024-01-04 12:39:21,814 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 12:39:23,467 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 12:39:36,118 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 125222
+INFO 2024-01-04 12:39:43,460 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 13814
+INFO 2024-01-04 12:39:43,489 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 12:39:59,705 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15510
+INFO 2024-01-04 12:41:18,095 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15510
+INFO 2024-01-04 12:41:41,337 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15519
+INFO 2024-01-04 12:41:49,526 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15519
+INFO 2024-01-04 12:41:52,565 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 8057
+WARNING 2024-01-04 12:41:52,640 log Not Found: /intro-text-weather/style.css
+WARNING 2024-01-04 12:41:52,641 basehttp "GET /intro-text-weather/style.css HTTP/1.1" 404 5353
+WARNING 2024-01-04 12:41:52,687 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-04 12:41:52,688 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 5350
+INFO 2024-01-04 12:42:02,393 basehttp "GET /news/ HTTP/1.1" 200 23687
+INFO 2024-01-04 12:42:30,717 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15519
+INFO 2024-01-04 12:43:08,139 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15511
+INFO 2024-01-04 12:43:15,093 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15511
+INFO 2024-01-04 12:43:56,902 basehttp "GET /news/ HTTP/1.1" 200 23662
+INFO 2024-01-04 12:44:04,284 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15494
+INFO 2024-01-04 12:44:44,379 basehttp "GET /news/ HTTP/1.1" 200 23671
+INFO 2024-01-04 12:44:52,572 basehttp "GET /news/ HTTP/1.1" 200 23671
+INFO 2024-01-04 12:45:19,550 basehttp "GET /news/ HTTP/1.1" 200 23680
+INFO 2024-01-04 12:45:27,200 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15512
+INFO 2024-01-04 12:46:19,129 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 8057
+WARNING 2024-01-04 12:46:19,157 log Not Found: /intro-text-weather/style.css
+WARNING 2024-01-04 12:46:19,158 basehttp "GET /intro-text-weather/style.css HTTP/1.1" 404 5353
+WARNING 2024-01-04 12:46:19,178 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-04 12:46:19,179 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 5350
+INFO 2024-01-04 12:46:36,386 basehttp "POST /intro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-04 12:46:36,422 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-04 12:46:36,432 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15544
+INFO 2024-01-04 12:46:59,554 basehttp "POST /weather-zipcode/ HTTP/1.1" 200 129820
+INFO 2024-01-04 12:47:00,047 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 14661
+INFO 2024-01-04 12:47:00,078 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 12:48:51,367 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 13331
+INFO 2024-01-04 12:48:51,394 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 12:51:38,717 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 12:51:39,996 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 12:51:50,204 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15544
+INFO 2024-01-04 12:51:52,202 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 8271
+WARNING 2024-01-04 12:51:52,273 log Not Found: /intro-text-weather/style.css
+WARNING 2024-01-04 12:51:52,276 basehttp "GET /intro-text-weather/style.css HTTP/1.1" 404 5353
+WARNING 2024-01-04 12:51:52,339 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-04 12:51:52,382 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 5350
+INFO 2024-01-04 12:52:01,146 basehttp "POST /intro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-04 12:52:01,191 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-04 12:52:01,203 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15576
+INFO 2024-01-04 12:52:06,153 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 13646
+INFO 2024-01-04 12:52:06,178 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 12:57:11,386 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 16047
+INFO 2024-01-04 12:57:29,593 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15817
+INFO 2024-01-04 12:58:17,011 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15798
+INFO 2024-01-04 12:58:27,007 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15809
+INFO 2024-01-04 12:58:38,865 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 15817
+INFO 2024-01-04 12:58:48,761 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 8271
+WARNING 2024-01-04 12:58:48,793 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-04 12:58:48,795 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 5350
+INFO 2024-01-04 12:58:51,109 basehttp "GET /news/ HTTP/1.1" 200 23762
+INFO 2024-01-04 12:59:03,040 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-04 12:59:03,053 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 12:59:05,563 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15817
+INFO 2024-01-04 13:02:20,169 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 13:02:22,386 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 13:02:27,434 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-04 13:02:27,460 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 13:02:29,714 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15817
+INFO 2024-01-04 13:02:46,401 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 13646
+INFO 2024-01-04 13:02:46,442 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:02:56,749 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-04 13:02:56,765 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 13:02:58,601 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22465
+INFO 2024-01-04 13:03:50,930 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 13:03:52,894 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 13:04:59,102 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 13:05:01,032 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 13:05:04,138 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22465
+INFO 2024-01-04 13:05:12,134 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-04 13:05:12,159 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 13:05:13,929 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15587
+INFO 2024-01-04 13:07:29,268 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 143613
+INFO 2024-01-04 13:08:06,310 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9586
+INFO 2024-01-04 13:08:06,371 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:08:09,876 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 15509
+INFO 2024-01-04 13:08:09,901 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:08:38,185 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 140269
+INFO 2024-01-04 13:08:43,248 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 16357
+INFO 2024-01-04 13:08:43,273 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:08:57,976 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 13:08:59,969 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 13:09:09,148 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 162003
+INFO 2024-01-04 13:09:09,526 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 17212
+INFO 2024-01-04 13:09:09,634 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:30:44,596 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-01-04 13:30:45,935 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 13:30:59,819 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15587
+INFO 2024-01-04 13:32:02,994 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/46/change/ HTTP/1.1" 200 19782
+INFO 2024-01-04 13:32:03,022 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:32:07,856 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/46/change/ HTTP/1.1" 302 0
+INFO 2024-01-04 13:32:07,901 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 17521
+INFO 2024-01-04 13:32:07,924 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:32:55,648 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 17228
+INFO 2024-01-04 13:32:55,679 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 13:34:14,275 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15734
+INFO 2024-01-04 13:34:46,535 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15789
+INFO 2024-01-04 13:34:54,214 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15789
+INFO 2024-01-04 13:34:54,428 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-04 13:34:54,862 log Not Found: /favicon.ico
+WARNING 2024-01-04 13:34:54,863 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-04 13:35:01,782 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15789
+INFO 2024-01-04 13:35:08,948 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15790
+INFO 2024-01-04 13:35:24,922 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15811
+INFO 2024-01-04 13:35:37,929 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15799
+INFO 2024-01-04 13:36:38,142 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15812
+INFO 2024-01-04 13:36:46,958 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15827
+INFO 2024-01-04 13:36:56,137 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15844
+INFO 2024-01-04 13:37:23,414 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15843
+INFO 2024-01-04 13:37:36,393 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15665
+INFO 2024-01-04 13:38:44,335 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15825
+INFO 2024-01-04 13:39:08,224 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15580
+INFO 2024-01-04 13:39:12,676 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 13:39:33,015 basehttp "GET /weather-zipcode?newscaster=Vishal HTTP/1.1" 301 0
+INFO 2024-01-04 13:39:33,026 basehttp "GET /weather-zipcode/?newscaster=Vishal HTTP/1.1" 200 15494
+INFO 2024-01-04 13:39:40,940 basehttp "GET /outro-text-weather/ HTTP/1.1" 200 9178
+WARNING 2024-01-04 13:39:41,004 log Not Found: /outro-text-weather/style.css
+WARNING 2024-01-04 13:39:41,005 basehttp "GET /outro-text-weather/style.css HTTP/1.1" 404 5353

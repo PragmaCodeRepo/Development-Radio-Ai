@@ -224,7 +224,7 @@
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Edit
                     </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button onclick="redirectToWeather('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Weather
                     </button>
                     <button onclick="redirectToNews('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -245,6 +245,31 @@
         function redirectToNews(newscasterName) {
             window.location.href = `/news?newscaster=${encodeURIComponent(newscasterName)}`;
         }
+        function redirectToWeather(newscasterName) {
+          window.location.href = `/weather-zipcode?newscaster=${encodeURIComponent(newscasterName)}`;
+      }
     </script>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="container mx-auto">
+            <p>&copy; <span id="currentYear"></span> - GroundRushLabs</p>
+        </div>
+    </footer>
 </body>
+<script>
+    // Update the current year dynamically
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+</script>
+</body>
+
 </html>

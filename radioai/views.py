@@ -458,6 +458,7 @@ def generate_speech(request):
                        sftp_port, sftp_username, sftp_password)
 
         return FileResponse(open(output_file, 'rb'), as_attachment=True, filename='combined_weather_report.mp3')
+        
 
     return render(request, 'weather.html', context={"intros": INTROS_LIST, "outros": OUTROS_LIST})
 
@@ -610,13 +611,13 @@ def fetch_weather_by_zip(zip_code):
 
 
 def zipcode_weather(request):
-    INTROS_LIST = [
-        intro.intros for intro in Intros.objects.all()
-    ]
-    OUTROS_LIST = [
-        outro.outros for outro in Outros.objects.all()
+    # INTROS_LIST = [
+    #     intro.intros for intro in Intros.objects.all()
+    # ]
+    # OUTROS_LIST = [
+    #     outro.outros for outro in Outros.objects.all()
 
-    ]
+    # ]
     flag=False
     time_to_show=None
     recurr_type=None
@@ -629,11 +630,12 @@ def zipcode_weather(request):
         sftp_remote_path = request.POST.get('sftp_remote_path')
         city_zipcode = request.POST.get('city_zipcode')
         # voice_gender = request.POST.get('voice_gender', 'NEUTRAL')
-        intro_user = request.POST.get('intro_user')
-        outro_user = request.POST.get('outro_user')
+        intro_user = request.POST.get('intros_user','')
+        outro_user = request.POST.get('outro_user','')
         schedule_time = request.POST.get('schedule_time')
         recurrence_type = request.POST.get('recurrence_type', 'onetime')
         voice = request.POST.get('voice')
+        news_caster=request.POST.get('news_caster')
         print("city_zipcode = ", city_zipcode)
         obj = SchedulingTasksWeatherByZipcode.objects.create(
             sftp_host=sftp_host,
@@ -647,7 +649,8 @@ def zipcode_weather(request):
             voice=voice,
             intros=intro_user,
             outros=outro_user,
-            is_pending=True if schedule_time else False
+            is_pending=True if schedule_time else False,
+            news_caster=news_caster
         )
         obj.save()
         if schedule_time:
@@ -676,8 +679,20 @@ def zipcode_weather(request):
                        sftp_port, sftp_username, sftp_password)
 
         return FileResponse(open(output_file, 'rb'), as_attachment=True, filename='zipcode_weather_report.mp3')
+    news_caster = request.GET.get('newscaster', '')
+    all_intros = Intros.objects.all()
+    all_outros=Outros.objects.all()
+        
+    if news_caster:
+        # Filter intros based on the selected newscaster name
+            intros = [intro for intro in all_intros if intro.news_caster == news_caster]
+            outros=[outro for outro in all_outros if outro.news_caster==news_caster]
+    else:
+            intros = all_intros
+            outros=all_outros
 
-    return render(request, 'weather_zipcode.html', context={"intros": INTROS_LIST, "outros": OUTROS_LIST})
+
+    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,})
 
 
 # chatbotdef chatgpt(request):
@@ -825,7 +840,8 @@ def enter_intro_weather(request):
     suggestions = ['This is Barbara Gordon, reporting live from our news desk. Lets get you up to speed on current events ', 'Good day, folks. Barbara Gordon here, and I m here to bring you the latest news from our studio', 'Greetings, Im Barbara Gordon, and I ll be your news anchor for today, bringing you the latest updates']
     if request.method == 'POST':
         intro_text = request.POST.get('intro_text')
-        Intros.objects.create(intros=intro_text)
+        news_caster=request.POST.get('news_caster')
+        Intros.objects.create(intros=intro_text,news_caster=news_caster)
         return redirect('/weather-zipcode')
 
     return render(request, 'enter_intro_weather.html',{'suggestions':suggestions})
@@ -835,7 +851,8 @@ def enter_outro_weather(request):
     suggestions = ['Bringing you real-time updates, Im Barbara Gordon. Appreciate your attention; now, lets return to the music', 'Bringing you real-time updates, I m Barbara Gordon. Appreciate your attention; now, lets return to the music','I m Barbara Gordon, providing you with live news coverage. Thank you for being here, and lets get back to the music','For up-to-the-minute news, I m Barbara Gordon. Grateful for your audience; now, let s resume the music','This is Barbara Gordon, delivering breaking news as it happens. Your presence is appreciated; now, let s enjoy some music.' ]
     if request.method == 'POST':
         outro_text = request.POST.get('outro_text')
-        Outros.objects.create(outros=outro_text)
+        news_caster=request.POST.get('news_caster')
+        Outros.objects.create(outros=outro_text,news_caster=news_caster)
         return redirect('/weather-zipcode')
 
     return render(request, 'enter_outro_weather.html',{'suggestions':suggestions})

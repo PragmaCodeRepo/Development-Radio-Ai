@@ -148,7 +148,8 @@ class SchedulingTasksWeatherByZipcode(models.Model):
     outros = models.CharField(max_length=200, default='')
     city_zipcode=models.CharField(max_length=200)
     is_pending = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)    
+    created_at = models.DateTimeField(auto_now_add=True)   
+    news_caster=models.CharField(max_length=200,default="") 
 
 
 #Newscaster    

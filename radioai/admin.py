@@ -35,9 +35,9 @@ admin.site.register(SchedulingTasksWeather,SchedulingWeatherAdmin)
 
 class SchedulingWeatherByZipcode(admin.ModelAdmin):
     list_display = ('sftp_host', 'sftp_port', 'sftp_username', 'sftp_password', 'sftp_remote_path',
-                    'city_zipcode', 'schedule_time', 'created_at', 'recurrence_type','voice', 'intros', 'outros', 'is_pending')
+                    'city_zipcode', 'schedule_time', 'created_at', 'recurrence_type','voice', 'intros', 'outros', 'is_pending','news_caster',)
     
-
+    list_filter = ('news_caster',) 
 admin.site.register(SchedulingTasksWeatherByZipcode,SchedulingWeatherByZipcode)    
 
 
