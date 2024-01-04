@@ -371,7 +371,7 @@ def convert_to_audio(request):
             intros = all_intros
             outros=all_outros
 
-    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"news_caster": news_caster })
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, })
 
 
 # weather --code
@@ -597,6 +597,8 @@ def fetch_weather_by_zip(zip_code):
     url = f'http://api.openweathermap.org/data/2.5/weather?zip={zip_code},US&appid={api_key}&units=metric'
     response = requests.get(url)
     data = response.json()
+    
+
 
     if data['cod'] == 200:
         weather_description = data['weather'][0]['description']
@@ -621,6 +623,7 @@ def zipcode_weather(request):
     flag=False
     time_to_show=None
     recurr_type=None
+    
 
     if request.method == 'POST':
         sftp_host = request.POST.get('sftp_host')
@@ -658,7 +661,18 @@ def zipcode_weather(request):
             schedule_time_datetime = datetime.strptime(schedule_time, "%Y-%m-%dT%H:%M")
             time_to_show = schedule_time_datetime.strftime("%A, %B %d, %Y %I:%M %p")
             recurr_type=recurrence_type
-            return render(request, 'weather_zipcode.html', context={"intros": INTROS_LIST, "outros": OUTROS_LIST, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type})
+            all_intros = Intros.objects.all()
+            all_outros=Outros.objects.all()
+            if news_caster:
+             # Filter intros based on the selected newscaster name
+                intros = [intro for intro in all_intros if intro.news_caster == news_caster]
+                outros=[outro for outro in all_outros if outro.news_caster==news_caster]
+            else:
+                intros = all_intros
+                outros=all_outros
+            
+            
+            return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
 
         weather_data = f'{intro_user} <break time="1s"/>'
         weather_report = fetch_weather_by_zip(city_zipcode)
@@ -692,7 +706,7 @@ def zipcode_weather(request):
             outros=all_outros
 
 
-    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,})
+    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type})
 
 
 # chatbotdef chatgpt(request):
