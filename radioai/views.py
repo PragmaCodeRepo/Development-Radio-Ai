@@ -371,7 +371,7 @@ def convert_to_audio(request):
             intros = all_intros
             outros=all_outros
 
-    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, })
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,'news_caster':news_caster })
 
 
 # weather --code
@@ -706,7 +706,7 @@ def zipcode_weather(request):
             outros=all_outros
 
 
-    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type})
+    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,'news_caster':news_caster})
 
 
 # chatbotdef chatgpt(request):

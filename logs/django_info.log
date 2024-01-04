@@ -8388,3 +8388,20 @@ INFO 2024-01-04 17:31:45,392 basehttp "GET /weather-zipcode/?newscaster=Pranjal 
 INFO 2024-01-04 17:31:51,184 basehttp "GET /weather-zipcode?newscaster=Mike HTTP/1.1" 301 0
 INFO 2024-01-04 17:31:51,193 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 15942
 INFO 2024-01-04 17:34:46,238 basehttp "GET /Newscasters/ HTTP/1.1" 200 13325
+INFO 2024-01-04 17:58:49,304 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 17:59:17,385 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22818
+INFO 2024-01-04 17:59:28,261 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22818
+INFO 2024-01-04 17:59:28,455 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-04 17:59:28,686 log Not Found: /favicon.ico
+WARNING 2024-01-04 17:59:28,687 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-04 18:10:58,750 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 18:11:07,353 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-01-04 18:11:19,368 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-01-04 18:11:19,385 basehttp "GET /Newscasters/ HTTP/1.1" 200 13326
+INFO 2024-01-04 18:11:22,466 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 22826
+INFO 2024-01-04 18:12:12,274 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 18:12:14,089 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 18:12:24,790 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 18:12:26,046 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 18:12:28,272 basehttp "GET /Newscasters/ HTTP/1.1" 200 13326
+INFO 2024-01-04 18:12:30,265 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15948
