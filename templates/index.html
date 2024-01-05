@@ -486,42 +486,46 @@
                       />
                     </div>
                   </div>
+                  <div class="w-1/2 mb-4">
+                    <label for="newscaster" class="block text-gblackray-700 font-semibold mb-2">Newscaster</label>
+                    <input type="text" id="news_caster" name="news_caster" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" value="{{ news_caster }}">
                 </div>
-                <div class="mb-4">
-                  <label for="newscaster" class="block text-gblackray-700 font-semibold mb-2">Newscaster</label>
-                  <input type="text" id="news_caster" name="news_caster" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black" value="{{ news_caster }}">
-              </div>
+                </div>
+                
                 
                 <button
                   type="submit"
                   class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                 Convert to Audio( Download directly)
+                 Convert to Audio
                 </button>
                 <br />
-
+                <button
+                type="button"
+                class="mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-300"
+                onclick="toggleScheduleText()"
+            >
+                Schedule Task
+            </button>
                 
-                <div class="lg p-6 bg-black rounded-md">
-                  <label for="recurrence_type" class="block text-sm font-medium text-white-700">Recurrence Type:</label>
-                  <select id="recurrence_type" name="recurrence_type" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black">
-                    <option value="onetime">One time</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="everyhour">Every Hour</option>
-                    <option value="monthly">Monthly</option>
-                  </select>
-                   
+                <div class="lg p-6 bg-black rounded-md flex space-x-4 hidden"id="schedule_text">
+                  <div class="w-1/2 mt-5">
+                      <label for="recurrence_type" class="block text-sm font-medium text-white-700">Recurrence Type:</label>
+                      <select id="recurrence_type" name="recurrence_type" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black">
+                          <option value="onetime">One time</option>
+                          <option value="weekly">Weekly</option>
+                          <option value="everyhour">Every Hour</option>
+                          <option value="monthly">Monthly</option>
+                      </select>
+                  </div>
+              
+                  <div class="w-1/2">
+                      <label for="schedule_time" class="block text-sm font-medium text-white-700 mt-4">Schedule Time:</label>
+                      <input type="datetime-local" id="schedule_time" name="schedule_time" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black" />
+                  </div>
+              </div>
+              
                 
-                
-                  <label for="schedule_time" class="block text-sm font-medium text-white-700 mt-4">Schedule Time:</label>
-                  <input type="datetime-local" id="schedule_time" name="schedule_time" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-black" />
-                
-                  <button type="submit" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Schedule Task</button>
-                </div>
-                <a
-                  href="/weather-zipcode"
-                  class="text-sm font-semibold leading-6 text-black-900"
-                  >Weather bot <span aria-hidden="true">→</span></a
-                >
                 
               </form>
 
@@ -588,6 +592,11 @@
     <script>
       // Update the current year dynamically
       document.getElementById('currentYear').innerText = new Date().getFullYear();
+      function toggleScheduleText() {
+        var scheduleText = document.getElementById("schedule_text");
+        scheduleText.classList.toggle("hidden");
+    }
+
   </script>
   </body>
 </html>
