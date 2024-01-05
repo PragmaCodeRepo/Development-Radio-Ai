@@ -8732,3 +8732,8 @@ INFO 2024-01-05 13:31:08,421 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
 INFO 2024-01-05 13:31:08,461 basehttp "GET /Newscasters HTTP/1.1" 301 0
 INFO 2024-01-05 13:31:08,474 basehttp "GET /Newscasters/ HTTP/1.1" 200 17809
 INFO 2024-01-05 13:31:20,193 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 15948
+INFO 2024-01-05 13:51:15,582 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 13:51:19,379 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 16172
+INFO 2024-01-05 13:52:11,408 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 16201
+INFO 2024-01-05 13:53:27,420 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 308706
+INFO 2024-01-05 13:54:05,305 basehttp "POST /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 16560
