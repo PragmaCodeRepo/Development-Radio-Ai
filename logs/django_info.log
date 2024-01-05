@@ -8841,3 +8841,15 @@ INFO 2024-01-05 16:12:20,873 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-01-05 16:12:35,160 basehttp "GET / HTTP/1.1" 302 0
 INFO 2024-01-05 16:12:35,199 basehttp "GET /Newscasters/ HTTP/1.1" 200 17806
 INFO 2024-01-05 16:12:35,257 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2024-01-05 17:06:48,047 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 17:06:51,022 basehttp "GET /Newscasters/ HTTP/1.1" 200 17806
+INFO 2024-01-05 17:06:54,213 basehttp "GET /news?newscaster=Pranjal HTTP/1.1" 301 0
+INFO 2024-01-05 17:06:54,227 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23966
+INFO 2024-01-05 17:07:51,994 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23363
+INFO 2024-01-05 17:08:10,433 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23374
+INFO 2024-01-05 17:08:46,448 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23385
+INFO 2024-01-05 17:08:53,639 basehttp "GET /Newscasters/ HTTP/1.1" 200 17806
+INFO 2024-01-05 17:08:55,944 basehttp "GET /weather-zipcode?newscaster=Pranjal HTTP/1.1" 301 0
+INFO 2024-01-05 17:08:55,955 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 16204
+INFO 2024-01-05 17:09:31,440 basehttp "GET /weather-zipcode/?newscaster=Pranjal HTTP/1.1" 200 16226
+INFO 2024-01-05 17:09:47,571 basehttp "GET /Newscasters/ HTTP/1.1" 200 17806
