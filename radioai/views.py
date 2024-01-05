@@ -885,6 +885,9 @@ def add_newscaster(request):
         name = request.POST.get('name')
         language = request.POST.get('language')
         voice = request.POST.get('voice')
+        exsiting_newscaster=Newscaster.objects.filter(name=name).first()
+        if exsiting_newscaster:
+            return render(request, 'add_newscaster.html', {'error_message': 'Newscaster with the same name already exists'})
 
         # Create a new Newscaster object and save it
         Newscaster.objects.create(name=name, language=language, voice=voice)

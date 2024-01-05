@@ -213,9 +213,11 @@
         <!-- Add Newscaster Button -->
         <div class="container mx-auto p-4 flex justify-end">
             <a href="/add_newscaster">
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                    Add Newscaster
-                </button>
+              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                <span class="text-lg">&plus;</span> Add Newscaster
+            </button>
+            
+            
             </a>
         </div>
         
@@ -239,12 +241,17 @@
                       {% csrf_token %}
                       <input type="hidden" name="newscaster_id" value="{{ newscaster.id }}">
                       <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                          Delete
-                      </button>
+                        &#128465; Delete
+                    </button>
+                    
+                    
                   </form>
-                  <a href="{% url 'rss_to_audio_app:edit_newscaster' newscaster.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded edit-link">
-                    Edit
+                  <a href="{% url 'rss_to_audio_app:edit_newscaster' newscaster.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded edit-link" style="font-size: 0.91em;">
+                    &#9998; Edit
                 </a>
+                
+                
+                
                 
                   <button onclick="redirectToWeather('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       Weather
