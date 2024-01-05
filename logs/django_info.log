@@ -8432,3 +8432,238 @@ INFO 2024-01-04 19:07:38,603 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 2
 INFO 2024-01-04 19:07:41,045 basehttp "GET /Newscasters/ HTTP/1.1" 200 12110
 INFO 2024-01-04 19:07:43,087 basehttp "GET /Newscasters/ HTTP/1.1" 200 12110
 INFO 2024-01-04 19:08:14,554 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23194
+INFO 2024-01-04 20:03:36,704 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 20:03:48,140 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11571
+INFO 2024-01-04 20:03:48,276 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-04 20:03:51,712 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23194
+INFO 2024-01-04 20:03:55,697 basehttp "GET /Newscasters/ HTTP/1.1" 200 12262
+INFO 2024-01-04 20:04:00,283 basehttp "GET /add_newscaster/?name=Pranjal&language=english&voice=Pranjal HTTP/1.1" 200 8309
+INFO 2024-01-04 20:05:22,148 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 20:05:25,581 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 20:05:30,151 basehttp "GET /Newscasters/ HTTP/1.1" 200 12262
+INFO 2024-01-04 20:05:31,445 basehttp "GET /add_newscaster/?name=Pranjal&language=english&voice=Pranjal HTTP/1.1" 200 8309
+INFO 2024-01-04 20:06:16,268 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-04 20:06:16,421 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-04 20:06:16,431 basehttp "GET /Newscasters/ HTTP/1.1" 200 13731
+INFO 2024-01-04 20:07:11,080 basehttp "GET /Newscasters/ HTTP/1.1" 200 13731
+INFO 2024-01-04 20:07:11,275 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-04 20:07:11,833 log Not Found: /favicon.ico
+WARNING 2024-01-04 20:07:11,834 basehttp "GET /favicon.ico HTTP/1.1" 404 5302
+INFO 2024-01-04 20:07:12,515 basehttp "GET /add_newscaster/?name=Mike&language=English&voice=Mike HTTP/1.1" 200 8309
+INFO 2024-01-04 20:10:10,951 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 20:10:13,128 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 20:10:19,200 basehttp "GET /Newscasters/ HTTP/1.1" 200 13731
+INFO 2024-01-04 20:10:21,123 basehttp "GET /add_newscaster/?name=Pranjal&language=english&voice=Pranjal HTTP/1.1" 200 8309
+INFO 2024-01-04 20:12:43,909 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-04 20:12:46,329 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 20:13:35,896 autoreload Watching for file changes with StatReloader
+INFO 2024-01-04 20:13:37,727 basehttp "GET /Newscasters/ HTTP/1.1" 200 13522
+INFO 2024-01-04 20:13:39,287 basehttp "GET /Newscasters/ HTTP/1.1" 200 13522
+INFO 2024-01-04 20:13:41,531 basehttp "GET /news/?newscaster=Pranjal HTTP/1.1" 200 23194
+INFO 2024-01-04 20:18:52,794 basehttp "GET /Newscasters/ HTTP/1.1" 200 13522
+INFO 2024-01-05 11:44:41,971 basehttp "GET /Newscasters/ HTTP/1.1" 200 13522
+INFO 2024-01-05 11:47:51,859 basehttp "GET /Newscasters/ HTTP/1.1" 200 13542
+INFO 2024-01-05 11:48:48,728 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-01-05 11:48:53,015 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:49:13,159 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 11:49:14,766 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:50:46,666 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-01-05 11:50:47,936 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:50:53,443 basehttp "GET /Newscasters/ HTTP/1.1" 200 14712
+INFO 2024-01-05 11:51:03,997 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11857
+INFO 2024-01-05 11:51:04,069 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-01-05 11:51:04,209 log Not Found: /favicon.ico
+WARNING 2024-01-05 11:51:04,210 basehttp "GET /favicon.ico HTTP/1.1" 404 5519
+INFO 2024-01-05 11:51:11,022 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11857
+INFO 2024-01-05 11:51:11,045 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-05 11:51:54,197 basehttp "GET /Newscasters/ HTTP/1.1" 200 14712
+INFO 2024-01-05 11:52:27,286 basehttp "GET /Newscasters/ HTTP/1.1" 200 14758
+WARNING 2024-01-05 11:52:47,246 log Not Found: /Newscasters/1
+WARNING 2024-01-05 11:52:47,248 basehttp "GET /Newscasters/1 HTTP/1.1" 404 5525
+WARNING 2024-01-05 11:52:50,512 log Not Found: /Newscasters/10
+WARNING 2024-01-05 11:52:50,513 basehttp "GET /Newscasters/10 HTTP/1.1" 404 5528
+INFO 2024-01-05 11:53:21,990 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-01-05 11:53:23,243 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:53:38,275 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 11:53:39,724 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:59:39,213 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-01-05 11:59:40,952 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:59:50,612 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 11:59:51,805 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 11:59:59,754 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 12:00:00,970 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-05 12:00:27,910 log Internal Server Error: /Newscasters/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 879, in newscaster_list
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_newscaster' not found. 'delete_newscaster' is not a valid view function or pattern name.
+ERROR 2024-01-05 12:00:27,965 basehttp "GET /Newscasters/ HTTP/1.1" 500 143799
+INFO 2024-01-05 12:01:06,609 basehttp "GET /Newscasters/ HTTP/1.1" 200 14718
+ERROR 2024-01-05 12:01:09,209 log Internal Server Error: /delete_newscaster/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 908, in delete_newscaster
+    return redirect('Newscasters')
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'Newscasters' not found. 'Newscasters' is not a valid view function or pattern name.
+ERROR 2024-01-05 12:01:09,220 basehttp "POST /delete_newscaster/ HTTP/1.1" 500 95153
+INFO 2024-01-05 12:01:36,906 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 12:01:38,412 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 12:01:39,612 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:01:39,641 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:01:39,660 basehttp "GET /Newscasters/ HTTP/1.1" 200 13010
+INFO 2024-01-05 12:01:52,020 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11573
+INFO 2024-01-05 12:01:52,044 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-05 12:02:00,472 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 23193
+INFO 2024-01-05 12:03:08,046 basehttp "GET /news/ HTTP/1.1" 200 23671
+INFO 2024-01-05 12:03:32,653 basehttp "GET /Newscasters/ HTTP/1.1" 200 13010
+INFO 2024-01-05 12:04:04,595 basehttp "GET /Newscasters/ HTTP/1.1" 200 13007
+INFO 2024-01-05 12:05:56,654 basehttp "GET /Newscasters/ HTTP/1.1" 200 12887
+INFO 2024-01-05 12:06:24,597 basehttp "GET /Newscasters/ HTTP/1.1" 200 12887
+INFO 2024-01-05 12:06:34,757 basehttp "GET /Newscasters/ HTTP/1.1" 200 13124
+INFO 2024-01-05 12:08:49,450 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8308
+INFO 2024-01-05 12:09:02,891 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:09:02,913 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:09:02,924 basehttp "GET /Newscasters/ HTTP/1.1" 200 14867
+INFO 2024-01-05 12:09:06,154 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8308
+INFO 2024-01-05 12:09:23,148 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:09:23,165 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:09:23,177 basehttp "GET /Newscasters/ HTTP/1.1" 200 16613
+INFO 2024-01-05 12:09:27,251 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8308
+INFO 2024-01-05 12:09:43,882 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:09:43,901 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:09:43,913 basehttp "GET /Newscasters/ HTTP/1.1" 200 18357
+INFO 2024-01-05 12:09:57,997 basehttp "GET /weather-zipcode?newscaster=Nandita HTTP/1.1" 301 0
+INFO 2024-01-05 12:09:58,010 basehttp "GET /weather-zipcode/?newscaster=Nandita HTTP/1.1" 200 15466
+INFO 2024-01-05 12:10:01,772 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 8272
+WARNING 2024-01-05 12:10:01,817 log Not Found: /intro-text-weather/style.css
+WARNING 2024-01-05 12:10:01,819 basehttp "GET /intro-text-weather/style.css HTTP/1.1" 404 5544
+WARNING 2024-01-05 12:10:01,823 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-05 12:10:01,825 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 5541
+INFO 2024-01-05 12:10:07,924 basehttp "POST /intro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:10:07,941 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-05 12:10:07,953 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 16659
+INFO 2024-01-05 12:10:14,153 basehttp "GET /outro-text-weather/ HTTP/1.1" 200 9179
+WARNING 2024-01-05 12:10:14,190 log Not Found: /outro-text-weather/style.css
+WARNING 2024-01-05 12:10:14,191 basehttp "GET /outro-text-weather/style.css HTTP/1.1" 404 5544
+INFO 2024-01-05 12:10:21,312 basehttp "POST /outro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:10:21,363 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-05 12:10:21,379 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 16905
+INFO 2024-01-05 12:10:27,102 basehttp "GET /Newscasters/ HTTP/1.1" 200 18357
+INFO 2024-01-05 12:10:29,810 basehttp "GET /weather-zipcode/?newscaster=Nandita HTTP/1.1" 200 15712
+INFO 2024-01-05 12:10:35,802 basehttp "GET /Newscasters/ HTTP/1.1" 200 18357
+INFO 2024-01-05 12:17:17,317 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-01-05 12:17:18,780 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 12:17:52,914 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 12:17:54,385 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 12:19:57,622 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-01-05 12:19:58,987 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 12:20:02,824 basehttp "GET /Newscasters/ HTTP/1.1" 200 18538
+INFO 2024-01-05 12:20:05,716 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 7114
+ERROR 2024-01-05 12:20:27,673 log Internal Server Error: /edit_newscaster/4/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 920, in edit_newscaster
+    return redirect('newscaster_list')
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'newscaster_list' not found. 'newscaster_list' is not a valid view function or pattern name.
+ERROR 2024-01-05 12:20:27,679 basehttp "POST /edit_newscaster/4/ HTTP/1.1" 500 96384
+INFO 2024-01-05 12:20:45,727 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-05 12:20:47,243 autoreload Watching for file changes with StatReloader
+INFO 2024-01-05 12:20:49,528 basehttp "POST /edit_newscaster/4/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:20:49,558 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:20:49,584 basehttp "GET /Newscasters/ HTTP/1.1" 200 18555
+INFO 2024-01-05 12:20:54,363 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 7123
+INFO 2024-01-05 12:21:01,501 basehttp "POST /edit_newscaster/4/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:21:01,523 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:21:01,537 basehttp "GET /Newscasters/ HTTP/1.1" 200 18543
+INFO 2024-01-05 12:21:25,668 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 7138
+INFO 2024-01-05 12:21:35,446 basehttp "GET /Newscasters/ HTTP/1.1" 200 18543
+INFO 2024-01-05 12:21:37,904 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 7138
+INFO 2024-01-05 12:21:45,758 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 7138
+INFO 2024-01-05 12:21:58,520 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 7150
+INFO 2024-01-05 12:22:41,924 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 8272
+INFO 2024-01-05 12:23:04,355 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 8283
+INFO 2024-01-05 12:23:21,865 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 8305
+INFO 2024-01-05 12:23:25,427 basehttp "POST /edit_newscaster/4/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:23:25,450 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:23:25,465 basehttp "GET /Newscasters/ HTTP/1.1" 200 18543
+INFO 2024-01-05 12:24:59,175 basehttp "GET /Newscasters/ HTTP/1.1" 200 18543
+INFO 2024-01-05 12:24:59,369 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-01-05 12:25:00,826 log Not Found: /favicon.ico
+WARNING 2024-01-05 12:25:00,827 basehttp "GET /favicon.ico HTTP/1.1" 404 5706
+INFO 2024-01-05 12:25:40,010 basehttp "GET /Newscasters/ HTTP/1.1" 200 18606
+INFO 2024-01-05 12:26:09,333 basehttp "GET /Newscasters/ HTTP/1.1" 200 18611
+INFO 2024-01-05 12:28:36,000 basehttp "GET /Newscasters/ HTTP/1.1" 200 18872
+INFO 2024-01-05 12:28:37,978 basehttp "GET /edit_newscaster/4/ HTTP/1.1" 200 8305
+INFO 2024-01-05 12:28:48,461 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8308
+INFO 2024-01-05 12:30:47,852 basehttp "GET /add_newscaster/ HTTP/1.1" 200 9475
+INFO 2024-01-05 12:30:49,544 basehttp "GET /add_newscaster/ HTTP/1.1" 200 9475
+INFO 2024-01-05 12:30:52,104 basehttp "GET /add_newscaster/ HTTP/1.1" 200 9475
+INFO 2024-01-05 12:40:23,016 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8571
+INFO 2024-01-05 12:40:42,718 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:40:42,753 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:40:42,769 basehttp "GET /Newscasters/ HTTP/1.1" 200 20664
+INFO 2024-01-05 12:40:53,300 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:40:53,321 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:40:53,334 basehttp "GET /Newscasters/ HTTP/1.1" 200 18885
+INFO 2024-01-05 12:40:58,552 basehttp "GET /edit_newscaster/7/ HTTP/1.1" 200 8308
+INFO 2024-01-05 12:41:04,573 basehttp "POST /edit_newscaster/7/ HTTP/1.1" 302 0
+INFO 2024-01-05 12:41:04,593 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-05 12:41:04,605 basehttp "GET /Newscasters/ HTTP/1.1" 200 18881

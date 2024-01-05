@@ -29,6 +29,8 @@ from decouple import config
 import boto3
 from django.http import JsonResponse
 from requests.exceptions import RequestException
+from django.shortcuts import render, redirect, get_object_or_404
+
 
 
 # logging
@@ -890,3 +892,31 @@ def add_newscaster(request):
         return redirect('/Newscasters')  # Redirect to the add_newscaster page after adding
 
     return render(request, 'add_newscaster.html')  # Correct template name
+
+from django.contrib import messages
+
+def delete_newscaster(request):
+    if request.method == 'POST':
+        newscaster_id = request.POST.get('newscaster_id')
+        newscaster = Newscaster.objects.filter(id=newscaster_id).first()
+
+        if newscaster:
+            newscaster.delete()
+            messages.success(request, 'Newscaster deleted successfully')
+        else:
+            messages.error(request, 'Newscaster not found')
+
+    return redirect('/Newscasters')
+
+
+def edit_newscaster(request, newscaster_id):
+    newscaster = get_object_or_404(Newscaster, id=newscaster_id)
+
+    if request.method == 'POST':
+        newscaster.name = request.POST['name']
+        newscaster.language = request.POST['language']
+        newscaster.voice = request.POST['voice']
+        newscaster.save()
+        return redirect('/Newscasters')
+
+    return render(request, 'edit_newscaster.html', {'newscaster': newscaster})

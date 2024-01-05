@@ -37,7 +37,8 @@ urlpatterns = [
     path('add_newscaster/', login_required(views.add_newscaster), name='add_newscaster'),
     # path('weather/',login_required(views.home), name='home'),
     path('generate/', login_required(views.generate_speech), name='generate_speech'),
-     path('logout/', CustomLogoutView.as_view(), name='logout'),
-     
+     path('logout/', CustomLogoutView.as_view(), name='logout'), 
+     path('delete_newscaster/',login_required(views.delete_newscaster) , name='delete_newscaster'),    
+      path('edit_newscaster/<int:newscaster_id>/', login_required(views.edit_newscaster), name='edit_newscaster'),
     path('', views.login_view,name='login')
 ]

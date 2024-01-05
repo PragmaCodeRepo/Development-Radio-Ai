@@ -28,14 +28,6 @@
         .bg-gray-800.text-white.text-center.py-4 {
           margin-top: auto;
         }
-        body.dark-mode a.edit-link {
-          color: #ffffff;  /* Set the desired white color for dark mode */
-      }
-      
-      body.dark-mode a.edit-link:hover {
-          color: #ffffff;  /* Set the desired white color for dark mode on hover */
-      }
-        
         /* Add more dark mode styles as needed */
       </style>
 </head>
@@ -209,91 +201,39 @@
           </div>
         </div>
       </header>
-    <div class="container mx-auto p-4 ">
-        <!-- Add Newscaster Button -->
-        <div class="container mx-auto p-4 flex justify-end">
-            <a href="/add_newscaster">
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                    Add Newscaster
-                </button>
-            </a>
-        </div>
-        
-        <h1 class="text-2xl font-bold mb-4">Newscaster List</h1>
-        <!-- Grid layout for newscasters -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            <!-- Dynamically create cards for each newscaster -->
-            {% for newscaster in newscasters %}
-            <div class="bg-black rounded shadow-md overflow-hidden ">
-                <div class="px-6 py-4 ">
-                    <div class="font-bold text-xl mb-2 text-white">{{ newscaster.name }}</div>
-                    <p class="text-grawhitey-700 text-base mb-4">
-                        Language: {{ newscaster.language }}
-                    </p>
-                    <p class="text-white-700 text-base">
-                        Voice: {{ newscaster.voice }}
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2 flex items-center space-x-4">
-                  <form method="post" action="{% url 'rss_to_audio_app:delete_newscaster' %}">
-                      {% csrf_token %}
-                      <input type="hidden" name="newscaster_id" value="{{ newscaster.id }}">
-                      <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                          Delete
-                      </button>
-                  </form>
-                  <a href="{% url 'rss_to_audio_app:edit_newscaster' newscaster.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded edit-link">
-                    Edit
-                </a>
+      <div class="bg-gray-800 min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded shadow-md w-full md:w-1/2 lg:w-1/3">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Edit Newscaster</h1>
+            <form method="post" action="{% url 'rss_to_audio_app:edit_newscaster' newscaster.id %}" class="space-y-4">
+                {% csrf_token %}
                 
-                  <button onclick="redirectToWeather('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                      Weather
-                  </button>
-                  <button onclick="redirectToNews('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                      News Bot
-                  </button>
-                  <br/>
-              <br/>
-              <br/>
-              </div>
-              
-              
-            </div>
-            {% endfor %}
-            
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" value="{{ newscaster.name }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+                <div>
+                    <label for="language" class="block text-sm font-medium text-gray-700">Language:</label>
+                    <input type="text" id="language" name="language" value="{{ newscaster.language }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+                <div>
+                    <label for="voice" class="block text-sm font-medium text-gray-700">Voice:</label>
+                    <input type="text" id="voice" name="voice" value="{{ newscaster.voice }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+                <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue">
+                    Save Changes
+                </button>
+            </form>
         </div>
     </div>
     
-    </a>
-    <script>
-        function redirectToNews(newscasterName) {
-            window.location.href = `/news?newscaster=${encodeURIComponent(newscasterName)}`;
-        }
-        function redirectToWeather(newscasterName) {
-          window.location.href = `/weather-zipcode?newscaster=${encodeURIComponent(newscasterName)}`;
-      }
-    </script>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-
-
-    <footer class="bg-gray-800 text-white text-center py-4">
-      <div class="container mx-auto">
-        <p>&copy; <span id="currentYear"></span> - GroundRushLabs</p>
-      </div>
-    </footer>
-</body>
-<script>
-    // Update the current year dynamically
-    document.getElementById('currentYear').innerText = new Date().getFullYear();
-</script>
+    
 </body>
 
 </html>
