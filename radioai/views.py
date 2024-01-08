@@ -182,6 +182,8 @@ def overlay_background_music(news_content, music_file_path, output_file):
         vfx.loop, duration=news_audio.duration)
 
     background_music = background_music.volumex(0.5)
+    news_audio = news_audio.volumex(3)
+
 
     # Combine the two audio files
     combined_audio = CompositeAudioClip(
