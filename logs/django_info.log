@@ -9657,3 +9657,157 @@ INFO 2024-01-29 11:54:45,806 basehttp "POST /admin/radioai/schedulingtasksweathe
 INFO 2024-01-29 11:54:47,175 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
 INFO 2024-01-29 11:54:47,222 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10133
 INFO 2024-01-29 11:54:47,243 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-29 12:21:50,431 autoreload Watching for file changes with StatReloader
+INFO 2024-01-29 12:21:53,988 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 12:21:56,029 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 9968
+INFO 2024-01-29 12:21:56,057 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-29 12:21:57,867 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 9968
+INFO 2024-01-29 12:21:57,958 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-29 12:22:01,795 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18552
+INFO 2024-01-29 12:22:21,923 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18909
+INFO 2024-01-29 12:22:25,547 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 14035
+INFO 2024-01-29 12:22:25,573 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2024-01-29 12:23:26,964 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:23:26,968 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:23:56,577 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18552
+INFO 2024-01-29 12:23:59,427 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25124
+INFO 2024-01-29 12:25:01,384 basehttp "POST /news/ HTTP/1.1" 200 2671430
+INFO 2024-01-29 12:33:10,401 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18552
+ERROR 2024-01-29 12:33:16,515 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:33:16,518 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:37:25,690 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 12:37:27,170 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-29 12:37:34,990 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:37:34,995 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:38:04,198 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 12:38:05,622 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-29 12:38:08,908 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:38:08,911 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:38:16,762 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 12:38:17,962 autoreload Watching for file changes with StatReloader
+INFO 2024-01-29 12:39:20,418 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25124
+INFO 2024-01-29 12:39:50,706 basehttp "POST /news/ HTTP/1.1" 200 732517
+INFO 2024-01-29 12:46:14,148 autoreload Watching for file changes with StatReloader
+INFO 2024-01-29 12:46:18,898 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-01-29 12:46:20,027 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-01-29 12:46:20,078 basehttp "GET /admin/login/?next=/admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 4266
+INFO 2024-01-29 12:46:31,036 basehttp "POST /admin/login/?next=/admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 4427
+INFO 2024-01-29 12:46:38,076 basehttp "POST /admin/login/?next=/admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-01-29 12:46:38,191 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 18264
+INFO 2024-01-29 12:46:38,219 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-29 12:46:39,461 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-29 12:46:39,478 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-29 12:46:39,491 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 12:46:43,208 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18552
+ERROR 2024-01-29 12:46:47,694 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 691, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:46:47,708 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:47:53,516 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 12:47:55,022 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-29 12:48:02,187 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:48:02,192 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:48:07,862 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 12:48:09,067 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-29 12:48:14,989 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:48:14,995 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:48:44,585 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-29 12:48:52,094 log Internal Server Error: /weather-zipcode/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 692, in zipcode_weather
+    overlay_background_music(audio_content, music_file_path, output_file)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 174, in overlay_background_music
+    temp_file.write(news_content)
+TypeError: a bytes-like object is required, not 'NoneType'
+ERROR 2024-01-29 12:48:52,098 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 83992
+INFO 2024-01-29 12:52:17,924 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 12:52:23,222 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-29 12:52:32,689 log Internal Server Error: /weather-zipcode/
+ERROR 2024-01-29 12:52:32,690 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 500 30
+INFO 2024-01-29 12:52:53,410 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 12:52:54,914 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25124
+INFO 2024-01-29 12:54:47,553 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 12:54:49,555 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18938
+INFO 2024-01-29 12:55:03,081 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 337964
+INFO 2024-01-29 13:16:21,151 autoreload Watching for file changes with StatReloader
+INFO 2024-01-29 13:16:40,683 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 19295
+INFO 2024-01-29 13:17:11,349 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 321663
+INFO 2024-01-29 13:17:49,067 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 368893
+INFO 2024-01-29 13:18:28,350 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-29 13:18:29,707 autoreload Watching for file changes with StatReloader
+INFO 2024-01-29 13:18:40,841 basehttp - Broken pipe from ('127.0.0.1', 63298)
+INFO 2024-01-29 13:18:45,689 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 336710
+INFO 2024-01-29 13:19:13,345 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 13:19:24,676 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109

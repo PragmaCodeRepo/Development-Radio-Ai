@@ -182,7 +182,7 @@ def overlay_background_music(news_content, music_file_path, output_file):
         vfx.loop, duration=news_audio.duration)
 
     background_music = background_music.volumex(0.5)
-    news_audio = news_audio.volumex(3)
+    news_audio = news_audio.volumex(2.5)
 
 
     # Combine the two audio files
@@ -685,6 +685,9 @@ def zipcode_weather(request):
 
         # Convert this text to speech using Google Text-to-Speech
         audio_content = convert_text_to_audio(weather_data, voice)
+        if audio_content is None:
+            # Handle the case when audio content is not generated successfully
+            return HttpResponse("Error generating audio content", status=500)
 
         # Overlay background music
         music_file_path = "music.mp3"
