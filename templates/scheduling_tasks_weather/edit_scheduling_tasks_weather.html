@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newscaster List</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Gn5384xqQ1z8YhQR/zX6FZEEiHq7OfK9c3NFH7xNGbHxxjM++XxKxh4kL12Mz3T6RL5Ob8Vfl6XaMLepQOl8kmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Dark Mode styles */
+        body.dark-mode {
+          background-color: #1a1a1a;
+          color: #ffffff;
+        }
+        body.dark-mode a {
+          color: #78c0a8;
+        }
+        body.dark-mode a:hover {
+          color: #48a999;
+        }
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+  
+        .bg-gray-800.text-white.text-center.py-4 {
+          margin-top: auto;
+        }
+        /* Add more dark mode styles as needed */
+      </style>
+</head>
+<body class="bg-gray-100 dark-mode">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+   
+    {% include 'navbar.html' %}
+
+      <div class=" bg-gray-800 min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded shadow-md w-full md:w-1/2 lg:w-1/3 mt-10 mb-10">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Edit scheduling Weather Task</h1>
+            <form method="post" action="{% url 'rss_to_audio_app:edit_scheduling_weather_task' scheduling_weather_task.id %}" class="space-y-4">
+                {% csrf_token %}
+                
+                <div>
+                    <label for="sftp_host" class="block text-sm font-medium text-gray-700">SFTP HOST:</label>
+                    <input type="text" id="sftp_host" name="sftp_host" value="{{ scheduling_weather_task.sftp_host }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+                <div>
+                    <label for="sftp_port" class="block text-sm font-medium text-gray-700">SFTP HOST:</label>
+                    <input type="text" id="sftp_port" name="sftp_port" value="{{ scheduling_weather_task.sftp_port }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+                <div>
+                    <label for="sftp_username" class="block text-sm font-medium text-gray-700">SFTP USERNAME:</label>
+                    <input type="text" id="sftp_username" name="sftp_username" value="{{ scheduling_weather_task.sftp_username }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="sftp_password" class="block text-sm font-medium text-gray-700">SFTP PASSWORD:</label>
+                    <div class="relative">
+                        <input type="password" id="sftp_password" name="sftp_password" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black" required>
+                        <span class="absolute right-0 top-0 mt-2 mr-2 cursor-pointer" id="togglePassword">
+                            <i class="far fa-eye" id="eyeIcon"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="sftp_remote_path" class="block text-sm font-medium text-gray-700">SFTP REMOTE ADDRESS:</label>
+                    <input type="text" id="sftp_remote_path" name="sftp_remote_path" value="{{ scheduling_weather_task.sftp_remote_path }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+                <div>
+                    <label for="rss_url" class="block text-sm font-medium text-gray-700">Enter zipcode:</label>
+                    <input type="text" id="city_zipcode" name="city_zipcode" value="{{ scheduling_weather_task.city_zipcode }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+                
+                <div>
+                    <label for="schedule_time" class="block text-sm font-medium text-gray-700">SCHEDULE TIME:</label>
+                    <input type="text" id="schedule_time" name="schedule_time" value="{{ scheduling_weather_task.schedule_time }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+                
+                <div class=" mt-5">
+                  <label for="recurrence_type" class="block text-sm font-medium text-gray-700">Recurrence Type:</label>
+                  <select id="recurrence_type" name="recurrence_type" class= "block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black" >
+                    <option value="onetime" {% if scheduling_weather_task.recurrence_type == 'onetime' %} selected {% endif %}>One time</option>
+                    <option value="weekly" {% if scheduling_weather_task.recurrence_type == 'weekly' %} selected {% endif %}>Weekly</option>
+                    <option value="everyhour" {% if scheduling_weather_task.recurrence_type == 'everyhour' %} selected {% endif %}>Every Hour</option>
+                    <option value="monthly" {% if scheduling_weather_task.recurrence_type == 'monthly' %} selected {% endif %}>Monthly</option>
+                  </select>
+              </div>
+              <div>
+                <label for="voice" class="block text-sm font-medium text-gray-700">VOICE:</label>
+                <select
+                  name="voice"
+                  id="voice"
+                  class="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black "
+                >
+                <option value="Joanna" {% if scheduling_weather_task.voice == 'Joanna' %} selected {% endif %}>Joanna</option>
+                <option value="Matthew" {% if scheduling_weather_task.voice == 'Matthew' %} selected {% endif %}>Matthew</option>
+                <option value="Ivy" {% if scheduling_weather_task.voice == 'Ivy' %} selected {% endif %}>Ivy</option>
+                <option value="Justin" {% if scheduling_weather_task.voice == 'Justin' %} selected {% endif %}>Justin</option>
+                <option value="Kendra" {% if scheduling_weather_task.voice == 'Kendra' %} selected {% endif %}>Kendra</option>
+                <option value="Kimberly" {% if scheduling_weather_task.voice == 'Kimberly' %} selected {% endif %}>Kimberly</option>
+                <option value="Salli" {% if scheduling_weather_task.voice == 'Salli' %} selected {% endif %}>Salli</option>
+                <option value="Joey" {% if scheduling_weather_task.voice == 'Joey' %} selected {% endif %}>Joey</option>
+                <option value="Nicole" {% if scheduling_weather_task.voice == 'Nicole' %} selected {% endif %}>Nicole</option>
+                <option value="Russell" {% if scheduling_weather_task.voice == 'Russell' %} selected {% endif %}>Russell</option>
+                <option value="Amy" {% if scheduling_weather_task.voice == 'Amy' %} selected {% endif %}>Amy</option>
+                <option value="Brian" {% if scheduling_weather_task.voice == 'Brian' %} selected {% endif %}>Brian</option>
+                <option value="Emma" {% if scheduling_weather_task.voice == 'Emma' %} selected {% endif %}>Emma</option>
+                <option value="Daniella" {% if scheduling_weather_task.voice == 'Daniella' %} selected {% endif %}>Daniella</option>
+                <option value="Ruth" {% if scheduling_weather_task.voice == 'Ruth' %} selected {% endif %}>Ruth</option>
+                <option value="Gregory" {% if scheduling_weather_task.voice == 'Gregory' %} selected {% endif %}>Gregory</option>
+                <option value="Kevin" {% if scheduling_weather_task.voice == 'Kevin' %} selected {% endif %}>Kevin</option>
+                <option value="Joey" {% if scheduling_weather_task.voice == 'Joey' %} selected {% endif %}>Joey</option>
+                </select>
+              </div>
+    
+                <div>
+                    <label for="intros" class="block text-sm font-medium text-gray-700">INTROS :</label>
+                    <input type="text" id="intros" name="intros" value="{{ scheduling_weather_task.intros }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+                <div>
+                    <label for="outros" class="block text-sm font-medium text-gray-700">OUTROS:</label>
+                    <input type="text" id="outros" name="outros" value="{{ scheduling_weather_task.outros }}" required
+                           class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 text-black">
+                </div>
+    
+    
+                <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue">
+                    Save Changes
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="bg-black-800 text-white text-center py-4 ">
+      <div class="container mx-auto">
+        <p>&copy; <span id="currentYear"></span> - GroundRushLabs</p>
+      </div>
+    </footer>
+    <script>
+      // Update the current year dynamically
+      document.getElementById('currentYear').innerText = new Date().getFullYear();
+      function toggleScheduleText() {
+        var scheduleText = document.getElementById("schedule_text");
+        scheduleText.classList.toggle("hidden");
+    }
+    const passwordInput = document.getElementById('sftp_password');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const togglePassword = document.getElementById('togglePassword');
+
+    togglePassword.addEventListener('click', () => {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.classList.remove('far', 'fa-eye');
+            eyeIcon.classList.add('far', 'fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            eyeIcon.classList.remove('far', 'fa-eye-slash');
+            eyeIcon.classList.add('far', 'fa-eye');
+        }
+    });
+
+    
+      // Update the current year dynamically
+      document.getElementById('dropdown-button').addEventListener('click', function () {
+        var menu = document.getElementById('dropdown-menu');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('block');
+    });
+    
+    document.addEventListener('click', function (event) {
+        var menu = document.getElementById('dropdown-menu');
+        var button = document.getElementById('dropdown-button');
+    
+        if (!menu.contains(event.target) && !button.contains(event.target)) {
+            menu.classList.add('hidden');
+            menu.classList.remove('block');
+        }
+    });
+    
+  </script>
+  
+
+</body>
+
+</html>

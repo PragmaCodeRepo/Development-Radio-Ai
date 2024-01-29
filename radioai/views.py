@@ -925,3 +925,192 @@ def edit_newscaster(request, newscaster_id):
         return redirect('/Newscasters')
 
     return render(request, 'edit_newscaster.html', {'newscaster': newscaster})
+
+
+
+
+# Scheduling tasks page for news
+def scheduling_news_task(request):
+    tasks = SchedulingTasks.objects.all()
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+
+
+def delete_scheduling_news_task(request):
+    if request.method == 'POST':
+        scheduling_tasks_id = request.POST.get('scheduling_tasks_id')
+        scheduling_news_task = SchedulingTasks.objects.filter(id=scheduling_tasks_id).first()  # Use the correct model name
+
+        if scheduling_news_task:
+            scheduling_news_task.delete()
+            messages.success(request, 'Newscaster deleted successfully')
+        else:
+            messages.error(request, 'Newscaster not found')
+
+    return redirect('/scheduling_news_task')
+
+def edit_scheduling_news_task(request, scheduling_news_task_id):
+    scheduling_news_task = get_object_or_404(SchedulingTasks, id=scheduling_news_task_id)
+
+    if request.method == 'POST':
+        scheduling_news_task.sftp_host = request.POST['sftp_host']
+        scheduling_news_task.sftp_port = request.POST['sftp_port']
+        scheduling_news_task.sftp_username = request.POST['sftp_username']
+        scheduling_news_task.sftp_password = request.POST['sftp_password']
+        scheduling_news_task.sftp_remote_path = request.POST['sftp_remote_path']
+        scheduling_news_task.rss_url = request.POST['rss_url']
+        scheduling_news_task.schedule_time = request.POST['schedule_time']
+        scheduling_news_task.recurrence_type = request.POST['recurrence_type']
+        scheduling_news_task.voice = request.POST['voice']
+        scheduling_news_task.intros = request.POST['intros']
+        scheduling_news_task.outros = request.POST['outros']
+        # scheduling_news_task.is_pending = request.POST['is_pending']
+        
+        scheduling_news_task.save()
+        return redirect('/scheduling_news_task')
+
+    return render(request, 'scheduling_tasks/edit_scheduling_tasks.html', {'scheduling_news_task': scheduling_news_task})
+
+
+
+def add_scheduling_news_task(request):
+    if request.method == 'POST':
+        sftp_host = request.POST.get('sftp_host')
+        sftp_port = request.POST.get('sftp_port')
+        sftp_username = request.POST.get('sftp_username')
+        sftp_password = request.POST.get('sftp_password')
+        sftp_remote_path = request.POST.get('sftp_remote_path')
+        rss_url = request.POST.get('rss_url')
+        limit = request.POST.get('limit')
+        schedule_time = request.POST.get('schedule_time')
+        recurrence_type = request.POST.get('recurrence_type')
+        voice = request.POST.get('voice')
+        intros = request.POST.get('intros')
+        outros = request.POST.get('outros')
+        # newscaster=request.POST.get('news_caster')
+        # is_pending = request.POST.get('is_pending')
+        news_caster = request.POST.get('news_caster')
+        
+        # exsiting_model=SchedulingTasks.objects.filter(sftp_host=sftp_host).first()
+        # if exsiting_model:
+        #     return render(request, 'scheduling_tasks/add_scheduling_tasks.html', {'error_message': 'This task is already scheduled with the same  already exists'})
+
+        # Create a new Newscaster object and save it
+        SchedulingTasks.objects.create(sftp_host=sftp_host,sftp_port=sftp_port,sftp_username=sftp_username,sftp_password=sftp_password,sftp_remote_path=sftp_remote_path,rss_url=rss_url,schedule_time=schedule_time,recurrence_type=recurrence_type,voice=voice,intros=intros,outros=outros,news_caster=news_caster,limit=limit)
+        
+        return redirect('/scheduling_news_task')  # Redirect to the add_newscaster page after adding
+
+    return render(request, 'scheduling_tasks/add_scheduling_tasks.html')  # Correct template name
+
+
+# Scheduling Tasks for weather
+
+def scheduling_weather_task(request):
+    tasks = SchedulingTasksWeatherByZipcode.objects.all()
+    return render(request, 'scheduling_tasks_weather/scheduling_task_weather_list.html', {'tasks': tasks})
+
+
+def delete_scheduling_weather_task(request):
+    if request.method == 'POST':
+        scheduling_tasks_id = request.POST.get('scheduling_tasks_id')
+        scheduling_weather_task = SchedulingTasksWeatherByZipcode.objects.filter(id=scheduling_tasks_id).first()  # Use the correct model name
+
+        if scheduling_weather_task:
+            scheduling_weather_task.delete()
+            messages.success(request, 'Newscaster deleted successfully')
+        else:
+            messages.error(request, 'Newscaster not found')
+
+    return redirect('/scheduling_weather_task')
+def edit_scheduling_weather_task(request,scheduling_weather_task_id):
+    scheduling_weather_task = get_object_or_404(SchedulingTasksWeatherByZipcode, id=scheduling_weather_task_id)
+
+    if request.method == 'POST':
+        scheduling_weather_task.sftp_host = request.POST['sftp_host']
+        scheduling_weather_task.sftp_port = request.POST['sftp_port']
+        scheduling_weather_task.sftp_username = request.POST['sftp_username']
+        scheduling_weather_task.sftp_password = request.POST['sftp_password']
+        scheduling_weather_task.sftp_remote_path = request.POST['sftp_remote_path']
+        scheduling_weather_task.city_zipcode = request.POST['city_zipcode']
+        scheduling_weather_task.schedule_time = request.POST['schedule_time']
+        scheduling_weather_task.recurrence_type = request.POST['recurrence_type']
+        scheduling_weather_task.voice = request.POST['voice']
+        scheduling_weather_task.intros = request.POST['intros']
+        scheduling_weather_task.outros = request.POST['outros']
+        # scheduling_news_task.is_pending = request.POST['is_pending']
+        
+        scheduling_weather_task.save()
+        return redirect('/scheduling_weather_task')
+
+    return render(request, 'scheduling_tasks_weather/edit_scheduling_tasks_weather.html', {'scheduling_weather_task': scheduling_weather_task})
+
+
+def add_scheduling_weather_task(request):
+    if request.method == 'POST':
+        sftp_host = request.POST.get('sftp_host')
+        sftp_port = request.POST.get('sftp_port')
+        sftp_username = request.POST.get('sftp_username')
+        sftp_password = request.POST.get('sftp_password')
+        sftp_remote_path = request.POST.get('sftp_remote_path')
+        city_zipcode = request.POST.get('city_zipcode')
+        schedule_time = request.POST.get('schedule_time')
+        recurrence_type = request.POST.get('recurrence_type')
+        voice = request.POST.get('voice')
+        intros = request.POST.get('intros')
+        outros = request.POST.get('outros')
+        # newscaster=request.POST.get('news_caster')
+        # is_pending = request.POST.get('is_pending')
+        news_caster = request.POST.get('news_caster')
+        
+        # exsiting_model=SchedulingTasks.objects.filter(sftp_host=sftp_host).first()
+        # if exsiting_model:
+        #     return render(request, 'scheduling_tasks/add_scheduling_tasks.html', {'error_message': 'This task is already scheduled with the same  already exists'})
+
+        # Create a new Newscaster object and save it
+        SchedulingTasksWeatherByZipcode.objects.create(sftp_host=sftp_host,sftp_port=sftp_port,sftp_username=sftp_username,sftp_password=sftp_password,sftp_remote_path=sftp_remote_path,schedule_time=schedule_time,recurrence_type=recurrence_type,voice=voice,intros=intros,outros=outros,news_caster=news_caster,city_zipcode=city_zipcode)
+        
+        return redirect('/scheduling_weather_task')  # Redirect to the add_newscaster page after adding
+
+    return render(request, 'scheduling_tasks_weather/add_scheduling_weather_tasks.html')  # Correct template name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def delete_all_scheduling_weather_tasks(request):
+    if request.method == 'POST':
+        # Delete all tasks
+        SchedulingTasksWeatherByZipcode.objects.all().delete()
+        return redirect('/scheduling_weather_task/')
+    else:
+        # Handle GET request (optional)
+        return redirect('/scheduling_weather_task/')
+    
+# delete all for schedule news bot 
+def delete_all_scheduling_news_tasks(request):
+    if request.method == 'POST':
+        # Delete all tasks
+        SchedulingTasks.objects.all().delete()
+        return redirect('/scheduling_news_task/')
+    else:
+        # Handle GET request (optional)
+        return redirect('/scheduling_news_task/')    
+
+
+# delete all for Newscaster
+def delete_all_newscaster(request):
+    if request.method == 'POST':
+        # Delete all tasks
+        Newscaster.objects.all().delete()
+        return redirect('/Newscasters/')
+    else:
+        # Handle GET request (optional)
+        return redirect('/Newscasters/')    

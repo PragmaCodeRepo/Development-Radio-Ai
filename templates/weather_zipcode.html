@@ -39,173 +39,7 @@
     class="bg-black bg-cover bg-center bg-fixed min-h-screen flex items-center justify-center dark-mode"
   >
     <!-- Navbar -->
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav
-        class="flex items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
-      >
-        <div class="flex lg:flex-1 dark-mode">
-          <a href="/Newscaster" class="-m-1.5 p-1.5">
-            <span class="sr-only">Groundrushlabs</span>
-            <img
-              class="h-8 w-auto bg-white"
-              src="{% static 'images\Groundrushlabs_logo.png' %}"
-              alt="groundrushlabs-logo"
-            />
-          </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black-700"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          {% comment %}
-          <a
-            href="/weather"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >Weather</a
-          >
-          {% endcomment %}
-          <div class="flex items-center justify-center">
-            <span class="text-green-500 pr-2">&#8592;</span>
-            <!-- Left arrow emoji -->
-            <a
-              href="/Newscasters"
-              class="text-sm font-semibold leading-6 text-black-900"
-              >Newscasters</a
-            >
-          </div>
-
-          <a
-            href="/contactus"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >Contact us</a
-          >
-          <a
-            href="/aboutus"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >About us</a
-          >
-          <a
-            href="/chatbot"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >Chatbot</a
-          >
-          {% if user.is_authenticated %}
-          <p class="text-lg text-black-800">
-            Welcome,
-            <span class="text-blue-500 font-semibold">{{ user.username }}</span
-            >!
-          </p>
-          <a
-            href="/admin"
-            class="text-sm font-semibold leading-6 text-black-900"
-            >Admin Panel</a
-          >
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
-
-        <a
-          href="{% url 'rss_to_audio_app:logout' %}"
-          class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-          >Logout</a
-        >
-
-        {% else %}
-        <!-- Your login form here -->
-        {% endif %}
-      </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="lg:hidden" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-50"></div>
-        <div
-          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-        >
-          <div class="flex items-center justify-between dark-mode">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Groundrush labs</span>
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
-            <button
-              type="button"
-              class="-m-2.5 rounded-md p-2.5 text-black-700"
-            >
-              <span class="sr-only">Close menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
-                  >Product</a
-                >
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
-                  >Features</a
-                >
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
-                  >Marketplace</a
-                >
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
-                  >Company</a
-                >
-              </div>
-              <div class="py-6">
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-black-900 hover:bg-gray-50"
-                  >Log in</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    {% include 'navbar.html' %}
 
     <!-- Content Section -->
 
@@ -259,25 +93,28 @@
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
                 {% endcomment %}
-                <option value="21m00Tcm4TlvDq8ikWAM">Rachel</option>
-                <option value="29vD33N1CtxCmqQRPOHJ">Drew</option>
-                <option value="2EiwWnXFnvU5JabPnv8n">Clyde</option>
-                <option value="AZnzlk1XvdvUeBnXmlld">Domi</option>
-                <option value="CYw3kZ02Hs0563khs1Fj">Dave</option>
-                <option value="D38z5RcWu1voky8WS1ja">Fin</option>
-                <option value="EXAVITQu4vr4xnSDxMaL">Sarah</option>
-                <option value="ErXwobaYiN019PkySvjV">Antoni</option>
-                <option value="GBv7mTt0atIp3Br8iCZE">Thomas</option>
-                <option value="IKne3meq5aSn9XLyUdCD">Charlie</option>
-                <option value="JBFqnCBsd6RMkjVDRZzb">George</option>
-                <option value="LcfcDJNUP1GQjkzn1xUU">Emily</option>
-                <option value="MF3mGyEYCl7XYWbV9V6O">Elli</option>
-                <option value="N2lVS1w4EtoT3dr4eOWO">Callum</option>
-                <option value="ODq5zmih8GrVes37Dizd">Patrick</option>
-                <option value="SOYHLrjzK2X1ezoPC6cr">Harry</option>
-                <option value="TX3LPaxmHKxFdv7VOQHJ">Liam</option>
-                <option value="ThT5KcBeYPX3keUQqHPh">Dorothy</option>
-                <option value="TxGEqnHWrfWFTfGW9XjX">Josh</option>
+                {% comment %} <option value="Female">Female</option> {% endcomment %}
+                {% comment %} <option value="Male">Male</option>  {% endcomment %}
+                <option value="Joanna">Joanna</option>
+                <option value="Matthew">Matthew</option>
+                <option value="Ivy">Ivy</option>
+                <option value="Justin">Justin</option>
+                <option value="Kendra">Kendra</option>
+                <option value="Kimberly">Kimberly</option>
+                <option value="Salli">Salli</option>
+                <option value="Joey">Joey</option>
+                {% comment %} <option value="Nicole">Nicole</option> {% endcomment %}
+                {% comment %} <option value="Russell">Russell</option> {% endcomment %}
+                <option value="Amy">Amy</option>
+                <option value="Brian">Brian</option>
+                <option value="Emma">Emma</option>
+                <option value="Daniella">Daniella</option>
+                <option value="Ruth">Ruth</option>
+                <option value="Gregory">Gregory</option>
+                <option value="Kevin">Kevin</option>
+                <option value="Joey">Joey</option>
+                {% comment %} <option value="Conchita">Conchita</option> {% endcomment %}
+                {% comment %} <option value="Stephan">Stephan</option> {% endcomment %}
               </select>
             </div>
 
@@ -431,6 +268,20 @@
           var scheduleText = document.getElementById("schedule_text");
           scheduleText.classList.toggle("hidden");
       }
+      document.getElementById('dropdown-button').addEventListener('click', function () {
+        var menu = document.getElementById('dropdown-menu');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('block');
+    });
+      document.addEventListener('click', function (event) {
+        var menu = document.getElementById('dropdown-menu');
+        var button = document.getElementById('dropdown-button');
+  
+        if (!menu.contains(event.target) && !button.contains(event.target)) {
+            menu.classList.add('hidden');
+            menu.classList.remove('block');
+        }
+    });
   </script>
   </body>
 </html>

@@ -1,11 +1,10 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newscaster List</title>
+    <title>Scheduling-Weather-tasks</title>
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet"/>
     <style>
@@ -48,68 +47,83 @@
    
     {% include 'navbar.html' %}
 
-    <div class="container mx-auto p-4 ">
+    <div class="container mx-auto p-4">
+         
+      
         <!-- Add Newscaster Button -->
-        
         <div class="container mx-auto p-4 flex  mb-10">
           <div class="flex justify-start mr-auto">
-            <form method="post" action="{% url 'rss_to_audio_app:delete_all_newscaster' %}">
+            <form method="post" action="{% url 'rss_to_audio_app:delete_all_scheduling_weather_tasks' %}">
               {% csrf_token %}
               <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                &#128465; Delete All Newscasters
+                  &#128465; Delete All Tasks
               </button>
-            </form>
-          </div>
-          <div class="justify-end">
-            <a href="/add_newscaster">
+          </form>
+        </div>
+        <div class="justify-end">
+            <a href="/add_scheduling_weather_task/">
               <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                <span class="text-lg">&plus;</span> Add Newscaster
+                <span class="text-lg">&plus;</span> Add Scheduling task
             </button>
-          </div>
             
             
             </a>
+          </div>
         </div>
         
-        <h1 class="text-2xl font-bold mb-4">Newscaster List</h1>
+        
+        <h1 class="text-2xl font-bold mb-4">Scheduling-Weather-Tasks List</h1>
         <!-- Grid layout for newscasters -->
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <!-- Dynamically create cards for each newscaster -->
-            {% if newscasters %}
-            {% for newscaster in newscasters %}
+            {% if tasks %}
+            {% for tasks in tasks %}
             <div class="bg-black rounded shadow-md overflow-hidden ">
                 <div class="px-6 py-4 ">
-                    <div class="font-bold text-xl mb-2 text-white">{{ newscaster.name }}</div>
-                    <p class="text-grawhitey-700 text-base mb-4">
-                        Language: {{ newscaster.language }}
+                    <div class="font-bold text-xl mb-2 text-white">{{ tasks.sftp_username }}</div>
+                    
+                    <p class="text-white-700 text-base mb-4">
+                        Voice: {{ tasks.voice }}
                     </p>
                     <p class="text-white-700 text-base">
-                        Voice: {{ newscaster.voice }}
+                        Scheduled Time: {{ tasks.schedule_time }}
                     </p>
+                    <p class="text-white-700 text-base">
+                        Reccurence type: {{ tasks.recurrence_type }}
+                    </p>
+                    <p class="text-white-700 text-base">
+                        Host: {{ tasks.sftp_host }}
+                    </p>
+                    <p class="text-white-700 text-base">
+                       Remote Path: {{ tasks.sftp_remote_path }}
+                    </p>
+                    
+                    
+
                 </div>
                 <div class="px-6 pt-4 pb-2 flex items-center space-x-4">
-                  <form method="post" action="{% url 'rss_to_audio_app:delete_newscaster' %}">
+                  <form method="post" action="{% url 'rss_to_audio_app:delete_scheduling_weather_task' %}">
                       {% csrf_token %}
-                      <input type="hidden" name="newscaster_id" value="{{ newscaster.id }}">
+                      <input type="hidden" name="scheduling_tasks_id" value="{{ tasks.id }}">
                       <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                         &#128465; Delete
                     </button>
                     
                     
                   </form>
-                  <a href="{% url 'rss_to_audio_app:edit_newscaster' newscaster.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded edit-link" style="font-size: 0.91em;">
+                   <a href="{% url 'rss_to_audio_app:edit_scheduling_weather_task' tasks.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded edit-link" style="font-size: 0.91em;">
                     &#9998; Edit
-                </a>
+                </a> 
                 
                 
                 
                 
-                  <button onclick="redirectToWeather('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  {% comment %} <button onclick="redirectToWeather('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       Weather
-                  </button>
-                  <button onclick="redirectToNews('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  </button> {% endcomment %}
+                  {% comment %} <button onclick="redirectToNews('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       News Bot
-                  </button>
+                  </button> {% endcomment %}
                   <br/>
               <br/>
               <br/>
@@ -118,16 +132,14 @@
               
             </div>
             {% endfor %}
-
-            
             {% else %}
-            <!-- Add this code where you want to display the message -->
-<div class="flex items-center justify-center h-full">
-  <div class="bg-white p-6 rounded-lg shadow-md">
-      <p class="text-lg text-gray-800">No scheduling Newscaster added yet.<a href="/add_newscaster/"> add now</a></p>
-  </div>
-</div>
+            <div class="flex items-center justify-center h-full">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                  <p class="text-lg text-gray-800">No scheduling tasks for weather bot yet.<a href="/add_scheduling_weather_task/"> add now</a></p>
+              </div>
+          </div>
 
+             
             {% endif %}
             
             
@@ -135,14 +147,7 @@
     </div>
     
     </a>
-    <script>
-        function redirectToNews(newscasterName) {
-            window.location.href = `/news?newscaster=${encodeURIComponent(newscasterName)}`;
-        }
-        function redirectToWeather(newscasterName) {
-          window.location.href = `/weather-zipcode?newscaster=${encodeURIComponent(newscasterName)}`;
-      }
-    </script>
+    
     <br/>
     <br/>
     <br/>
@@ -161,25 +166,24 @@
     </footer>
 </body>
 <script>
-    // Update the current year dynamically
-    document.getElementById('currentYear').innerText = new Date().getFullYear();
-    document.getElementById('dropdown-button').addEventListener('click', function () {
-      var menu = document.getElementById('dropdown-menu');
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('block');
-  });
+  // Update the current year dynamically
+  document.getElementById('currentYear').innerText = new Date().getFullYear();
+  document.getElementById('dropdown-button').addEventListener('click', function () {
+    var menu = document.getElementById('dropdown-menu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('block');
+});
 
-  document.addEventListener('click', function (event) {
-      var menu = document.getElementById('dropdown-menu');
-      var button = document.getElementById('dropdown-button');
+document.addEventListener('click', function (event) {
+    var menu = document.getElementById('dropdown-menu');
+    var button = document.getElementById('dropdown-button');
 
-      if (!menu.contains(event.target) && !button.contains(event.target)) {
-          menu.classList.add('hidden');
-          menu.classList.remove('block');
-      }
-  });
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.add('hidden');
+        menu.classList.remove('block');
+    }
+});
 </script>
-
 </body>
 
 </html>

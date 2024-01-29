@@ -30,94 +30,12 @@
 </head>
 <body class=" flex flex-col min-h-screen dark-mode bg-black-100">
     <!-- Navigation Bar -->
-    <nav
-          class="flex items-center justify-between p-6 lg:px-8"
-          aria-label="Global"
-        >
-          <div class="flex lg:flex-1 ">
-            <a href="/Newscasters" class="-m-1.5 p-1.5">
-              <span class="sr-only">Groundrushlabs</span>
-              <img
-                class="h-8 w-auto bg-white"
-                src="{% static 'images\Groundrushlabs_logo.png' %}"
-                alt="groundrushlabs-logo"
-              />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            {% comment %} <a
-              href="/weather"
-              class="text-sm font-semibold leading-6 text-gray-900"
-              >Weather</a
-            > {% endcomment %}
-            <div class="flex items-center justify-center">
-              <span class="text-green-500 pr-2">&#8592;</span> <!-- Left arrow emoji -->
-              <a href="/Newscasters" class="text-sm font-semibold leading-6 text-black-900">Newscasters</a>
-          </div>
-          
-            
-            <a
-              href="/contactus"
-              class="text-sm font-semibold leading-6 text-gray-900"
-              >Contact us</a
-            >
-            <a
-              href="/aboutus"
-              class="text-sm font-semibold leading-6 text-gray-900"
-              >About us</a
-            >
-            <a
-              href="/chatbot"
-              class="text-sm font-semibold leading-6 text-gray-900"
-              >Chatbot</a
-            >
-            {% if user.is_authenticated %}
-            <p class="text-lg text-gray-800">
-              Welcome,
-              <span class="text-blue-500 font-semibold"
-                >{{ user.username }}</span
-              >!
-            </p>
-            <a
-              href="/admin"
-              class="text-sm font-semibold leading-6 text-black-900"
-              >Admin Panel</a
-            >
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
-
-          <a
-            href="{% url 'rss_to_audio_app:logout' %}"
-            class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-            >Logout</a
-          >
-
-          {% else %}
-          <!-- Your login form here -->
-          {% endif %}
-        </nav>
+    <div class="flex container">{% include 'navbar.html' %}</div>
+    <br/>
+    <br/>
+    <br/>
+    
+    
 
     <!-- About Us Content -->
     <div class="flex-grow ">
