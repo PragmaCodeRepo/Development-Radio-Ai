@@ -73,8 +73,9 @@
         <!-- Grid layout for newscasters -->
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <!-- Dynamically create cards for each newscaster -->
-            {% if tasks %}
+            {% if tasks %}           
             {% for tasks in tasks %}
+               
             <div class="bg-black rounded shadow-md overflow-hidden ">
                 <div class="px-6 py-4 ">
                     <div class="font-bold text-xl mb-2 text-white">{{ tasks.sftp_username }}</div>
@@ -137,7 +138,7 @@
   </div>
 </div>
 
-
+            
             {% endif %}
             
             

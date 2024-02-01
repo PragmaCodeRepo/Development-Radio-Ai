@@ -104,10 +104,11 @@
                 
                 
                 
-                  <button onclick="redirectToWeather('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                      Weather
-                  </button>
-                  <button onclick="redirectToNews('{{ newscaster.name }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button onclick="redirectToWeather('{{ newscaster.name }}', '{{ newscaster.language }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Weather
+              </button>
+              
+                  <button onclick="redirectToNews('{{ newscaster.name }}','{{ newscaster.language }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       News Bot
                   </button>
                   <br/>
@@ -136,11 +137,15 @@
     
     </a>
     <script>
-        function redirectToNews(newscasterName) {
-            window.location.href = `/news?newscaster=${encodeURIComponent(newscasterName)}`;
+        function redirectToNews(newscasterName,language) {
+          const encodedName = encodeURIComponent(newscasterName);
+          const encodedLanguage = encodeURIComponent(language);
+            window.location.href = `/news?newscaster=${encodedName}&language=${encodedLanguage}`;
         }
-        function redirectToWeather(newscasterName) {
-          window.location.href = `/weather-zipcode?newscaster=${encodeURIComponent(newscasterName)}`;
+        function redirectToWeather(newscasterName, language) {
+          const encodedName = encodeURIComponent(newscasterName);
+          const encodedLanguage = encodeURIComponent(language);
+          window.location.href = `/weather-zipcode?newscaster=${encodedName}&language=${encodedLanguage}`;
       }
     </script>
     <br/>

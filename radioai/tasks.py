@@ -312,7 +312,9 @@ def schedule_convert_to_audio_weatherbyzipcode(request_data):
         intro = request_data.get('intros')
         outro = request_data.get('outros')
         news_caster=request_data.get('news_caster')
+        language=request_data.get('language')
         print("intros and outro ",intro,outro)
+        print("language",language)
 
         # Your existing logic for processing RSS, converting text to audio, etc.
         weather_data = f'{intro}<break time="1s"/>'
@@ -391,7 +393,8 @@ def fetchingschedulingWeatherByzipcode():
                     'voice':task.voice,
                     'intros': task.intros,
                     'outros': task.outros,
-                    'news_caster':task.news_caster
+                    'news_caster':task.news_caster,
+                    'language':task.language
                     
                 }
                 schedule_convert_to_audio_weatherbyzipcode(request_data)

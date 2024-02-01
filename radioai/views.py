@@ -30,6 +30,8 @@ import boto3
 from django.http import JsonResponse
 from requests.exceptions import RequestException
 from django.shortcuts import render, redirect, get_object_or_404
+from translate import Translator
+
 
 
 
@@ -245,6 +247,7 @@ def convert_to_audio(request):
         intro_user = request.POST.get('intros_user','')
         outro_user = request.POST.get('outro_user',"hola")
         news_caster = request.POST.get('news_caster')
+        language = request.POST.get('language')
         print(f"outros:{outro_user}")
         print("request.POST = ",request.POST)
         obj = SchedulingTasks.objects.create(
@@ -261,7 +264,9 @@ def convert_to_audio(request):
             intros=intro_user,
             outros=outro_user,
             is_pending=True if schedule_time else False,
-            news_caster = request.POST.get('news_caster')
+            news_caster = request.POST.get('news_caster'),
+            language = request.POST.get('language'),
+
         )
         obj.save()
         if limit == 0:
@@ -284,6 +289,7 @@ def convert_to_audio(request):
 
         # Extract voice gender from the request
         # voice_gender = request.POST.get('voice_gender', 'NEUTRAL')
+            
         if schedule_time:
 
             # return HttpResponse("Task scheduled successfully")
@@ -303,7 +309,7 @@ def convert_to_audio(request):
                 outros=all_outros
 
 
-            return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
+            return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster,})
 
 
 # main.delay(time)
@@ -334,6 +340,7 @@ def convert_to_audio(request):
                 all_news_text += f"{rewritten_description}\n"
 
         all_news_text += f'<break time="1s"/>{outro_user}'
+        
 
         # Convert text to audio using the selected voice gender
         audio_content = convert_text_to_audio(all_news_text,voice)
@@ -363,9 +370,13 @@ def convert_to_audio(request):
             os.remove(combined_audio_path)
             print("Time = ", datetime.now() - start_time)
             return response
+    language = request.GET.get('language', '')    
     news_caster = request.GET.get('newscaster', '')
     all_intros = Intros.objects.all()
     all_outros=Outros.objects.all()
+    print(language)
+    
+
         
     if news_caster:
         # Filter intros based on the selected newscaster name
@@ -375,7 +386,7 @@ def convert_to_audio(request):
             intros = all_intros
             outros=all_outros
 
-    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,'news_caster':news_caster })
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,'news_caster':news_caster,'languaage':language, })
 
 
 # weather --code
@@ -643,6 +654,7 @@ def zipcode_weather(request):
         recurrence_type = request.POST.get('recurrence_type', 'onetime')
         voice = request.POST.get('voice')
         news_caster=request.POST.get('news_caster')
+        language=request.POST.get('language')
         print("city_zipcode = ", city_zipcode)
         obj = SchedulingTasksWeatherByZipcode.objects.create(
             sftp_host=sftp_host,
@@ -657,7 +669,8 @@ def zipcode_weather(request):
             intros=intro_user,
             outros=outro_user,
             is_pending=True if schedule_time else False,
-            news_caster=news_caster
+            news_caster=news_caster,
+            language=language
         )
         obj.save()
         if schedule_time:
@@ -676,12 +689,16 @@ def zipcode_weather(request):
                 outros=all_outros
             
             
-            return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster})
+            return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,  "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,"news_caster": news_caster,"language":language,})
 
         weather_data = f'{intro_user} <break time="1s"/>'
         weather_report = fetch_weather_by_zip(city_zipcode)
         weather_data += weather_report + "\n"
+        # weather_data=translate_to_spanish(weather_data)
         weather_data += f'<break time="1s"/>{outro_user}'
+        if language=="spanish":
+           weather_data= translate_to_spanish(weather_data)
+
 
         # Convert this text to speech using Google Text-to-Speech
         audio_content = convert_text_to_audio(weather_data, voice)
@@ -701,6 +718,7 @@ def zipcode_weather(request):
 
         return FileResponse(open(output_file, 'rb'), as_attachment=True, filename='zipcode_weather_report.mp3')
     news_caster = request.GET.get('newscaster', '')
+    language = request.GET.get('language', '')
     all_intros = Intros.objects.all()
     all_outros=Outros.objects.all()
         
@@ -713,7 +731,7 @@ def zipcode_weather(request):
             outros=all_outros
 
 
-    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,'news_caster':news_caster})
+    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,'news_caster':news_caster,'language':language})
 
 
 # chatbotdef chatgpt(request):
@@ -1117,3 +1135,25 @@ def delete_all_newscaster(request):
     else:
         # Handle GET request (optional)
         return redirect('/Newscasters/')    
+    
+
+
+
+#convert english text to spanish text to spanish
+
+def translate_to_spanish(text):
+    translator = Translator(to_lang="es")
+    translated_text = translator.translate(text)
+    return translated_text
+
+
+
+
+
+   
+     
+
+
+# Example usage
+
+

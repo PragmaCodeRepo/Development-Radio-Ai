@@ -22,7 +22,7 @@ class SchedulingAdmin(admin.ModelAdmin):
     list_display = (
         'sftp_host', 'sftp_port', 'sftp_username', 'display_sftp_password', 'sftp_remote_path',
         'rss_url', 'limit', 'schedule_time', 'recurrence_type', 'voice', 'intros', 'outros', 'is_pending',
-        'created_at', 'news_caster'
+        'created_at', 'news_caster','language'
     )
     list_filter = ('news_caster',)
 
@@ -64,7 +64,7 @@ class SchedulingWeatherByZipcodeAdmin(admin.ModelAdmin):
     form = SchedulingWeatherByZipcodeAdminForm
     list_display = (
         'sftp_host', 'sftp_port', 'sftp_username', 'display_sftp_password', 'sftp_remote_path',
-        'city_zipcode', 'schedule_time', 'created_at', 'recurrence_type', 'voice', 'intros', 'outros', 'is_pending', 'news_caster',
+        'city_zipcode', 'schedule_time', 'created_at', 'recurrence_type', 'voice', 'intros', 'outros', 'is_pending', 'news_caster','language',
     )
     list_filter = ('news_caster',)
 

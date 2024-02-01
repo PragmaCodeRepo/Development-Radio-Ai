@@ -56,6 +56,7 @@ class SchedulingTasks(models.Model):
     is_pending = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     news_caster=models.CharField(max_length=200,default="")
+    language=models.CharField(max_length=200,default="") 
     # type = "halgffhf"
     def __str__(self):
         return self.sftp_username    
@@ -150,15 +151,24 @@ class SchedulingTasksWeatherByZipcode(models.Model):
     is_pending = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)   
     news_caster=models.CharField(max_length=200,default="") 
+    language=models.CharField(max_length=200,default="") 
 
 
 #Newscaster    
     
+from django.db import models
+
 class Newscaster(models.Model):
+    # Choices for the language field
+    LANGUAGE_CHOICES = [
+        ('english', 'English'),
+        ('spanish', 'Spanish'),
+    ]
+
     name = models.CharField(max_length=100)
-    language = models.CharField(max_length=100)
+    language = models.CharField(max_length=100, choices=LANGUAGE_CHOICES)
     voice = models.CharField(max_length=100)
     # ... add other fields as necessary
 
     def __str__(self):
-        return self.name    
+        return self.name

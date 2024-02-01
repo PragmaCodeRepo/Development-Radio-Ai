@@ -9811,3 +9811,845 @@ INFO 2024-01-29 13:18:40,841 basehttp - Broken pipe from ('127.0.0.1', 63298)
 INFO 2024-01-29 13:18:45,689 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 336710
 INFO 2024-01-29 13:19:13,345 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
 INFO 2024-01-29 13:19:24,676 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 13:51:53,075 autoreload Watching for file changes with StatReloader
+INFO 2024-01-29 13:51:55,350 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 29955
+INFO 2024-01-29 13:51:55,380 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-29 13:51:57,941 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 13:52:00,766 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 17270
+ERROR 2024-01-29 14:19:37,827 log Internal Server Error: /scheduling_news_task/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 938, in scheduling_news_task
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 145: 'endif'. Did you forget to register or load this tag?
+ERROR 2024-01-29 14:19:37,860 basehttp "GET /scheduling_news_task/ HTTP/1.1" 500 161301
+ERROR 2024-01-29 14:19:50,257 log Internal Server Error: /scheduling_news_task/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 938, in scheduling_news_task
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 145: 'endif'. Did you forget to register or load this tag?
+ERROR 2024-01-29 14:19:50,263 basehttp "GET /scheduling_news_task/ HTTP/1.1" 500 161299
+ERROR 2024-01-29 14:20:02,748 log Internal Server Error: /scheduling_news_task/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 938, in scheduling_news_task
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 146: 'endif'. Did you forget to register or load this tag?
+ERROR 2024-01-29 14:20:02,756 basehttp "GET /scheduling_news_task/ HTTP/1.1" 500 161305
+INFO 2024-01-29 14:21:52,249 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11410
+INFO 2024-01-29 14:21:56,134 basehttp "GET /add_scheduling_news_task/ HTTP/1.1" 200 16283
+INFO 2024-01-29 14:22:00,411 basehttp "POST /add_scheduling_news_task/ HTTP/1.1" 302 0
+INFO 2024-01-29 14:22:00,456 basehttp "GET /scheduling_news_task HTTP/1.1" 301 0
+INFO 2024-01-29 14:22:00,467 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11410
+INFO 2024-01-29 14:22:04,247 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 14:22:06,007 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25124
+INFO 2024-01-29 14:22:19,440 basehttp "POST /news/ HTTP/1.1" 200 25577
+INFO 2024-01-29 14:22:24,701 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-29 14:22:27,011 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11410
+INFO 2024-01-29 14:22:58,273 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 21470
+ERROR 2024-01-29 14:23:58,716 log Internal Server Error: /scheduling_news_task/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 938, in scheduling_news_task
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 132: 'endfor', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2024-01-29 14:23:58,725 basehttp "GET /scheduling_news_task/ HTTP/1.1" 500 215910
+ERROR 2024-01-29 14:24:10,396 log Internal Server Error: /scheduling_news_task/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 938, in scheduling_news_task
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 132: 'endfor', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2024-01-29 14:24:10,407 basehttp "GET /scheduling_news_task/ HTTP/1.1" 500 215926
+INFO 2024-01-29 14:24:36,788 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 21535
+INFO 2024-01-29 14:24:50,036 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 21429
+ERROR 2024-01-29 14:29:08,740 log Internal Server Error: /scheduling_news_task/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 938, in scheduling_news_task
+    return render(request, 'scheduling_tasks/scheduling_tasks.html', {'tasks': tasks})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 132: 'endfor', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2024-01-29 14:29:08,751 basehttp "GET /scheduling_news_task/ HTTP/1.1" 500 215972
+INFO 2024-01-29 14:30:09,904 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11234
+INFO 2024-01-29 14:30:14,708 basehttp "GET /add_scheduling_news_task/ HTTP/1.1" 200 16283
+INFO 2024-01-29 14:30:17,747 basehttp "POST /add_scheduling_news_task/ HTTP/1.1" 302 0
+INFO 2024-01-29 14:30:17,792 basehttp "GET /scheduling_news_task HTTP/1.1" 301 0
+INFO 2024-01-29 14:30:17,806 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11264
+INFO 2024-01-29 14:30:30,567 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 23592
+INFO 2024-01-29 14:53:40,733 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11397
+INFO 2024-01-29 14:53:42,755 basehttp "GET /add_scheduling_news_task/ HTTP/1.1" 200 16283
+INFO 2024-01-29 14:53:45,585 basehttp "POST /add_scheduling_news_task/ HTTP/1.1" 302 0
+INFO 2024-01-29 14:53:45,608 basehttp "GET /scheduling_news_task HTTP/1.1" 301 0
+INFO 2024-01-29 14:53:45,619 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11397
+INFO 2024-01-29 14:54:02,740 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 20462
+INFO 2024-01-29 14:54:02,775 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-29 14:56:19,470 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 25675
+INFO 2024-01-29 20:13:55,527 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 25675
+INFO 2024-01-29 20:31:39,820 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 25675
+INFO 2024-01-29 20:31:42,588 basehttp "POST /delete_all_scheduling_news_tasks/ HTTP/1.1" 302 0
+INFO 2024-01-29 20:31:42,614 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11397
+INFO 2024-01-29 20:31:47,160 basehttp "GET /scheduling_weather_task/ HTTP/1.1" 200 44177
+INFO 2024-01-29 20:31:48,425 basehttp "POST /delete_all_scheduling_weather_tasks/ HTTP/1.1" 302 0
+INFO 2024-01-29 20:31:48,439 basehttp "GET /scheduling_weather_task/ HTTP/1.1" 200 11409
+INFO 2024-01-29 20:40:40,696 basehttp "GET /scheduling_weather_task/ HTTP/1.1" 200 11409
+INFO 2024-01-29 20:40:46,869 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11397
+INFO 2024-01-30 11:17:40,887 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 11397
+INFO 2024-01-30 11:52:26,003 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-30 11:52:28,120 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 11:53:15,243 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-30 11:53:17,028 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 11:54:24,786 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-30 11:54:26,652 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 11:55:19,734 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-30 11:55:21,653 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 12:49:58,248 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-30 12:50:00,245 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 12:50:06,698 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-30 12:50:08,616 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18938
+INFO 2024-01-30 12:50:23,709 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 335456
+INFO 2024-01-30 19:55:38,091 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18938
+INFO 2024-01-30 20:15:09,161 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:16:10,375 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:16:31,321 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-30 20:16:32,664 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:17:19,118 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:18:09,503 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:20:15,508 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:25:25,287 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:28:46,312 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:30:49,664 autoreload Watching for file changes with StatReloader
+INFO 2024-01-30 20:30:56,561 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-01-30 20:30:57,202 basehttp "GET /static/images/Vesion_1.png HTTP/1.1" 304 0
+WARNING 2024-01-30 20:30:59,626 log Not Found: /favicon.ico
+WARNING 2024-01-30 20:30:59,627 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-01-30 20:31:14,917 basehttp "POST / HTTP/1.1" 200 3044
+INFO 2024-01-30 20:31:19,624 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9841
+INFO 2024-01-30 20:31:19,780 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-30 20:31:23,702 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18938
+INFO 2024-01-30 20:31:37,312 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 309542
+INFO 2024-01-31 11:37:34,265 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 11:38:33,750 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 11:38:40,614 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18459
+INFO 2024-01-31 11:38:42,423 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 302 0
+INFO 2024-01-31 11:38:42,997 basehttp "GET /admin/login/?next=/admin/radioai/schedulingtasks/ HTTP/1.1" 200 4234
+INFO 2024-01-31 11:38:43,280 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2024-01-31 11:38:43,281 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2024-01-31 11:38:43,282 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2024-01-31 11:38:43,492 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2024-01-31 11:38:43,660 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-01-31 11:38:43,661 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-01-31 11:38:56,766 basehttp "POST /admin/login/?next=/admin/radioai/schedulingtasks/ HTTP/1.1" 302 0
+INFO 2024-01-31 11:38:56,826 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9841
+INFO 2024-01-31 11:38:56,953 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-01-31 11:38:56,954 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-01-31 11:38:57,052 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-01-31 11:38:57,054 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-01-31 11:38:57,055 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2024-01-31 11:38:57,058 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 11:38:57,059 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-01-31 11:38:57,060 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2024-01-31 11:38:57,064 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2024-01-31 11:38:57,246 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2024-01-31 11:38:57,280 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2024-01-31 11:38:57,281 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-01-31 11:38:57,713 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-01-31 11:38:57,795 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2024-01-31 11:38:57,959 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-01-31 11:38:58,009 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-01-31 11:38:58,024 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-01-31 11:38:58,024 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-01-31 11:38:58,024 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-01-31 11:39:02,908 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-31 11:39:03,172 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-31 11:39:06,566 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18938
+INFO 2024-01-31 11:39:19,943 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 309542
+INFO 2024-01-31 13:14:29,894 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:14:37,235 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 18938
+INFO 2024-01-31 13:14:39,577 basehttp "GET /Newscasters/ HTTP/1.1" 200 19109
+INFO 2024-01-31 13:15:12,869 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8653
+INFO 2024-01-31 13:18:17,383 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8806
+INFO 2024-01-31 13:18:25,945 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:18:26,414 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:18:26,428 basehttp "GET /Newscasters/ HTTP/1.1" 200 21037
+INFO 2024-01-31 13:18:53,285 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 12127
+INFO 2024-01-31 13:18:53,304 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,311 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,315 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,321 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,326 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,339 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:18:53,347 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,354 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,360 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,367 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,373 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,379 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,390 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,396 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,405 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,410 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,418 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,424 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-01-31 13:18:53,434 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-01-31 13:19:09,158 basehttp "POST /admin/radioai/newscaster/ HTTP/1.1" 200 10001
+INFO 2024-01-31 13:19:09,284 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2024-01-31 13:19:10,570 basehttp "POST /admin/radioai/newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:19:10,594 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11153
+INFO 2024-01-31 13:19:10,627 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:19:10,645 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2024-01-31 13:19:12,976 basehttp "GET /Newscasters/ HTTP/1.1" 200 13343
+INFO 2024-01-31 13:19:14,103 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8806
+INFO 2024-01-31 13:19:26,378 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:19:26,404 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:19:26,415 basehttp "GET /Newscasters/ HTTP/1.1" 200 15253
+INFO 2024-01-31 13:19:27,575 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8806
+INFO 2024-01-31 13:19:50,610 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:19:50,628 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:19:50,640 basehttp "GET /Newscasters/ HTTP/1.1" 200 17175
+INFO 2024-01-31 13:19:52,294 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 11577
+INFO 2024-01-31 13:19:52,316 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:19:56,088 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:19:56,108 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:19:56,286 basehttp "GET /Newscasters/ HTTP/1.1" 200 15247
+INFO 2024-01-31 13:24:13,894 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\models.py changed, reloading.
+INFO 2024-01-31 13:24:15,187 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:24:34,983 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:25:11,977 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 16286
+INFO 2024-01-31 13:25:12,006 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:25:12,094 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2024-01-31 13:25:17,061 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10220
+INFO 2024-01-31 13:25:18,576 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:25:18,628 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10134
+INFO 2024-01-31 13:25:18,651 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:27:17,930 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 13:27:19,175 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:27:25,042 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 19443
+INFO 2024-01-31 13:27:45,964 basehttp "POST /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 317066
+INFO 2024-01-31 13:27:48,994 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 14019
+INFO 2024-01-31 13:27:49,018 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:28:22,523 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\admin.py changed, reloading.
+INFO 2024-01-31 13:28:23,716 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:28:26,515 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 14203
+INFO 2024-01-31 13:28:26,545 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:31:45,123 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 13:31:46,391 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:31:48,805 basehttp "GET /Newscasters/ HTTP/1.1" 200 15247
+INFO 2024-01-31 13:31:49,808 basehttp "GET /weather-zipcode/?newscaster=Mike HTTP/1.1" 200 19468
+INFO 2024-01-31 13:35:47,300 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:35:49,274 basehttp "GET /weather-zipcode?newscaster=Mike&language=english HTTP/1.1" 301 0
+INFO 2024-01-31 13:35:49,286 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19468
+INFO 2024-01-31 13:37:18,573 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 13:37:19,786 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:37:23,865 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:37:24,712 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19468
+INFO 2024-01-31 13:38:40,631 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 13:38:42,047 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:38:43,050 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:38:44,297 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19475
+INFO 2024-01-31 13:38:53,023 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19475
+INFO 2024-01-31 13:38:56,955 basehttp "GET /weather-zipcode?newscaster=Pranjal%20&language=spanish HTTP/1.1" 301 0
+INFO 2024-01-31 13:38:56,974 basehttp "GET /weather-zipcode/?newscaster=Pranjal%20&language=spanish HTTP/1.1" 200 18995
+INFO 2024-01-31 13:39:10,179 basehttp "POST /weather-zipcode/?newscaster=Pranjal%20&language=spanish HTTP/1.1" 200 135253
+INFO 2024-01-31 13:42:35,221 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 13:42:36,411 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:42:47,743 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:42:50,326 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19475
+INFO 2024-01-31 13:42:56,450 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:42:57,774 basehttp "GET /weather-zipcode/?newscaster=Pranjal%20&language=spanish HTTP/1.1" 200 18995
+INFO 2024-01-31 13:43:14,219 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 10642
+WARNING 2024-01-31 13:43:14,315 log Not Found: /intro-text-weather/style.css
+WARNING 2024-01-31 13:43:14,316 basehttp "GET /intro-text-weather/style.css HTTP/1.1" 404 8137
+WARNING 2024-01-31 13:43:14,327 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-31 13:43:14,328 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 8134
+INFO 2024-01-31 13:43:20,897 basehttp "POST /intro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:43:20,947 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-31 13:43:20,965 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 20662
+INFO 2024-01-31 13:43:36,006 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:43:41,380 basehttp "GET /weather-zipcode/?newscaster=Pranjal%20&language=spanish HTTP/1.1" 200 18995
+INFO 2024-01-31 13:43:54,571 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 12839
+INFO 2024-01-31 13:43:54,600 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,605 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,614 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,621 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,625 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,637 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:43:54,650 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,656 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,661 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,667 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,672 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,677 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,717 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,723 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,728 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,736 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,741 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,747 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-01-31 13:43:54,755 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-01-31 13:44:01,697 basehttp "GET /admin/radioai/outros/ HTTP/1.1" 200 12462
+INFO 2024-01-31 13:44:01,720 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:44:05,781 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:46:28,437 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25124
+INFO 2024-01-31 13:46:34,718 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25124
+INFO 2024-01-31 13:46:42,445 basehttp "GET /weather-zipcode/?newscaster=Pranjal%20&language=spanish HTTP/1.1" 200 18995
+INFO 2024-01-31 13:46:54,829 basehttp "GET /admin/radioai/intros/ HTTP/1.1" 200 12839
+INFO 2024-01-31 13:46:54,850 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 13:47:03,175 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:47:05,045 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19475
+INFO 2024-01-31 13:47:06,900 basehttp "GET /intro-text-weather/ HTTP/1.1" 200 10642
+WARNING 2024-01-31 13:47:06,935 log Not Found: /intro-text-weather/index.js
+WARNING 2024-01-31 13:47:06,936 basehttp "GET /intro-text-weather/index.js HTTP/1.1" 404 8134
+WARNING 2024-01-31 13:47:06,943 log Not Found: /intro-text-weather/style.css
+WARNING 2024-01-31 13:47:06,945 basehttp "GET /intro-text-weather/style.css HTTP/1.1" 404 8137
+INFO 2024-01-31 13:47:14,378 basehttp "POST /intro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:47:14,416 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-31 13:47:14,430 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 20896
+INFO 2024-01-31 13:47:17,879 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:47:19,542 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19709
+INFO 2024-01-31 13:47:23,517 basehttp "GET /outro-text-weather/ HTTP/1.1" 200 11859
+WARNING 2024-01-31 13:47:23,552 log Not Found: /outro-text-weather/style.css
+WARNING 2024-01-31 13:47:23,553 basehttp "GET /outro-text-weather/style.css HTTP/1.1" 404 8137
+INFO 2024-01-31 13:47:28,676 basehttp "POST /outro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:47:28,719 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-31 13:47:28,730 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 21142
+INFO 2024-01-31 13:47:33,198 basehttp "GET /Newscasters/ HTTP/1.1" 200 15424
+INFO 2024-01-31 13:47:34,581 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-01-31 13:47:42,134 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 25604
+INFO 2024-01-31 13:47:52,657 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:47:52,677 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:47:52,689 basehttp "GET /Newscasters/ HTTP/1.1" 200 13486
+INFO 2024-01-31 13:47:53,933 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8806
+INFO 2024-01-31 13:48:03,520 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:48:03,538 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:48:03,549 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 13:48:07,557 basehttp "GET /weather-zipcode?newscaster=Pranjal&language=english HTTP/1.1" 301 0
+INFO 2024-01-31 13:48:07,887 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=english HTTP/1.1" 200 19712
+INFO 2024-01-31 13:48:17,851 basehttp "GET /edit_newscaster/26/ HTTP/1.1" 200 10328
+INFO 2024-01-31 13:48:24,628 basehttp "POST /edit_newscaster/26/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:48:24,649 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-01-31 13:48:24,661 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 13:48:27,245 basehttp "GET /weather-zipcode?newscaster=Pranjal&language=spanish HTTP/1.1" 301 0
+INFO 2024-01-31 13:48:27,554 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 19712
+INFO 2024-01-31 13:48:31,300 basehttp "GET /outro-text-weather/ HTTP/1.1" 200 11859
+WARNING 2024-01-31 13:48:31,336 log Not Found: /outro-text-weather/style.css
+WARNING 2024-01-31 13:48:31,338 basehttp "GET /outro-text-weather/style.css HTTP/1.1" 404 8137
+INFO 2024-01-31 13:48:37,300 basehttp "POST /outro-text-weather/ HTTP/1.1" 302 0
+INFO 2024-01-31 13:48:37,319 basehttp "GET /weather-zipcode HTTP/1.1" 301 0
+INFO 2024-01-31 13:48:37,332 basehttp "GET /weather-zipcode/ HTTP/1.1" 200 21390
+INFO 2024-01-31 13:48:39,006 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 13:48:40,861 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 19960
+INFO 2024-01-31 13:48:44,830 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 13:48:46,613 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-01-31 13:48:50,252 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 13:48:51,892 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-01-31 13:48:56,788 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 19960
+INFO 2024-01-31 13:49:10,142 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 13:49:11,292 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-01-31 13:49:34,942 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 310796
+INFO 2024-01-31 13:49:40,711 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 19960
+INFO 2024-01-31 13:49:57,983 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 404837
+INFO 2024-01-31 13:53:39,202 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-01-31 13:53:40,480 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 13:53:58,380 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-01-31 13:53:59,728 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 14:01:25,744 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 17576
+INFO 2024-01-31 14:01:25,765 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,770 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,775 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,779 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,784 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,797 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 14:01:25,854 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,859 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,863 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,867 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,872 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,878 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,883 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,887 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,893 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,900 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,906 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,913 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,914 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,927 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:25,927 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-01-31 14:01:29,146 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/113/change/ HTTP/1.1" 200 20626
+INFO 2024-01-31 14:01:29,170 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 14:01:29,256 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-01-31 14:01:29,312 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-01-31 14:01:29,316 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO 2024-01-31 14:01:29,341 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2024-01-31 14:01:46,794 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/113/change/ HTTP/1.1" 302 0
+INFO 2024-01-31 14:01:46,823 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 17749
+INFO 2024-01-31 14:01:46,847 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 14:02:33,851 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/112/change/ HTTP/1.1" 200 20624
+INFO 2024-01-31 14:02:33,876 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 14:02:38,566 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/112/change/ HTTP/1.1" 302 0
+INFO 2024-01-31 14:02:38,605 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 17765
+INFO 2024-01-31 14:02:38,639 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 19:19:32,783 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 19960
+WARNING 2024-01-31 19:19:34,294 log Not Found: /favicon.ico
+WARNING 2024-01-31 19:19:34,296 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-01-31 19:19:49,308 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 390626
+INFO 2024-01-31 19:21:10,927 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\models.py changed, reloading.
+INFO 2024-01-31 19:21:17,068 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:21:37,120 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\admin.py changed, reloading.
+INFO 2024-01-31 19:21:38,391 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:25:16,271 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:25:21,678 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-01-31 19:25:21,715 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 19:25:46,067 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 26196
+INFO 2024-01-31 19:26:06,688 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 14248
+INFO 2024-01-31 19:26:06,714 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,715 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,724 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,734 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,737 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,750 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,753 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-31 19:26:06,756 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,763 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,768 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,773 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,775 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,785 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,785 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,791 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,794 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,804 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,804 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,811 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:06,822 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-01-31 19:26:12,032 basehttp "POST /news/ HTTP/1.1" 200 681526
+INFO 2024-01-31 19:28:35,292 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:28:36,972 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:29:07,248 basehttp "POST /news/ HTTP/1.1" 200 758013
+INFO 2024-01-31 19:29:30,161 basehttp "POST /news/ HTTP/1.1" 200 841186
+INFO 2024-01-31 19:30:15,748 basehttp "POST /news/ HTTP/1.1" 200 68380
+INFO 2024-01-31 19:32:17,848 basehttp "POST /news/ HTTP/1.1" 200 58349
+INFO 2024-01-31 19:32:43,541 basehttp "POST /news/ HTTP/1.1" 200 67126
+INFO 2024-01-31 19:33:07,888 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 19:33:08,885 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-01-31 19:33:22,692 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 316230
+INFO 2024-01-31 19:33:43,729 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 348413
+INFO 2024-01-31 19:33:58,207 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-01-31 19:33:59,725 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 26196
+INFO 2024-01-31 19:34:26,187 basehttp "POST /news/ HTTP/1.1" 200 70470
+INFO 2024-01-31 19:35:09,158 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:35:10,843 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:35:35,201 basehttp "POST /news/ HTTP/1.1" 200 740040
+INFO 2024-01-31 19:38:13,523 basehttp "POST /news/ HTTP/1.1" 200 405673
+INFO 2024-01-31 19:40:16,821 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:40:18,099 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:40:35,945 basehttp "POST /news/ HTTP/1.1" 200 69634
+INFO 2024-01-31 19:44:20,412 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:44:22,025 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-31 19:44:27,585 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 343, in convert_to_audio
+    all_news_text=translate_to_spanish(all_news_text)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1141, in translate_to_spanish
+    translator = Translator()
+TypeError: Translator.__init__() missing 1 required positional argument: 'to_lang'
+ERROR 2024-01-31 19:44:27,591 basehttp "POST /news/ HTTP/1.1" 500 102686
+INFO 2024-01-31 19:45:24,067 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:45:25,431 autoreload Watching for file changes with StatReloader
+ERROR 2024-01-31 19:45:32,423 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 343, in convert_to_audio
+    all_news_text=translate_to_spanish(all_news_text)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1141, in translate_to_spanish
+    translator = Translator()
+TypeError: Translator.__init__() missing 1 required positional argument: 'to_lang'
+ERROR 2024-01-31 19:45:32,426 basehttp "POST /news/ HTTP/1.1" 500 103668
+INFO 2024-01-31 19:45:46,269 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:45:47,668 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:45:58,350 basehttp "POST /news/ HTTP/1.1" 200 65036
+INFO 2024-01-31 19:46:55,508 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-01-31 19:46:56,818 autoreload Watching for file changes with StatReloader
+INFO 2024-01-31 19:47:17,990 basehttp "POST /news/ HTTP/1.1" 200 656030
+INFO 2024-02-01 17:52:28,173 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 26196
+INFO 2024-02-01 17:54:33,747 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-02-01 17:54:36,201 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-01 17:54:42,923 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 19960
+INFO 2024-02-01 17:55:07,670 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 378924
+INFO 2024-02-01 17:56:40,866 basehttp "GET /Newscasters/ HTTP/1.1" 200 15421
+INFO 2024-02-01 17:56:42,523 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 26196
+INFO 2024-02-01 17:57:38,060 basehttp "GET /news/?newscaster=Mike HTTP/1.1" 200 26196
+INFO 2024-02-01 17:59:09,749 basehttp "GET /Newscasters/ HTTP/1.1" 200 15576
+INFO 2024-02-01 17:59:38,248 basehttp "GET /Newscasters/ HTTP/1.1" 200 15579
+INFO 2024-02-01 17:59:38,325 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-01 17:59:38,917 log Not Found: /favicon.ico
+WARNING 2024-02-01 17:59:38,918 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-01 17:59:41,099 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-01 18:01:01,483 basehttp "GET /Newscasters/ HTTP/1.1" 200 15588
+INFO 2024-02-01 18:01:22,808 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:01:24,743 basehttp "GET /news?newscaster=Mike&language=english HTTP/1.1" 301 0
+INFO 2024-02-01 18:01:24,782 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:16:59,023 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:17:00,638 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:17:13,145 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:17:16,505 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:18:36,764 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:18:37,876 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-01 18:18:58,300 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:26:42,688 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:26:46,990 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-02-01 18:26:47,015 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-01 18:26:47,036 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:27:07,153 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:27:10,636 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-01 18:33:17,873 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:33:50,338 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:33:51,913 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:34:27,448 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:34:28,790 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:35:15,578 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:35:16,761 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:35:20,553 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:35:21,902 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:35:22,995 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:35:24,217 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:36:59,414 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:37:00,991 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:37:02,640 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:37:03,990 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:37:13,840 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:37:15,150 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:37:17,111 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:38:25,703 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:38:27,253 autoreload Watching for file changes with StatReloader
+ERROR 2024-02-01 18:38:28,889 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 294, in convert_to_audio
+    if schedule_time:
+UnboundLocalError: local variable 'schedule_time' referenced before assignment
+ERROR 2024-02-01 18:38:28,894 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 500 79962
+INFO 2024-02-01 18:39:48,436 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:39:49,874 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:39:50,775 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:39:54,307 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:39:55,627 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:40:24,167 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:40:25,344 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:40:28,799 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:40:29,741 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:41:01,742 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:41:03,145 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:41:04,080 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:41:05,734 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:41:25,046 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:41:26,234 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:41:26,448 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-01 18:41:26,953 log Not Found: /favicon.ico
+WARNING 2024-02-01 18:41:26,954 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-01 18:41:28,340 basehttp "GET /news?newscaster=Pranjal&language=spanish HTTP/1.1" 301 0
+INFO 2024-02-01 18:41:28,362 basehttp "GET /news/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 26201
+INFO 2024-02-01 18:41:48,970 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:41:50,424 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:41:52,386 basehttp "GET /news/?newscaster=Pranjal&language=spanish HTTP/1.1" 200 26201
+INFO 2024-02-01 18:41:55,659 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:42:58,296 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:43:55,793 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:43:56,867 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:43:56,982 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-01 18:43:57,372 log Not Found: /favicon.ico
+WARNING 2024-02-01 18:43:57,373 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-01 18:43:58,357 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:44:17,133 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:44:18,426 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:44:21,428 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-01 18:45:45,271 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-01 18:45:46,805 autoreload Watching for file changes with StatReloader
+INFO 2024-02-01 18:45:55,803 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-01 18:45:57,589 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
