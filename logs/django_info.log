@@ -10653,3 +10653,13 @@ INFO 2024-02-01 18:45:45,271 autoreload C:\VE\Micheal Johnson\copy-django\dev-ne
 INFO 2024-02-01 18:45:46,805 autoreload Watching for file changes with StatReloader
 INFO 2024-02-01 18:45:55,803 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
 INFO 2024-02-01 18:45:57,589 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-02 17:53:18,094 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 11:42:17,960 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 11:46:28,183 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-05 11:46:31,846 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-05 11:46:33,531 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 19955
+INFO 2024-02-05 11:46:49,605 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english HTTP/1.1" 200 317066
+INFO 2024-02-05 12:03:38,696 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-05 12:04:23,268 basehttp "POST /news/ HTTP/1.1" 200 999593
+INFO 2024-02-05 12:28:39,521 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-05 12:28:43,414 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8806
