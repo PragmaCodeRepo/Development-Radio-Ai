@@ -78,6 +78,6 @@ admin.site.register(SchedulingTasksWeatherByZipcode, SchedulingWeatherByZipcodeA
 
 
 class Newscasteradmin(admin.ModelAdmin):
-     list_display = ('name', 'language', 'voice')
+     list_display = ('name', 'language', 'voice','sftp_host','sftp_port','sftp_username','sftp_password','sftp_remote_path',)
 
 admin.site.register(Newscaster,Newscasteradmin)

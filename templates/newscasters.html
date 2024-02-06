@@ -104,11 +104,11 @@
                 
                 
                 
-                <button onclick="redirectToWeather('{{ newscaster.name }}', '{{ newscaster.language }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button onclick="redirectToWeather('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   Weather
               </button>
               
-                  <button onclick="redirectToNews('{{ newscaster.name }}','{{ newscaster.language }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <button onclick="redirectToNews('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       News Bot
                   </button>
                   <br/>
@@ -137,16 +137,28 @@
     
     </a>
     <script>
-        function redirectToNews(newscasterName,language) {
+        function redirectToNews(newscasterName, language, sftpHost, sftpPort, sftpUsername, sftpPassword, sftpRemotePath) {
           const encodedName = encodeURIComponent(newscasterName);
           const encodedLanguage = encodeURIComponent(language);
-            window.location.href = `/news?newscaster=${encodedName}&language=${encodedLanguage}`;
+          const encodedHost = encodeURIComponent(sftpHost);
+          const encodedPort = encodeURIComponent(sftpPort);
+          const encodedUsername = encodeURIComponent(sftpUsername);
+          const encodedPassword = encodeURIComponent(sftpPassword);
+          const encodedRemotePath = encodeURIComponent(sftpRemotePath);
+      
+          window.location.href = `/news?newscaster=${encodedName}&language=${encodedLanguage}&sftp_host=${encodedHost}&sftp_port=${encodedPort}&sftp_username=${encodedUsername}&sftp_password=${encodedPassword}&sftp_remote_path=${encodedRemotePath}`;
         }
-        function redirectToWeather(newscasterName, language) {
+        function redirectToWeather(newscasterName, language, sftpHost, sftpPort, sftpUsername, sftpPassword, sftpRemotePath) {
           const encodedName = encodeURIComponent(newscasterName);
           const encodedLanguage = encodeURIComponent(language);
-          window.location.href = `/weather-zipcode?newscaster=${encodedName}&language=${encodedLanguage}`;
-      }
+          const encodedHost = encodeURIComponent(sftpHost);
+          const encodedPort = encodeURIComponent(sftpPort);
+          const encodedUsername = encodeURIComponent(sftpUsername);
+          const encodedPassword = encodeURIComponent(sftpPassword);
+          const encodedRemotePath = encodeURIComponent(sftpRemotePath);
+      
+          window.location.href = `/weather-zipcode?newscaster=${encodedName}&language=${encodedLanguage}&sftp_host=${encodedHost}&sftp_port=${encodedPort}&sftp_username=${encodedUsername}&sftp_password=${encodedPassword}&sftp_remote_path=${encodedRemotePath}`;
+        }
     </script>
     <br/>
     <br/>

@@ -38,3 +38,4 @@ celery
 djangorestframework
 gunicorn
 python-dotenv
+translate

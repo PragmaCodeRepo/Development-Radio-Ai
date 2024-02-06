@@ -168,6 +168,11 @@ class Newscaster(models.Model):
     name = models.CharField(max_length=100)
     language = models.CharField(max_length=100, choices=LANGUAGE_CHOICES)
     voice = models.CharField(max_length=100)
+    sftp_host = models.CharField(max_length=255,default="")
+    sftp_port = models.IntegerField(default="1")
+    sftp_username = models.CharField(max_length=255,default="")
+    sftp_password = models.CharField(max_length=255,default="")
+    sftp_remote_path = models.CharField(max_length=255,default="")
     # ... add other fields as necessary
 
     def __str__(self):

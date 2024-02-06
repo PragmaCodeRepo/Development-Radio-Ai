@@ -372,6 +372,11 @@ def convert_to_audio(request):
             return response
     language = request.GET.get('language', '')    
     news_caster = request.GET.get('newscaster', '')
+    sftp_host = request.GET.get('sftp_host', '')
+    sftp_port = request.GET.get('sftp_port', '')
+    sftp_username = request.GET.get('sftp_username', '')
+    sftp_password = request.GET.get('sftp_password', '')
+    sftp_remote_path = request.GET.get('sftp_remote_path', '')
     all_intros = Intros.objects.all()
     all_outros=Outros.objects.all()
     print(language)
@@ -386,7 +391,7 @@ def convert_to_audio(request):
             intros = all_intros
             outros=all_outros
 
-    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,'news_caster':news_caster,'languaage':language, })
+    return render(request, 'index.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros,'news_caster':news_caster,'language':language,'sftp_host':sftp_host,'sftp_port':sftp_port,'sftp_username':sftp_username,'sftp_password':sftp_password,'sftp_remote_path':sftp_remote_path })
 
 
 # weather --code
@@ -719,6 +724,11 @@ def zipcode_weather(request):
         return FileResponse(open(output_file, 'rb'), as_attachment=True, filename='zipcode_weather_report.mp3')
     news_caster = request.GET.get('newscaster', '')
     language = request.GET.get('language', '')
+    sftp_host = request.GET.get('sftp_host', '')
+    sftp_port = request.GET.get('sftp_port', '')
+    sftp_username = request.GET.get('sftp_username', '')
+    sftp_password = request.GET.get('sftp_password', '')
+    sftp_remote_path = request.GET.get('sftp_remote_path', '')
     all_intros = Intros.objects.all()
     all_outros=Outros.objects.all()
         
@@ -731,7 +741,7 @@ def zipcode_weather(request):
             outros=all_outros
 
 
-    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,'news_caster':news_caster,'language':language})
+    return render(request, 'weather_zipcode.html', context={'intros': intros, 'all_intros': all_intros,'outros':outros,'all_outros':all_outros, "flag": flag,"time_to_show":time_to_show,"recurr_type":recurr_type,'news_caster':news_caster,'language':language,'sftp_host':sftp_host,'sftp_port':sftp_port,'sftp_username':sftp_username,'sftp_password':sftp_password,'sftp_remote_path':sftp_remote_path})
 
 
 # chatbotdef chatgpt(request):
@@ -908,12 +918,17 @@ def add_newscaster(request):
         name = request.POST.get('name')
         language = request.POST.get('language')
         voice = request.POST.get('voice')
+        sftp_host=request.POST.get('sftp_host')
+        sftp_port=request.POST.get('sftp_port')
+        sftp_username=request.POST.get('sftp_username')
+        sftp_password=request.POST.get('sftp_password')
+        sftp_remote_path=request.POST.get('sftp_remote_path')
         exsiting_newscaster=Newscaster.objects.filter(name=name).first()
         if exsiting_newscaster:
             return render(request, 'add_newscaster.html', {'error_message': 'Newscaster with the same name already exists'})
 
         # Create a new Newscaster object and save it
-        Newscaster.objects.create(name=name, language=language, voice=voice)
+        Newscaster.objects.create(name=name, language=language, voice=voice,sftp_host=sftp_host,sftp_port=sftp_port,sftp_username=sftp_username,sftp_password=sftp_password,sftp_remote_path=sftp_remote_path)
         
         return redirect('/Newscasters')  # Redirect to the add_newscaster page after adding
 
@@ -942,6 +957,13 @@ def edit_newscaster(request, newscaster_id):
         newscaster.name = request.POST['name']
         newscaster.language = request.POST['language']
         newscaster.voice = request.POST['voice']
+        newscaster.sftp_host = request.POST['sftp_host']
+        newscaster.sftp_port = request.POST['sftp_port']
+        newscaster.sftp_username = request.POST['sftp_username']
+        newscaster.sftp_password = request.POST['sftp_password']
+        newscaster.sftp_remote_path = request.POST['sftp_remote_path']
+
+
         newscaster.save()
         return redirect('/Newscasters')
 

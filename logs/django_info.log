@@ -10663,3 +10663,324 @@ INFO 2024-02-05 12:03:38,696 basehttp "GET /news/?newscaster=Mike&language=engli
 INFO 2024-02-05 12:04:23,268 basehttp "POST /news/ HTTP/1.1" 200 999593
 INFO 2024-02-05 12:28:39,521 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
 INFO 2024-02-05 12:28:43,414 basehttp "GET /add_newscaster/ HTTP/1.1" 200 8806
+INFO 2024-02-05 12:47:24,116 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 14:01:10,965 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-05 14:03:08,205 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\admin.py changed, reloading.
+INFO 2024-02-05 14:03:09,650 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 14:06:21,223 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 14:06:24,588 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 30501
+INFO 2024-02-05 14:06:24,705 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,705 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,705 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,713 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,714 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,716 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,726 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,726 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,730 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:06:24,759 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,760 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,760 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,768 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,774 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,809 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,823 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,828 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,845 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,860 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:24,860 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:29,258 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 200 11908
+INFO 2024-02-05 14:06:29,435 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:33,061 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 302 0
+INFO 2024-02-05 14:06:33,089 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9989
+INFO 2024-02-05 14:06:33,113 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:06:33,158 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:33,647 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 22987
+INFO 2024-02-05 14:06:33,677 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:06:37,241 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 11612
+INFO 2024-02-05 14:06:39,346 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-02-05 14:06:39,379 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10134
+INFO 2024-02-05 14:06:39,406 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:06:39,949 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 12414
+INFO 2024-02-05 14:06:39,999 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:06:41,839 basehttp "GET /admin/radioai/newscaster/add/ HTTP/1.1" 200 14908
+INFO 2024-02-05 14:06:41,877 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:06:41,878 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:41,878 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:41,890 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-02-05 14:06:41,917 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-02-05 14:09:38,801 basehttp "GET /Newscasters/ HTTP/1.1" 200 15585
+INFO 2024-02-05 14:09:39,956 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10138
+INFO 2024-02-05 14:43:31,938 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 14:43:32,378 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 14:43:32,389 basehttp "GET /Newscasters/ HTTP/1.1" 200 17551
+INFO 2024-02-05 14:43:37,511 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 12885
+INFO 2024-02-05 14:43:37,534 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:43:42,025 basehttp "GET /admin/radioai/newscaster/27/change/ HTTP/1.1" 200 15177
+INFO 2024-02-05 14:43:42,048 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:47:24,839 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 14:47:26,310 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 14:47:27,871 basehttp "GET /admin/radioai/newscaster/27/change/ HTTP/1.1" 200 15177
+INFO 2024-02-05 14:47:27,909 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:47:29,811 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10138
+ERROR 2024-02-05 14:47:35,859 log Internal Server Error: /add_newscaster/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: radioai_newscaster.sftp_remote_path
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 921, in add_newscaster
+    Newscaster.objects.create(name=name, language=language, voice=voice,sftp_host=sftp_host,sftp_port=sftp_port,sftp_username=sftp_username,sftp_password=sftp_password,sftp_remote_path=sftp_remote_path)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: radioai_newscaster.sftp_remote_path
+ERROR 2024-02-05 14:47:35,872 basehttp "POST /add_newscaster/ HTTP/1.1" 500 172394
+ERROR 2024-02-05 14:48:39,573 log Internal Server Error: /add_newscaster/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: radioai_newscaster.sftp_remote_path
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 921, in add_newscaster
+    Newscaster.objects.create(name=name, language=language, voice=voice,sftp_host=sftp_host,sftp_port=sftp_port,sftp_username=sftp_username,sftp_password=sftp_password,sftp_remote_path=sftp_remote_path)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: radioai_newscaster.sftp_remote_path
+ERROR 2024-02-05 14:48:39,581 basehttp "POST /add_newscaster/ HTTP/1.1" 500 172394
+INFO 2024-02-05 14:48:45,922 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10470
+INFO 2024-02-05 14:48:54,546 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 14:48:54,566 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 14:48:54,583 basehttp "GET /Newscasters/ HTTP/1.1" 200 19523
+INFO 2024-02-05 14:48:58,379 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 13421
+INFO 2024-02-05 14:48:58,401 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 14:48:59,573 basehttp "GET /admin/radioai/newscaster/28/change/ HTTP/1.1" 200 15284
+INFO 2024-02-05 14:48:59,596 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 16:07:49,116 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10470
+INFO 2024-02-05 16:16:13,009 basehttp "GET /Newscasters/ HTTP/1.1" 200 19523
+INFO 2024-02-05 16:16:14,511 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-05 16:22:57,502 basehttp "GET /news/?newscaster=Mike&language=english HTTP/1.1" 200 26196
+INFO 2024-02-05 16:22:57,666 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-05 16:22:58,209 log Not Found: /favicon.ico
+WARNING 2024-02-05 16:22:58,210 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-05 16:22:59,380 basehttp "GET /Newscasters/ HTTP/1.1" 200 20240
+WARNING 2024-02-05 16:23:01,217 log Not Found: /weatherAndSFTP
+WARNING 2024-02-05 16:23:01,218 basehttp "GET /weatherAndSFTP?newscaster=Mike&language=english&sftp_host=&sftp_port=1&sftp_username=&sftp_password=&sftp_remote_path= HTTP/1.1" 404 8223
+WARNING 2024-02-05 16:23:45,837 log Not Found: /weatherAndSFTP
+WARNING 2024-02-05 16:23:45,838 basehttp "GET /weatherAndSFTP?newscaster=Mike&language=english&sftp_host=&sftp_port=1&sftp_username=&sftp_password=&sftp_remote_path= HTTP/1.1" 404 8223
+WARNING 2024-02-05 16:23:47,729 log Not Found: /weatherAndSFTP
+WARNING 2024-02-05 16:23:47,731 basehttp "GET /weatherAndSFTP?newscaster=Mike&language=english&sftp_host=&sftp_port=1&sftp_username=&sftp_password=&sftp_remote_path= HTTP/1.1" 404 8223
+WARNING 2024-02-05 16:24:46,768 log Not Found: /weatherAndSFTP
+WARNING 2024-02-05 16:24:46,768 basehttp "GET /weatherAndSFTP?newscaster=Mike&language=english&sftp_host=&sftp_port=1&sftp_username=&sftp_password=&sftp_remote_path= HTTP/1.1" 404 8223
+INFO 2024-02-05 16:24:50,182 basehttp "GET /Newscasters/ HTTP/1.1" 200 20230
+INFO 2024-02-05 16:24:50,207 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-05 16:24:50,497 log Not Found: /favicon.ico
+WARNING 2024-02-05 16:24:50,499 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-05 16:24:52,177 basehttp "GET /news?newscaster=Mike&language=english&sftp_host=&sftp_port=1&sftp_username=&sftp_password=&sftp_remote_path= HTTP/1.1" 301 0
+INFO 2024-02-05 16:24:52,227 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=&sftp_port=1&sftp_username=&sftp_password=&sftp_remote_path= HTTP/1.1" 200 26196
+INFO 2024-02-05 16:26:07,637 basehttp "GET /news?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-02-05 16:26:07,916 basehttp "GET /news/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 25244
+INFO 2024-02-05 16:30:04,246 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 16:30:06,629 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 16:32:45,353 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 16:32:51,279 basehttp "GET /Newscasters/ HTTP/1.1" 200 20230
+INFO 2024-02-05 16:32:51,375 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-05 16:32:52,034 log Not Found: /favicon.ico
+WARNING 2024-02-05 16:32:52,035 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-05 16:32:54,747 basehttp "GET /news/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 25498
+INFO 2024-02-05 16:34:49,440 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 16:34:50,810 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 16:35:02,031 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 16:35:03,205 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 16:35:06,059 basehttp "GET /news/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 25505
+INFO 2024-02-05 16:37:09,267 basehttp "GET /Newscasters/ HTTP/1.1" 200 20932
+INFO 2024-02-05 16:37:11,712 basehttp "GET /weather-zipcode?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-02-05 16:37:11,784 basehttp "GET /weather-zipcode/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 19003
+INFO 2024-02-05 16:42:29,683 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 16:42:31,027 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 16:42:32,168 basehttp "GET /Newscasters/ HTTP/1.1" 200 20932
+INFO 2024-02-05 16:42:36,121 basehttp "GET /weather-zipcode/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 19003
+INFO 2024-02-05 16:59:32,377 basehttp "GET /weather-zipcode/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 19202
+INFO 2024-02-05 17:07:50,209 basehttp "GET /Newscasters/ HTTP/1.1" 200 20932
+INFO 2024-02-05 17:07:51,634 basehttp "GET /edit_newscaster/24/ HTTP/1.1" 200 10325
+INFO 2024-02-05 17:07:56,926 basehttp "GET /Newscasters/ HTTP/1.1" 200 20932
+INFO 2024-02-05 17:07:59,035 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:07:59,057 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:07:59,071 basehttp "GET /Newscasters/ HTTP/1.1" 200 18952
+INFO 2024-02-05 17:09:55,435 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 17:09:56,836 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 17:09:57,988 basehttp "GET /Newscasters/ HTTP/1.1" 200 18952
+INFO 2024-02-05 17:10:00,423 basehttp "GET /edit_newscaster/28/ HTTP/1.1" 200 12001
+INFO 2024-02-05 17:10:11,862 basehttp "GET /Newscasters/ HTTP/1.1" 200 18952
+INFO 2024-02-05 17:10:11,961 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-05 17:10:12,150 log Not Found: /favicon.ico
+WARNING 2024-02-05 17:10:12,151 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-05 17:12:15,042 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:12:15,062 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:12:15,206 basehttp "GET /Newscasters/ HTTP/1.1" 200 16963
+INFO 2024-02-05 17:12:16,167 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:12:16,185 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:12:16,317 basehttp "GET /Newscasters/ HTTP/1.1" 200 14953
+INFO 2024-02-05 17:12:17,674 basehttp "GET /edit_newscaster/28/ HTTP/1.1" 200 12001
+INFO 2024-02-05 17:12:21,507 basehttp "GET /Newscasters/ HTTP/1.1" 200 14953
+INFO 2024-02-05 17:12:24,357 basehttp "GET /weather-zipcode/?newscaster=Nandita%20dodwalll&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 19202
+INFO 2024-02-05 17:13:05,880 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 17:13:07,126 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 17:13:10,314 basehttp "GET /Newscasters/ HTTP/1.1" 200 14953
+INFO 2024-02-05 17:13:10,423 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-02-05 17:13:10,607 log Not Found: /favicon.ico
+WARNING 2024-02-05 17:13:10,608 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-05 17:13:27,573 basehttp "GET /edit_newscaster/28/ HTTP/1.1" 200 12001
+INFO 2024-02-05 17:15:19,323 basehttp "GET /admin/radioai/newscaster/28/delete/ HTTP/1.1" 200 9778
+INFO 2024-02-05 17:15:20,923 basehttp "POST /admin/radioai/newscaster/28/delete/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:15:20,971 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 9661
+INFO 2024-02-05 17:15:20,995 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-05 17:15:23,665 basehttp "GET /Newscasters/ HTTP/1.1" 200 13096
+INFO 2024-02-05 17:15:25,434 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10470
+INFO 2024-02-05 17:15:30,670 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:15:30,691 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:15:30,708 basehttp "GET /Newscasters/ HTTP/1.1" 200 14953
+INFO 2024-02-05 17:15:31,617 basehttp "GET /edit_newscaster/29/ HTTP/1.1" 200 12001
+INFO 2024-02-05 17:19:12,640 basehttp "GET /edit_newscaster/29/ HTTP/1.1" 200 12071
+INFO 2024-02-05 17:20:12,323 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-05 17:20:13,596 autoreload Watching for file changes with StatReloader
+INFO 2024-02-05 17:25:33,005 basehttp "GET /edit_newscaster/29/ HTTP/1.1" 200 12110
+INFO 2024-02-05 17:25:41,653 basehttp "POST /edit_newscaster/29/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:25:41,696 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:25:41,710 basehttp "GET /Newscasters/ HTTP/1.1" 200 14953
+INFO 2024-02-05 17:25:42,887 basehttp "GET /edit_newscaster/29/ HTTP/1.1" 200 12110
+INFO 2024-02-05 17:25:46,038 basehttp "POST /edit_newscaster/29/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:25:46,080 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:25:46,091 basehttp "GET /Newscasters/ HTTP/1.1" 200 14953
+INFO 2024-02-05 17:25:49,746 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10470
+INFO 2024-02-05 17:25:58,908 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:25:58,928 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:25:58,943 basehttp "GET /Newscasters/ HTTP/1.1" 200 17059
+INFO 2024-02-05 17:26:00,250 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10470
+INFO 2024-02-05 17:26:10,259 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:26:10,301 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:26:10,397 basehttp "GET /Newscasters/ HTTP/1.1" 200 19174
+INFO 2024-02-05 17:26:12,738 basehttp "POST /delete_newscaster/ HTTP/1.1" 302 0
+INFO 2024-02-05 17:26:12,760 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-02-05 17:26:12,952 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-05 17:26:15,997 basehttp "GET /weather-zipcode?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-02-05 17:26:16,305 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20154
+INFO 2024-02-05 17:26:35,791 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 307453
+INFO 2024-02-05 17:31:11,249 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 11:43:55,973 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 11:44:17,494 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-02-06 11:44:19,299 basehttp "GET /static/images/Vesion_1.png HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:29,946 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 11:44:35,324 basehttp "GET /edit_newscaster/30/ HTTP/1.1" 200 12098
+INFO 2024-02-06 11:44:42,323 basehttp "GET /admin/radioai/newscaster/ HTTP/1.1" 200 12677
+INFO 2024-02-06 11:44:42,675 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,675 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,679 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,686 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,686 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,698 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,698 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,704 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,711 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,718 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,719 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,731 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,737 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,747 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-06 11:44:42,765 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,800 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:42,867 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:43,329 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:43,330 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:43,342 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:48,245 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 14209
+INFO 2024-02-06 11:44:48,292 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-06 11:44:48,317 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:52,649 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 9755
+INFO 2024-02-06 11:44:52,799 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2024-02-06 11:44:54,688 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-02-06 11:44:54,745 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10133
+INFO 2024-02-06 11:44:54,769 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-06 11:44:55,310 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9841
+INFO 2024-02-06 11:44:55,330 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
