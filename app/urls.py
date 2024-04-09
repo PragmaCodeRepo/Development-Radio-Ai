@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('radioai.urls',namespace='radioai')),
+    # path('speech/', include('speechtospeech.urls',namespace='speechtospeech')),
     path('scheduling/', include('scheduling.urls')),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

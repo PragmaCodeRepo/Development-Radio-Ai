@@ -1,95 +1,85 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
     <style>
-     .backk{
-      background-image: url('{% static "images/Vesion_1.png" %}');
-     }
+        .backk {
+            background-image: url('{% static "images/Vesion_1.png" %}');
+        }
     </style>
-  </head>
-  
-  <body
-    class="bg-cover bg-center bg-fixed backk"
-    
-  >
-    <div
-      class="bg bg-opacity-50 h-screen flex flex-col items-center justify-center text-white"
-    >
-      <!-- Additional text above the login box -->
-      <div class="text-center mb-8">
-        
-        <h1 class="text-4xl font-bold tracking-tight text-900 sm:text-6xl">
-          Automated Generation of News and Weather
+</head>
+<body class="bg-cover bg-center bg-fixed backk">
+<div class="bg bg-opacity-50 min-h-screen flex flex-col items-center justify-center text-white">
+    <!-- Additional text above the login box -->
+    <div class="text-center mb-8 px-4">
+        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-900">
+            Automated Generation of News and Weather
         </h1>
-        <p class="mt-6 text-lg leading-8 font-bold tracking-tight text-900">
-          AI bot for genration automated latest news and weather
+        <p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl leading-8 font-bold tracking-tight text-900">
+            AI bot for generation automated latest news and weather
         </p>
-        <div
-          class="relative rounded-full px-3 py-1 font-bold tracking-tight text-900 leading-6"
-        >
-          GroundRushLabs.
+        <div class="relative rounded-full px-3 py-1 font-bold tracking-tight text-900 leading-6">
+            GroundRushLabs.
         </div>
-      </div>
+    </div>
 
-      <!-- Login box in the center -->
-      <div
-        class="bg-white p-8 rounded shadow-md w-1/3 mx-auto mt-10 text-black justify-between items-center"
-      >
+    <!-- Login box in the center -->
+    <div class="bg-white p-8 rounded shadow-md w-full md:w-1/3 mx-auto mt-10 text-black justify-between items-center">
         <div class="flex justify-between items-center mb-4">
-          <h2 class="text-2xl mb-4 text-gray-800 font-semibold">Login</h2>
-          <img
-          src="https://github.com/PragmaCodeRepo/Images/blob/main/Groundrushlabs_logo.png?raw=true"
-            alt="GroundRushLabs Logo"
-            class="w-19 h-10"
-          />
+            <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 text-gray-800 font-semibold">Login</h2>
+            <img
+                src="https://github.com/PragmaCodeRepo/Images/blob/main/Groundrushlabs_logo.png?raw=true"
+                alt="GroundRushLabs Logo"
+                class="w-19 h-10"
+            />
         </div>
         {% if error_message %}
-        <p class="text-red-500 mb-4">{{ error_message }}</p>
+            <p class="text-red-500 mb-4">{{ error_message }}</p>
         {% endif %}
         <form method="post" class="space-y-4">
-          {% csrf_token %}
-          <div>
-            <label
-              for="username"
-              class="block text-gray-700 text-sm font-semibold mb-1"
-              >Username:</label
+            {% csrf_token %}
+            <div>
+                <label
+                    for="username"
+                    class="block text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 font-semibold mb-1"
+                >Username:</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="w-full border rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+                />
+            </div>
+            <div>
+                <label
+                    for="password"
+                    class="block text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 font-semibold mb-1"
+                >Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="w-full border rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+                />
+            </div>
+            <button
+                type="submit"
+                class="w-full bg-blue-500 text-white py-2 px-4 mt-5 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
-            <input
-              type="text"
-              id="username"
-              name="username"
-              class="w-full border rounded py-2 px-3 focus:outline-none focus:border-blue-500"
-            />
-          </div>
-          <div>
-            <label
-              for="password"
-              class="block text-gray-700 text-sm font-semibold mb-1"
-              >Password:</label
-            >
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="w-full border rounded py-2 px-3 focus:outline-none focus:border-blue-500"
-            />
-          </div>
-          <button
-            type="submit"
-            class="w-full bg-blue-500 text-white py-2 px-4 mt-5 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            Login
-          </button>
+                Login
+            </button>
         </form>
+
+        <!-- Button for inquiry -->
+        <div class="flex justify-center">
+          <a href="contactus/" class="mt-4 inline-block bg-green-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-md transition duration-300 ease-in-out">Want to Inquiry?</a>
       </div>
+      
     </div>
-  </body>
+</div>
+</body>
 </html>

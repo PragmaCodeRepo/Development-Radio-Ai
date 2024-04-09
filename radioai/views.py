@@ -4,6 +4,7 @@ from django.core.mail import send_mail, BadHeaderError
 import datetime
 import requests
 from xml.etree import ElementTree as ET
+from app.settings import BASE_DIR
 import openai
 from moviepy.editor import *
 from io import BytesIO
@@ -340,6 +341,7 @@ def convert_to_audio(request):
                 all_news_text += f"{rewritten_description}\n"
 
         all_news_text += f'<break time="1s"/>{outro_user}'
+        
         
 
         # Convert text to audio using the selected voice gender
@@ -1176,6 +1178,336 @@ def translate_to_spanish(text):
      
 
 
-# Example usage
+# DeepL tranlation
+# import deepl
+
+# def translate_to_spanish(text):
+#     deepl_auth_key = 'YOUR_DEEPL_AUTH_KEY'  # Replace 'YOUR_DEEPL_AUTH_KEY' with your actual DeepL API key
+#     translator = deepl.Translator(deepl_auth_key)
+#     translated_text = translator.translate(text, target_lang='ES')
+#     return translated_text
+
+
+#Speech to Speech
+
+def speech_to_speech(request):
+    return render(request, 'speech_to_speech.html')
+
+
+
+
+
+
+
+
+#Meta Song data 
+import os
+import paramiko
+from datetime import datetime
+from django.shortcuts import render
+import concurrent.futures
+import time
+
+def fetching_song_meta_data(request):
+    track_names = []
+    if request.method == 'POST':
+        # Start the timer for profiling
+        start_time = time.time()
+        print("************INSIDE META DATA SONG************")
+
+        # SFTP server credentials
+        sftp_host = request.POST.get('sftp_host')
+        sftp_port = request.POST.get('sftp_port')
+        sftp_username = request.POST.get('sftp_username')
+        sftp_password = request.POST.get('sftp_password')
+        sftp_path_playlist=request.POST.get('sftp_path_playlist')
+        sftp_path_output=request.POST.get('sftp_path_output')
+        recurrence_type=request.POST.get('recurrence_type')
+        schedule_time=request.POST.get('schedule_time')
+        extraedge=request.POST.get('extraedge')
+        stationname=request.POST.get('stationname')
+        voice=request.POST.get('voice')
+        sftp_port=int(sftp_port)
+        print(f"The ex {extraedge}")
+        print(f"The voice is ={voice}")
+        obj = SchedulingSongsMetaData.objects.create(
+            sftp_host=sftp_host,
+            sftp_port=sftp_port,
+            sftp_password=sftp_password,
+            sftp_username=sftp_username,
+            sftp_playlist_folder_name=sftp_path_playlist,
+            sftp_output_folder_name=sftp_path_output,
+            is_pending=True if schedule_time else False,
+            schedule_time=schedule_time,
+            recurrence_type=recurrence_type,
+        )
+        obj.save()
+
+        # Construct the remote path based on the current date
+        today_date = datetime.now().strftime('%m%d%y')
+        sftp_remote_path = f'/{sftp_path_playlist}/{today_date}/'
+        print(f"SFTP remote path: {sftp_remote_path}")
+
+        media_folder = os.path.join(BASE_DIR, "media")
+
+        # Connect to the SFTP server
+        transport = paramiko.Transport((sftp_host, sftp_port))
+        transport.connect(username=sftp_username, password=sftp_password)
+        sftp = paramiko.SFTPClient.from_transport(transport)
+
+        # List files in the specific folder
+        folder_files = sftp.listdir(sftp_remote_path)
+
+        # Determine the name of the .pls file based on the current hour
+        current_hour = datetime.now().hour
+        pls_file_name = f"{(current_hour + 1):02}.pls"
+        print(f"Expected .pls file based on current hour: {pls_file_name}")
+
+        # Check if the .pls file exists in the folder
+        if pls_file_name in folder_files:
+            remote_file_path = os.path.join(sftp_remote_path, pls_file_name)
+            local_file_path = os.path.join(media_folder, pls_file_name)
+            os.makedirs(os.path.dirname(local_file_path), exist_ok=True)
+            sftp.get(remote_file_path, local_file_path)
+            track_names = get_track_names(local_file_path)
+
+            # Function to process each track
+            def process_track(i):
+                # print("*******INSIDE PROCESS TRACK*************")
+                current_track = track_names[i]
+                next_track = track_names[i + 1]
+                fun_fact_current = rewrite_with_chatgpt_song_meta_data(current_track,current_track,next_track,stationname)
+                fun_fact_next = rewrite_with_chatgpt_song_meta_data(next_track,current_track,next_track,stationname)
+                extradata=extranews(extraedge)
+                print(f"the extra news is {extraedge}")
+                text = f"  {fun_fact_current}. Next song is {next_track} {fun_fact_next} {extradata}"
+                audio_file = f"vo{(i // 3) + 1}.mp3"
+                convert_text_to_audio_gtts(text, audio_file,'21m00Tcm4TlvDq8ikWAM')
+                upload_to_sftp_for_meta_data(audio_file, f"{sftp_path_output}/VO{(i // 3) + 1}/{audio_file}", sftp_host, sftp_port, sftp_username, sftp_password)
+                print(f"Processed track: {current_track}, Next track: {next_track}")
+
+            # Use ThreadPoolExecutor for parallel processing
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                executor.map(process_track, range(2, len(track_names) - 1, 3))
+            # for i in range(2, len(track_names) - 1, 3):
+                # process_track(i)
+
+        # Close the SFTP connection
+        sftp.close()
+        transport.close()
+
+        # Clean up the local media folder
+        empty_folder(media_folder)
+
+        # Log the total execution time
+        print(f"Total execution time: {time.time() - start_time} seconds")
+        return render(request, 'Songs/fetching.html', {"track_names": track_names})
+
+    return render(request, 'Songs/fetching.html')
+
+
+def empty_folder(folder_path):
+    # List all files and subdirectories in the folder
+    for root, dirs, files in os.walk(folder_path):
+        # Remove files
+        for file in files:
+            os.remove(os.path.join(root, file))
+        # Remove subdirectories
+        for dir in dirs:
+            os.rmdir(os.path.join(root, dir))
+
+
+def get_track_names(path):
+    track_names = []
+
+    # Open the file with the correct encoding
+    with open(path, "r", encoding="latin-1") as file:
+        # Read the lines of the file
+        lines = file.readlines()
+
+        # Iterate over each line
+        for line in lines:
+            # Check if the line starts with "TrackName"
+            if line.startswith("TrackName"):
+                # Split the line by "=" and get the second part (the value)
+                track_name = line.split("=")[1].strip()
+                # Append the track name to the list
+                track_names.append(track_name)
+
+    # Print the list of track names
+    return track_names
+
+
+def convert_text_to_audio_gtts(text, output_file, voice_id):
+    ELEVEN_API_URL = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"    
+    try:
+        data = {
+            "text": text,
+            "model_id": "eleven_monolingual_v1",
+            "voice_settings": {
+                "stability": 0.5,
+                "similarity_boost": 0.5
+            }
+        }
+        headers = {
+            "Accept": "audio/mpeg",
+            "Content-Type": "application/json",
+            "xi-api-key": config('ELEVEN_API_KEY')
+        }
+        response = requests.post(ELEVEN_API_URL, json=data, headers=headers)
+        
+        if response.status_code == 200:
+            with open(output_file, 'wb') as f:
+                f.write(response.content)
+        else:
+            print(f"Failed to convert text to audio with Eleven Labs. Status code: {response.status_code}")
+    except RequestException as e:
+        print(f"An error occurred with Eleven Labs: {str(e)}")
+def rewrite_with_chatgpt_song_meta_data(text,current_track,next_track,stationname):
+    # truncated_text = text[:4096]
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "system",
+            "content": f"You are a radio dj female named Payton Brooks on {stationname} best country is the tag line  and you are backselling out of {current_track} song while giving a  bit of fun information then I would like you to front sell of this this {next_track} did give fun information about this song aor artist also.and keep it small"
+        },
+            {
+            "role": "user",
+            "content": str(text)
+        }]
+    )
+    
+    return response.choices[0].message['content'].strip()
+
+
+def upload_to_sftp_for_meta_data(local_path, remote_path, sftp_host, sftp_port, sftp_username, sftp_password):
+    print("**********INSIDE UPLOAD*******************")
+    ssh_client = paramiko.SSHClient()
+    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        ssh_client.connect(
+            hostname=sftp_host, port=sftp_port, username=sftp_username, password=sftp_password
+        )
+
+        with ssh_client.open_sftp() as sftp:
+            sftp.put(local_path, remote_path)
+        print("************upload successfully*************")
+
+    except Exception as e:
+        print(f"Error uploading file via SFTP: {e}")
+    finally:
+        ssh_client.close()
+# import re
+# import os
+# def fetching_song_meta_data(request):
+#     if request.method == 'POST':
+#         print("************INSIDE META DATA SONG************")
+#         # SFTP server credentials
+#         sftp_host = '75.43.156.103'
+#         sftp_port = 2227  # or any other port your SFTP server is running on
+#         sftp_username = 'GRUser'
+#         sftp_password = 'HOX45!!'
+#         sftp_remote_path = '/Playlist/022224/'
+#         # Connect to the SFTP server
+#         transport = paramiko.Transport((sftp_host, sftp_port))
+#         transport.connect(username=sftp_username, password=sftp_password)
+#         sftp = paramiko.SFTPClient.from_transport(transport)
+#         # List files in the specific folder
+#         folder_files = sftp.listdir(sftp_remote_path)
+#         # Read the .pls file from the folder
+#         pls_file = None
+#         for file_name in folder_files:
+#             if file_name.endswith('.pls'):
+#                 pls_file = file_name
+#                 break
+#         print(f"{pls_file}")
+#         if pls_file:
+#             pls_file_path = os.path.join(sftp_remote_path, pls_file)
+#             pls_content = read_pls(pls_file_path)
+#             # # Read the contents of the .pls file
+#             # with sftp.open(pls_file_path, 'r') as file:
+#             #  try:
+#             #     pls_content = file.read().decode('utf-8')
+#             #  except UnicodeDecodeError:
+#             #     pls_content = file.read().decode('latin-1')
+#             # Close SFTP connection
+#             sftp.close()
+#             transport.close()
+#             # Extract 'TrackName' values from the .pls file content
+#             print(f"pls content{pls_content}")
+#             track_names = re.findall(r'TrackName\d+=(.*)', pls_content)
+#             print(f" Track names is {track_names}")
+#             track_names_list = [name.strip() for name in track_names]
+#             # Pass track names to the template
+#             return render(request, 'Songs/fetching.html', {
+#                 'track_names_list': track_names_list
+#             })
+#         else:
+#             # If no .pls file found in the folder
+#             return render(request, 'Songs/no_pls_file.html')
+#     return render(request, 'Songs/fetching.html')
+
+
+def read_pls(file_path):
+    print("file path = ", file_path)
+    playlist = {}
+    with open(file_path, 'r') as f:
+        lines = f.readlines()
+        print("lines = ", lines)
+        for line in lines:
+            line = line.strip()
+            if line.startswith("File"):
+                parts = line.split("=")
+                if len(parts) == 2:
+                    file_index = int(parts[0].split("File")[1].strip())
+                    file_path = parts[1].strip()
+                    playlist[file_index] = file_path
+    return playlist
+
+
+def extranews(text):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "system",
+            "content": f"The text is as follows: {text}. Please read it and respond accordingly. Keep your reply concise."
+        },
+            {
+            "role": "user",
+            "content": str(text)
+        }]
+    )
+    
+    return response.choices[0].message['content'].strip()        
+
+
+def upload_files(request):
+    SFTP_HOST = '75.43.156.103'
+    SFTP_PORT = 2227
+    SFTP_USERNAME = 'GRUser'
+    SFTP_PASSWORD = 'HOX45!!'
+    SFTP_FOLDER = '/Test'
+
+    if request.method == 'POST' and request.FILES.getlist('files'):
+        try:
+            transport = paramiko.Transport((SFTP_HOST, SFTP_PORT))
+            transport.connect(username=SFTP_USERNAME, password=SFTP_PASSWORD)
+            sftp = paramiko.SFTPClient.from_transport(transport)
+
+            for file in request.FILES.getlist('files'):
+                filename = file.name
+                sftp.putfo(file, f'{SFTP_FOLDER}/{filename}')
+
+            sftp.close()
+            transport.close()
+
+            return render(request, 'Songs/success.html')
+        except Exception as e:
+            return render(request, 'Songs/error.html', {'error': str(e)})
+    return render(request, 'Songs/uploading_files.html')    
+
+
+
 
 

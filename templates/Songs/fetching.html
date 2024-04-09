@@ -1,0 +1,428 @@
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetching Meta-data</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Dark Mode styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      body.dark-mode a {
+        color: #78c0a8;
+      }
+      body.dark-mode a:hover {
+        color: #48a999;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .bg-gray-800.text-white.text-center.py-4 {
+        margin-top: auto;
+      }
+      /* Add more dark mode styles as needed */
+    </style>
+  </head>
+  {% include 'navbar.html' %}
+  <body
+    class="flex flex-col justify-center items-center min-h-screen dark-mode bg-black-100"
+  >
+    <h1 class="text-3xl font-bold mb-4 text-white">Fetching Meta-data</h1>
+    <form
+      action="{% url 'rss_to_audio_app:fetching-meta-data' %}"
+      method="post"
+      class="mb-8"
+      enctype="multipart/form-data"
+    >
+      <button
+        type="submit"
+        class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+        Fetch details
+      </button>
+      {% csrf_token %}
+    </form>
+
+    <div
+      class="mb-4 text-center bg-gray-100 p-4 rounded-lg shadow-md max-w-xl overflow-auto"
+    >
+      <h2 class="text-xl font-semibold mb-2 text-black">
+        Tracknes of .pls FIle:
+      </h2>
+      {% for value in track_names %}
+      <p class="text-sm text-gray-800 text-blacks">{{ value }}</p>
+
+      {% endfor %}
+    </div>
+    <div
+      class="mb-4 text-center bg-gray-100 p-4 rounded-lg shadow-md max-w-xl overflow-auto"
+    >
+      <h2 class="text-xl font-semibold mb-2 text-black">Researched Data:</h2>
+      <p class="text-sm text-gray-800">{{ rewriten_data }}</p>
+    </div>
+  </body>
+</html>
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetching Meta-data</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Dark Mode styles */
+      body.dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      body.dark-mode a {
+        color: #78c0a8;
+      }
+      body.dark-mode a:hover {
+        color: #48a999;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .bg-gray-800.text-white.text-center.py-4 {
+        margin-top: auto;
+      }
+      .ss {
+        margin-top: 6rem;
+      }
+      /* Add more dark mode styles as needed */
+    </style>
+  </head>
+  <body
+    class="flex flex-col justify-center items-center min-h-screen bg-gray-100 dark-mode"
+  >
+    {% include 'navbar.html' %}
+    <div class="container mx-auto px-4 ss">
+      {% comment %}
+      <div class="flex justify-center mt-4">
+        <h1 class="text-3xl font-bold mb-4 text-white-800 dark:text-white">
+          Fetching Meta-data
+        </h1>
+      </div>
+      {% endcomment %}
+      <a href="/upload_files">Want to upload .pls files to SFTP Folder</a>
+      <div
+        class="mb-4 text-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md max-w-xl mx-auto overflow-auto"
+      >
+        <h2 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+          Tracknames of .pls File:
+        </h2>
+        <h1
+          class="text-3xl font-bold text-green-600 flex items-center flex justify-center"
+        >
+          <svg
+            class="h-6 w-6 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            ></path>
+          </svg>
+          {% if flagg %}Uploaded Successfully On SFTP Folders{% endif %}
+        </h1>
+
+        {% for value in track_names %}
+        <p class="text-sm text-gray-800 dark:text-gray-300">{{ value }}</p>
+        {% endfor %}
+      </div>
+      <div
+        class="mb-4 text-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md max-w-xl mx-auto overflow-auto"
+      >
+        <h2 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+          Notes:
+        </h2>
+        <p class="text-sm text-gray-800 dark:text-gray-300">
+          1. To begin, you need to create a folder named 'Playlist' in the root
+          directory of your SFTP server. Inside this folder, insert your 24-hour
+          playlist files labeled from 00.pls to 23.pls.
+          <br />2.Additionally, create another folder named 'Music'. Within the
+          'Music' folder, create subfolders named VO1, VO2, VO3, VO4, VO5, VO6,
+          and VO7. <br />3.With these preparations complete, you're ready to use
+          the application. Enjoy! Stay connected with Groundrush Labs for more
+          AI radio innovations!"
+        </p>
+      </div>
+      <form
+        action="{% url 'rss_to_audio_app:fetching-meta-data' %}"
+        method="post"
+        class="mb-8"
+        enctype="multipart/form-data"
+      >
+        <div class="container mx-auto px-4 py-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto">
+            <div class="mb-4">
+              <label
+                for="sftp_host"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >SFTP Host:</label
+              >
+              <input
+                type="text"
+                id="sftp_host"
+                name="sftp_host"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="sftp_port"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >SFTP Port:</label
+              >
+              <input
+                type="text"
+                id="sftp_port"
+                name="sftp_port"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="sftp_username"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >SFTP Username:</label
+              >
+              <input
+                type="text"
+                id="sftp_username"
+                name="sftp_username"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="sftp_password"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >SFTP Password:</label
+              >
+              <input
+                type="password"
+                id="sftp_password"
+                name="sftp_password"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-black-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="sftp_path_playlist"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >Name of Playlist Folder:</label
+              >
+              <input
+                type="text"
+                id="sftp_path_playlist"
+                name="sftp_path_playlist"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-black-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="sftp_path_output"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >Name of Output Folder:</label
+              >
+              <input
+                type="text"
+                id="sftp_path_output"
+                name="sftp_path_output"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="stationname"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >Enter station name:</label
+              >
+              <input
+                type="text"
+                id="stationname"
+                name="stationname"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="extraedge"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >Enter Extra Edge:</label
+              >
+              <input
+                type="text"
+                id="extraedge"
+                name="extraedge"
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block font-medium text-black-700"
+                >Select Voices:</label
+              >
+              <select
+                name="voice"
+                class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:border-indigo-500 focus:outline-none focus:ring-opacity-50  bg-black"
+              >
+                {% comment %}
+                <option value="Neutral">Neutral</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                {% endcomment %} {% comment %}
+                <option value="Female">Female</option>
+                {% endcomment %} {% comment %}
+                <option value="Male">Male</option>
+                {% endcomment %}
+                <option value="Joanna">Joanna</option>
+                <option value="Matthew">Matthew</option>
+                <option value="Ivy">Ivy</option>
+                <option value="Justin">Justin</option>
+                <option value="Kendra">Kendra</option>
+                <option value="Kimberly">Kimberly</option>
+                <option value="Salli">Salli</option>
+                <option value="Joey">Joey</option>
+                {% comment %}
+                <option value="Nicole">Nicole</option>
+                {% endcomment %} {% comment %}
+                <option value="Russell">Russell</option>
+                {% endcomment %}
+                <option value="Amy">Amy</option>
+                <option value="Brian">Brian</option>
+                <option value="Emma">Emma</option>
+                <option value="Daniella">Daniella</option>
+                <option value="Ruth">Ruth</option>
+                <option value="Gregory">Gregory</option>
+                <option value="Kevin">Kevin</option>
+                <option value="Joey">Joey</option>
+                {% comment %}
+                <option value="Stephan">Stephan</option>
+                {% endcomment %}
+              </select>
+            </div>
+            <br/>
+            
+            <br/>
+            
+              <button
+                  type="submit"
+                  class="rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+              >
+                  Fetch details
+              </button>
+              <button
+                  type="button"
+                  class="ml-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-600"
+                  onclick="toggleScheduleText()"
+              >
+                  Schedule Task
+              </button>
+          
+          
+           
+
+            <div
+              class="lg  rounded-md flex space-x-40 hidden "
+              id="schedule_text"
+            >
+            <div class="mt-4">
+              <label
+                for="recurrence_type"
+                class="block text-sm font-medium text-white-700"
+                >Recurrence Type:</label
+              >
+              <select
+                id="recurrence_type"
+                name="recurrence_type"
+                class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
+              >
+                <option value="onetime">One time</option>
+                <option value="weekly">Weekly</option>
+                <option value="everyhour">Every Hour</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
+              <div class="mb-2 ">
+                <label
+                  for="schedule_time"
+                  class="block text-sm font-medium text-white-700 mt-4"
+                  >Schedule Time:</label
+                >
+                <input
+                  type="datetime-local"
+                  id="schedule_time"
+                  name="schedule_time"
+                  class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
+                />
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+        
+       
+        {% csrf_token %}
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("sftp_port")
+        .addEventListener("input", function () {
+          // Remove any non-numeric characters from the input value
+          this.value = this.value.replace(/\D/g, "");
+        });
+      function toggleScheduleText() {
+        var scheduleText = document.getElementById("schedule_text");
+        scheduleText.classList.toggle("hidden");
+      }
+      document
+        .getElementById("dropdown-button")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("dropdown-menu");
+          menu.classList.toggle("hidden");
+          menu.classList.toggle("block");
+        });
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("dropdown-menu");
+        var button = document.getElementById("dropdown-button");
+
+        if (!menu.contains(event.target) && !button.contains(event.target)) {
+          menu.classList.add("hidden");
+          menu.classList.remove("block");
+        }
+      });
+    </script>
+  </body>
+</html>

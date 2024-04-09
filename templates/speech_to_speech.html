@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Speech</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Animation for music waves */
+        @keyframes wave {
+            0% { height: 10px; }
+            50% { height: 30px; }
+            100% { height: 10px; }
+        }
+        #waveform {
+            display: none;
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+            background-color: #38b2ac;
+        }
+        #waveform.active {
+            display: block;
+            animation: wave 1s infinite;
+        }
+    </style>
+</head>
+{% include 'navbar.html' %}
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+    <div class="max-w-lg w-full bg-white p-8 rounded shadow-md">
+        <h1 class="text-3xl font-bold mb-4 flex justify-center">Record Speech</h1>
+        <div class="flex justify-between">
+            <button id="startRecord" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Start Recording</button>
+            <button id="stopRecord" class="bg-red-500 text-white px-4 py-2 rounded">Stop Recording</button>
+        </div>
+        <div id="recordingsList" class="mt-4"></div>
+        <div id="waveform"></div>
+    </div>
+    <script>
+        let mediaRecorder;
+        let chunks = [];
+        let waveformInterval;
+
+        // Animation function for music waves
+        function animateButton() {
+            let startButton = document.getElementById('startRecord');
+            startButton.classList.add('pulse');
+            setTimeout(() => {
+                startButton.classList.remove('pulse');
+            }, 1000);
+            // Activate waveform animation
+            let waveform = document.getElementById('waveform');
+            waveform.classList.add('active');
+            waveformInterval = setInterval(() => {
+                waveform.classList.toggle('active');
+            }, 1000);
+        }
+
+        // Function to stop waveform animation
+        function stopWaveformAnimation() {
+            let waveform = document.getElementById('waveform');
+            waveform.classList.remove('active');
+            clearInterval(waveformInterval);
+        }
+
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function(stream) {
+                mediaRecorder = new MediaRecorder(stream);
+
+                mediaRecorder.ondataavailable = function(e) {
+                    chunks.push(e.data);
+                }
+
+                mediaRecorder.onstop = function(e) {
+                    let blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+                    chunks = [];
+                    let audioURL = URL.createObjectURL(blob);
+                    let audio = document.createElement('audio');
+                    audio.controls = true;
+                    audio.src = audioURL;
+                    document.getElementById('recordingsList').appendChild(audio);
+                    let downloadLink = document.createElement('a');
+                    downloadLink.href = audioURL;
+                    downloadLink.download = 'recorded_audio.ogg';
+                    downloadLink.innerHTML = 'Download';
+                    downloadLink.classList.add('block', 'mt-2', 'text-blue-500');
+                    document.getElementById('recordingsList').appendChild(downloadLink);
+                }
+            });
+
+        document.getElementById('startRecord').addEventListener('click', function() {
+            animateButton();
+            chunks = [];
+            mediaRecorder.start();
+        });
+
+        document.getElementById('stopRecord').addEventListener('click', function() {
+            mediaRecorder.stop();
+            stopWaveformAnimation();
+        });
+    </script>
+</body>
+</html>

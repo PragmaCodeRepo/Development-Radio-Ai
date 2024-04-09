@@ -81,3 +81,12 @@ class Newscasteradmin(admin.ModelAdmin):
      list_display = ('name', 'language', 'voice','sftp_host','sftp_port','sftp_username','sftp_password','sftp_remote_path',)
 
 admin.site.register(Newscaster,Newscasteradmin)
+
+
+
+#Meta Song
+class MetaSongadmin(admin.ModelAdmin):
+     list_display = ('sftp_host','sftp_port','sftp_username','sftp_password','sftp_playlist_folder_name','sftp_output_folder_name','schedule_time','recurrence_type','is_pending')
+
+
+admin.site.register(SchedulingSongsMetaData,MetaSongadmin)

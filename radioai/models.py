@@ -177,3 +177,25 @@ class Newscaster(models.Model):
 
     def __str__(self):
         return self.name
+#Meta Song
+    
+class SchedulingSongsMetaData(models.Model):
+    
+    RECURRENCE_CHOICES = [
+        ('weekly', 'Weekly'),
+        ('everyhour', 'Every Hour'),
+        ('monthly', 'Monthly'),
+        ('onetime', 'Onetime'),
+    ]
+    sftp_host = models.CharField(max_length=255)
+    sftp_port = models.IntegerField()
+    sftp_username = models.CharField(max_length=255)
+    sftp_password = models.CharField(max_length=255)
+    sftp_playlist_folder_name = models.CharField(max_length=255)
+    sftp_output_folder_name = models.CharField(max_length=255)
+    is_pending = models.BooleanField(default=True)
+    schedule_time = models.CharField(max_length=200)
+    recurrence_type = models.CharField(
+        max_length=20, choices=RECURRENCE_CHOICES, default='onetime'
+    )
+   

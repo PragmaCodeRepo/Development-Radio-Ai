@@ -10984,3 +10984,649 @@ INFO 2024-02-06 11:44:54,745 basehttp "GET /admin/radioai/schedulingtasksweather
 INFO 2024-02-06 11:44:54,769 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-02-06 11:44:55,310 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 9841
 INFO 2024-02-06 11:44:55,330 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-02-06 12:27:59,276 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 12:28:18,286 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 12:31:39,290 basehttp "GET /news?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-02-06 12:31:39,433 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26457
+INFO 2024-02-06 12:31:46,529 basehttp "GET /weather-zipcode?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-02-06 12:31:46,573 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20159
+INFO 2024-02-06 12:32:04,784 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 402329
+INFO 2024-02-06 12:42:36,746 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26457
+INFO 2024-02-06 12:43:12,622 basehttp "POST /news/ HTTP/1.1" 200 1369069
+INFO 2024-02-06 13:14:58,765 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:15:00,449 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:15:38,101 basehttp "POST /news/ HTTP/1.1" 200 1362799
+INFO 2024-02-06 13:18:09,276 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 13:18:11,521 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26457
+INFO 2024-02-06 13:18:16,785 basehttp "GET /news?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-02-06 13:18:16,811 basehttp "GET /news/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26462
+INFO 2024-02-06 13:19:03,513 basehttp "POST /news/ HTTP/1.1" 200 1555897
+INFO 2024-02-06 13:21:09,924 basehttp "POST /news/ HTTP/1.1" 200 125222
+INFO 2024-02-06 13:33:10,846 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:33:35,783 basehttp "GET /news/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26462
+ERROR 2024-02-06 13:33:50,030 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 344, in convert_to_audio
+    all_news_text=translate_to_spanish(all_news_text)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1178, in translate_to_spanish
+    translated_chunk = str(blob.translate(to='es'))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\textblob\blob.py", line 568, in translate
+    return self.__class__(self.translator.translate(self.raw,
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\textblob\translate.py", line 61, in translate
+    self._validate_translation(source, result)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\textblob\translate.py", line 88, in _validate_translation
+    if result.strip() == source.strip():
+AttributeError: 'list' object has no attribute 'strip'
+ERROR 2024-02-06 13:33:50,035 basehttp "POST /news/ HTTP/1.1" 500 122621
+INFO 2024-02-06 13:34:37,525 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:34:39,508 autoreload Watching for file changes with StatReloader
+ERROR 2024-02-06 13:34:47,501 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 344, in convert_to_audio
+    all_news_text=translate_to_spanish(all_news_text)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1183, in translate_to_spanish
+    translated_chunk = str(blob.translate(to='es'))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\textblob\blob.py", line 568, in translate
+    return self.__class__(self.translator.translate(self.raw,
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\textblob\translate.py", line 61, in translate
+    self._validate_translation(source, result)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\textblob\translate.py", line 88, in _validate_translation
+    if result.strip() == source.strip():
+AttributeError: 'list' object has no attribute 'strip'
+ERROR 2024-02-06 13:34:47,506 basehttp "POST /news/ HTTP/1.1" 500 123264
+INFO 2024-02-06 13:35:15,308 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:35:16,746 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:35:45,836 basehttp "POST /news/ HTTP/1.1" 200 693229
+INFO 2024-02-06 13:36:06,598 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 13:36:10,403 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20159
+INFO 2024-02-06 13:36:29,694 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 304527
+INFO 2024-02-06 13:37:46,058 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:37:47,860 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:37:53,423 basehttp "GET / HTTP/1.1" 200 2968
+WARNING 2024-02-06 13:37:55,928 log Not Found: /favicon.ico
+WARNING 2024-02-06 13:37:55,929 basehttp "GET /favicon.ico HTTP/1.1" 404 8086
+INFO 2024-02-06 13:38:07,018 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 302019
+INFO 2024-02-06 13:38:50,774 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:38:52,698 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:39:05,164 basehttp "POST /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 409017
+INFO 2024-02-06 13:47:24,688 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:47:26,459 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:49:18,209 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:49:19,457 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:49:47,652 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:49:49,081 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 13:54:34,495 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 13:54:36,547 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 14:07:10,574 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 14:07:11,909 basehttp "GET /news/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26462
+INFO 2024-02-06 14:07:37,324 basehttp "POST /news/ HTTP/1.1" 200 742130
+INFO 2024-02-06 19:42:08,150 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 19:45:26,144 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 19:45:44,566 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-02-06 19:45:44,690 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 19:45:47,228 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20154
+INFO 2024-02-06 19:46:02,803 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 304109
+INFO 2024-02-06 19:49:29,828 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 19:49:31,631 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 19:52:45,461 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-02-06 19:52:46,742 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 19:53:00,575 basehttp "GET /speech_to_speech HTTP/1.1" 301 0
+INFO 2024-02-06 19:53:00,595 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 548
+ERROR 2024-02-06 19:53:08,704 log Internal Server Error: /speech_to_speech/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 491, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.eleven-labs.com', port=443): Max retries exceeded with url: /v1/convert (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1200, in speech_to_speech
+    response = requests.post('https://api.eleven-labs.com/v1/convert', json=data, headers=headers)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.eleven-labs.com', port=443): Max retries exceeded with url: /v1/convert (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)")))
+ERROR 2024-02-06 19:53:08,748 basehttp "POST /speech_to_speech/ HTTP/1.1" 500 187596
+ERROR 2024-02-06 19:53:23,911 log Internal Server Error: /speech_to_speech/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 491, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.eleven-labs.com', port=443): Max retries exceeded with url: /v1/convert (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1200, in speech_to_speech
+    response = requests.post('https://api.eleven-labs.com/v1/convert', json=data, headers=headers)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.eleven-labs.com', port=443): Max retries exceeded with url: /v1/convert (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.eleven-labs.com'. (_ssl.c:997)")))
+ERROR 2024-02-06 19:53:23,921 basehttp "POST /speech_to_speech/ HTTP/1.1" 500 187606
+INFO 2024-02-06 19:56:41,388 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 19:56:42,628 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 19:57:21,543 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 1861
+INFO 2024-02-06 19:59:21,401 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 2318
+INFO 2024-02-06 20:05:56,096 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 20:05:57,509 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 20:07:28,657 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-02-06 20:07:29,897 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 20:08:00,621 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-02-06 20:08:01,862 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 20:08:06,697 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 2859
+INFO 2024-02-06 20:08:36,679 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 2859
+INFO 2024-02-06 20:08:41,491 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 2859
+INFO 2024-02-06 20:09:06,713 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-02-06 20:09:08,335 autoreload Watching for file changes with StatReloader
+INFO 2024-02-06 20:09:17,131 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 2318
+INFO 2024-02-06 20:11:00,043 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9797
+INFO 2024-02-06 20:11:23,961 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9803
+INFO 2024-02-06 20:12:36,278 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 2415
+INFO 2024-02-06 20:12:51,605 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9894
+INFO 2024-02-06 20:13:17,889 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9922
+INFO 2024-02-06 20:13:32,803 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9914
+INFO 2024-02-06 20:13:41,169 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9914
+INFO 2024-02-06 20:13:54,123 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 9914
+INFO 2024-02-06 20:17:49,107 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 10812
+INFO 2024-02-06 20:19:42,214 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 3561
+INFO 2024-02-06 20:19:57,933 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 3561
+INFO 2024-02-06 20:20:03,973 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 3561
+INFO 2024-02-06 20:22:06,479 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 3907
+INFO 2024-02-06 20:22:41,107 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 11386
+INFO 2024-02-06 20:24:32,246 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-02-06 20:24:32,272 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 20:24:37,021 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 11386
+INFO 2024-02-06 20:24:47,045 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-06 20:24:49,714 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20154
+INFO 2024-02-06 20:25:02,527 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 313722
+INFO 2024-02-07 11:56:32,867 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20154
+INFO 2024-02-07 12:59:03,503 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 11386
+INFO 2024-02-07 13:35:12,230 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 4331
+WARNING 2024-02-07 13:35:17,139 log Not Found: /overlay_background_music
+WARNING 2024-02-07 13:35:17,152 basehttp "POST /overlay_background_music HTTP/1.1" 404 8315
+WARNING 2024-02-07 16:10:12,563 log Not Found: /overlay_background_music
+WARNING 2024-02-07 16:10:12,568 basehttp "POST /overlay_background_music HTTP/1.1" 404 8315
+WARNING 2024-02-07 16:10:30,411 log Not Found: /overlay_background_music
+WARNING 2024-02-07 16:10:30,412 basehttp "POST /overlay_background_music HTTP/1.1" 404 8315
+INFO 2024-02-07 16:10:47,412 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 11386
+INFO 2024-02-07 19:43:53,055 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 11386
+INFO 2024-02-07 19:45:16,308 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-02-07 20:00:15,275 basehttp "GET /speech_to_speech/ HTTP/1.1" 200 11386
+INFO 2024-02-19 12:45:57,200 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 14:18:01,877 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 14:20:07,919 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-04-03 14:20:12,703 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-04-03 14:20:13,119 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4186
+INFO 2024-04-03 14:20:13,274 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-04-03 14:20:23,912 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-04-03 14:20:23,988 basehttp "GET /admin/ HTTP/1.1" 200 12137
+INFO 2024-04-03 14:20:29,292 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-04-03 14:20:32,674 basehttp "GET / HTTP/1.1" 200 2968
+INFO 2024-04-03 14:20:41,814 basehttp "POST / HTTP/1.1" 200 3065
+INFO 2024-04-03 14:20:45,466 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 10709
+INFO 2024-04-03 14:20:45,682 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-03 14:20:50,533 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 200 9596
+INFO 2024-04-03 14:20:51,476 basehttp "POST /admin/radioai/activesession/ HTTP/1.1" 302 0
+INFO 2024-04-03 14:20:51,503 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 9662
+INFO 2024-04-03 14:20:51,520 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-03 14:20:55,020 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-04-03 14:20:55,181 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-04-03 14:21:02,795 basehttp "GET /news?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-03 14:21:02,890 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26457
+INFO 2024-04-03 14:21:43,329 basehttp "POST /news/ HTTP/1.1" 200 1237830
+INFO 2024-04-03 15:38:57,608 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-03 15:39:00,289 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 15:46:37,677 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-03 15:46:39,874 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 15:47:55,216 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-04-03 15:47:57,414 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 15:48:11,568 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+ERROR 2024-04-03 15:48:16,338 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1299, in fetching_song_meta_data
+    return render(request, 'Songs/fetching.html')
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: Songs/fetching.html
+ERROR 2024-04-03 15:48:16,343 basehttp "GET /fetching-meta-data/ HTTP/1.1" 500 86464
+INFO 2024-04-03 15:48:39,317 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 20034
+INFO 2024-04-03 15:48:42,479 basehttp "GET /upload_files/ HTTP/1.1" 200 2353
+ERROR 2024-04-03 16:32:41,545 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1208, in fetching_song_meta_data
+    start_time = time.time()
+NameError: name 'time' is not defined
+ERROR 2024-04-03 16:32:41,552 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 74089
+INFO 2024-04-03 16:34:46,944 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-03 16:34:48,421 autoreload Watching for file changes with StatReloader
+ERROR 2024-04-03 16:34:54,831 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1232, in fetching_song_meta_data
+    obj = SchedulingSongsMetaData.objects.create(
+NameError: name 'SchedulingSongsMetaData' is not defined
+ERROR 2024-04-03 16:34:54,834 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 76569
+INFO 2024-04-03 16:36:01,189 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\models.py changed, reloading.
+INFO 2024-04-03 16:36:02,737 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 16:36:34,638 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\admin.py changed, reloading.
+INFO 2024-04-03 16:36:36,138 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 16:37:47,992 autoreload Watching for file changes with StatReloader
+ERROR 2024-04-03 16:37:53,798 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1250, in fetching_song_meta_data
+    media_folder = os.path.join(BASE_DIR, "media")
+NameError: name 'BASE_DIR' is not defined
+ERROR 2024-04-03 16:37:53,801 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 77018
+INFO 2024-04-03 16:38:48,911 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-03 16:38:50,814 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 16:40:20,511 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-03 16:40:22,312 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 16:45:37,844 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 22714
+INFO 2024-04-03 16:46:29,789 autoreload Watching for file changes with StatReloader
+INFO 2024-04-03 16:46:34,265 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 20034
+INFO 2024-04-03 16:49:20,650 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 11072
+INFO 2024-04-03 16:49:20,722 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-03 16:49:25,995 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 13480
+INFO 2024-04-03 16:49:26,011 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-04 15:31:28,809 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 13480
+INFO 2024-04-04 15:31:29,108 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-04 15:31:32,866 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 20034
+ERROR 2024-04-04 15:32:16,734 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1255, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-04 15:32:16,739 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 91832
+INFO 2024-04-04 15:33:10,717 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 22585
+INFO 2024-04-04 15:33:15,533 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 14781
+INFO 2024-04-04 15:33:15,550 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-04 15:33:34,413 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9949
+INFO 2024-04-04 15:33:34,428 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-04 15:33:37,211 basehttp "GET /admin/radioai/schedulingtasksweather/add/ HTTP/1.1" 200 17281
+INFO 2024-04-04 15:33:37,225 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-04 15:33:37,293 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-04-04 15:33:37,294 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-04-04 15:33:37,441 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-04-04 15:33:37,441 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-04-04 15:33:42,458 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 24020
+INFO 2024-04-04 15:33:42,473 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-04 15:50:08,357 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-04 15:50:21,801 autoreload Watching for file changes with StatReloader
+INFO 2024-04-04 15:53:07,943 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 22585
+INFO 2024-04-08 11:50:55,837 autoreload Watching for file changes with StatReloader
+INFO 2024-04-08 11:59:16,669 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 22573
+INFO 2024-04-09 15:27:44,779 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-09 15:27:47,151 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-04-09 15:27:47,448 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2024-04-09 15:27:50,619 basehttp "GET /logout/ HTTP/1.1" 200 3433
+INFO 2024-04-09 15:27:50,720 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-04-09 15:27:50,720 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-04-09 15:27:50,720 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-04-09 15:27:50,722 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-04-09 15:30:37,552 basehttp "GET / HTTP/1.1" 200 3207
+INFO 2024-04-09 15:30:43,199 basehttp "GET /contactus/ HTTP/1.1" 302 0
+WARNING 2024-04-09 15:30:44,086 log Not Found: /accounts/login/
+WARNING 2024-04-09 15:30:44,088 basehttp "GET /accounts/login/?next=/contactus/ HTTP/1.1" 404 8678
+INFO 2024-04-09 15:31:01,827 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\urls.py changed, reloading.
+INFO 2024-04-09 15:31:19,780 autoreload Watching for file changes with StatReloader
+WARNING 2024-04-09 15:31:40,332 log Not Found: /accounts/login/
+WARNING 2024-04-09 15:31:40,334 basehttp "GET /accounts/login/?next=/contactus/ HTTP/1.1" 404 8678
+INFO 2024-04-09 15:31:43,196 basehttp "GET /contactus/ HTTP/1.1" 200 69933
+INFO 2024-04-09 15:31:53,661 basehttp "GET /Newscasters/ HTTP/1.1" 302 0
+WARNING 2024-04-09 15:31:53,702 log Not Found: /accounts/login/
+WARNING 2024-04-09 15:31:53,703 basehttp "GET /accounts/login/?next=/Newscasters/ HTTP/1.1" 404 8680
+INFO 2024-04-09 15:33:05,937 basehttp "GET / HTTP/1.1" 200 3215
+INFO 2024-04-09 15:33:14,526 basehttp "GET / HTTP/1.1" 200 3216
+INFO 2024-04-09 15:33:35,683 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-04-09 15:33:35,734 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-04-09 15:33:49,588 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 26457
+INFO 2024-04-09 15:33:51,726 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-04-09 15:33:58,532 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-04-09 15:33:59,775 basehttp "GET /weather-zipcode?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-09 15:33:59,863 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 20154
+INFO 2024-04-09 15:34:01,804 basehttp "GET /Newscasters/ HTTP/1.1" 200 17032
+INFO 2024-04-09 15:35:15,703 basehttp "GET /Newscasters/ HTTP/1.1" 200 17189
+WARNING 2024-04-09 15:35:16,999 log Not Found: /Newscasters/fetching-meta-data/
+WARNING 2024-04-09 15:35:16,999 basehttp "GET /Newscasters/fetching-meta-data/ HTTP/1.1" 404 8709
+WARNING 2024-04-09 15:35:27,558 log Not Found: /Newscasters/fetching-meta-data/
+WARNING 2024-04-09 15:35:27,559 basehttp "GET /Newscasters/fetching-meta-data/ HTTP/1.1" 404 8709
+WARNING 2024-04-09 15:35:37,237 log Not Found: /Newscasters/fetching-meta-data/
+WARNING 2024-04-09 15:35:37,238 basehttp "GET /Newscasters/fetching-meta-data/ HTTP/1.1" 404 8709
+INFO 2024-04-09 15:36:04,081 basehttp "GET /Newscasters/ HTTP/1.1" 200 17189
+INFO 2024-04-09 15:36:05,993 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 20191
+INFO 2024-04-09 15:38:26,508 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 22797
+INFO 2024-04-09 15:39:21,601 basehttp "GET /logout/ HTTP/1.1" 200 3433
+INFO 2024-04-09 15:39:26,910 basehttp "GET / HTTP/1.1" 200 3216
+INFO 2024-04-09 15:40:42,867 basehttp "GET / HTTP/1.1" 200 3398
+INFO 2024-04-09 15:41:06,036 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-04-09 15:41:06,049 basehttp "GET /Newscasters/ HTTP/1.1" 200 17189
+INFO 2024-04-09 15:43:53,564 basehttp "GET /Newscasters/ HTTP/1.1" 200 16914
+ERROR 2024-04-09 15:47:31,982 log Internal Server Error: /Newscasters/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 915, in newscaster_list
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 85: 'endif'. Did you forget to register or load this tag?
+ERROR 2024-04-09 15:47:32,008 basehttp "GET /Newscasters/ HTTP/1.1" 500 185274
+INFO 2024-04-09 15:48:47,217 basehttp "GET /Newscasters/ HTTP/1.1" 200 18085
+WARNING 2024-04-09 15:48:47,236 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:48:54,040 basehttp "GET /scheduling_news_task/ HTTP/1.1" 200 30814
+WARNING 2024-04-09 15:48:54,059 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+WARNING 2024-04-09 15:48:57,849 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:51:49,230 basehttp "GET /Newscasters/ HTTP/1.1" 200 14389
+WARNING 2024-04-09 15:51:49,266 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:51:53,036 basehttp "GET /Newscasters/ HTTP/1.1" 200 14389
+WARNING 2024-04-09 15:51:53,053 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+WARNING 2024-04-09 15:51:57,142 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:52:33,464 basehttp "GET /Newscasters/ HTTP/1.1" 200 18085
+WARNING 2024-04-09 15:52:33,502 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:53:05,963 basehttp "GET /Newscasters/ HTTP/1.1" 200 18095
+WARNING 2024-04-09 15:53:05,992 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:53:08,038 basehttp "GET /contactus/ HTTP/1.1" 200 71475
+WARNING 2024-04-09 15:53:08,063 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-09 15:57:03,559 log Internal Server Error: /contactus/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 603, in contactus
+    return render(request, 'contactus.html')
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 581, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 122: 'if'. Looking for one of: elif, else, endif.
+ERROR 2024-04-09 15:57:03,569 basehttp "GET /contactus/ HTTP/1.1" 500 187390
+INFO 2024-04-09 15:57:22,646 basehttp "GET /contactus/ HTTP/1.1" 200 71580
+WARNING 2024-04-09 15:57:22,677 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:57:42,967 basehttp "GET /contactus/ HTTP/1.1" 200 71580
+WARNING 2024-04-09 15:57:42,991 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:57:56,958 basehttp "GET /contactus/ HTTP/1.1" 200 71587
+WARNING 2024-04-09 15:57:57,001 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:58:13,328 basehttp "GET /contactus/ HTTP/1.1" 200 71579
+WARNING 2024-04-09 15:58:13,365 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:58:30,902 basehttp "GET /contactus/ HTTP/1.1" 200 71579
+WARNING 2024-04-09 15:58:30,926 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:58:48,883 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+WARNING 2024-04-09 15:58:48,910 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 15:58:52,190 basehttp "GET /Newscasters/ HTTP/1.1" 200 18199
+WARNING 2024-04-09 15:58:52,207 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+WARNING 2024-04-09 15:58:57,356 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 16:01:24,253 basehttp "GET /Newscasters/ HTTP/1.1" 200 18190
+WARNING 2024-04-09 16:01:24,273 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 16:01:48,533 basehttp "GET /Newscasters/ HTTP/1.1" 200 18199
+WARNING 2024-04-09 16:01:48,555 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 16:01:57,193 basehttp "GET /logout/ HTTP/1.1" 200 3433
+INFO 2024-04-09 16:02:00,292 basehttp "GET / HTTP/1.1" 200 3398
+INFO 2024-04-09 16:02:21,342 basehttp "GET / HTTP/1.1" 200 3399
+INFO 2024-04-09 16:03:09,631 basehttp "GET / HTTP/1.1" 200 3463
+INFO 2024-04-09 16:03:17,436 basehttp "GET /contactus/ HTTP/1.1" 200 70754
+WARNING 2024-04-09 16:03:17,458 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 16:03:26,295 basehttp "GET /contactus/ HTTP/1.1" 200 70754
+WARNING 2024-04-09 16:03:26,322 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-09 16:03:28,003 basehttp "GET /aboutus/ HTTP/1.1" 302 0
+WARNING 2024-04-09 16:03:28,014 log Not Found: /accounts/login/
+WARNING 2024-04-09 16:03:28,015 basehttp "GET /accounts/login/?next=/aboutus/ HTTP/1.1" 404 8676
+INFO 2024-04-09 16:04:03,270 autoreload Watching for file changes with StatReloader
+INFO 2024-04-09 16:06:34,134 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 200 11258
+INFO 2024-04-09 16:06:34,395 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,396 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,444 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,448 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,454 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,464 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,465 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,465 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,470 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,470 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,471 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,479 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,484 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,502 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,522 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:34,593 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:37,052 basehttp "POST /admin/radioai/schedulingtasks/ HTTP/1.1" 302 0
+INFO 2024-04-09 16:06:37,248 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 10351
+INFO 2024-04-09 16:06:37,311 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:37,318 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:37,333 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-09 16:06:37,398 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:37,412 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:37,927 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9949
+INFO 2024-04-09 16:06:37,941 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-09 16:06:39,605 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 20190
+INFO 2024-04-09 16:06:39,623 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-09 16:06:39,643 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-04-09 16:06:42,532 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 11279
+INFO 2024-04-09 16:06:45,009 basehttp "POST /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 302 0
+INFO 2024-04-09 16:06:45,029 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10497
+INFO 2024-04-09 16:06:45,043 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-09 16:06:45,590 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 16721
+INFO 2024-04-09 16:06:45,697 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-09 16:06:49,122 basehttp "POST /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 11251
+INFO 2024-04-09 16:06:51,254 basehttp "POST /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 302 0
+INFO 2024-04-09 16:06:51,305 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 10118
+INFO 2024-04-09 16:06:51,325 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343

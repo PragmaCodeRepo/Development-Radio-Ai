@@ -23,7 +23,7 @@ app_name = 'rss_to_audio_app'
 urlpatterns = [
 
     path('news/', login_required(views.convert_to_audio), name='convert',),
-    path('contactus/', login_required(views.contactus), name='contactus',),
+    path('contactus/', views.contactus, name='contactus',),
     path('intro-text/', login_required(views.enter_intro), name='enter_intro',),
     path('outro-text/', login_required(views.enter_outro), name='enter_outro',),
     path('intro-text-weather/',
@@ -67,5 +67,8 @@ urlpatterns = [
         views.delete_all_scheduling_news_tasks), name='delete_all_scheduling_news_tasks'),
     path('delete_all_newscaster/', login_required(views.delete_all_newscaster),
          name='delete_all_newscaster'),
+    path('speech_to_speech/', views.speech_to_speech, name='speech_to_speech'),
+    path('fetching-meta-data/', views.fetching_song_meta_data, name='fetching-meta-data'),
+    path('upload_files/', views.upload_files, name='upload-files'),
     path('', views.login_view, name='login')
 ]
