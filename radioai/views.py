@@ -1237,6 +1237,8 @@ def fetching_song_meta_data(request):
             sftp_username=sftp_username,
             sftp_playlist_folder_name=sftp_path_playlist,
             sftp_output_folder_name=sftp_path_output,
+            station_name=stationname,
+            extra_edge=extraedge,
             is_pending=True if schedule_time else False,
             schedule_time=schedule_time,
             recurrence_type=recurrence_type,

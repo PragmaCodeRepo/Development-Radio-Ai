@@ -11632,3 +11632,154 @@ INFO 2024-04-09 16:06:51,305 basehttp "GET /admin/radioai/schedulingsongsmetadat
 INFO 2024-04-09 16:06:51,325 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-04-09 21:11:01,104 autoreload Watching for file changes with StatReloader
 INFO 2024-04-09 21:11:07,491 basehttp "GET / HTTP/1.1" 200 3318
+INFO 2024-04-12 16:42:24,376 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 16:43:39,620 basehttp "GET /static/images/Vesion_1.png HTTP/1.1" 304 0
+INFO 2024-04-12 16:43:43,523 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 302 0
+INFO 2024-04-12 16:43:58,580 basehttp "GET /admin/login/?next=/admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 4250
+WARNING 2024-04-12 16:44:00,189 log Not Found: /favicon.ico
+WARNING 2024-04-12 16:44:00,190 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-12 16:44:04,468 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+WARNING 2024-04-12 16:44:05,410 log Not Found: /favicon.ico
+WARNING 2024-04-12 16:44:05,412 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-12 16:44:18,766 basehttp "POST /admin/login/?next=/admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 302 0
+INFO 2024-04-12 16:44:19,081 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 9961
+INFO 2024-04-12 16:44:19,239 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 16:44:22,880 basehttp "GET / HTTP/1.1" 200 3301
+INFO 2024-04-12 16:44:24,908 basehttp "GET / HTTP/1.1" 200 3301
+INFO 2024-04-12 16:44:32,479 basehttp "POST / HTTP/1.1" 302 0
+INFO 2024-04-12 16:44:33,990 basehttp "GET /Newscasters/ HTTP/1.1" 200 18199
+WARNING 2024-04-12 16:44:34,074 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 16:44:39,855 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+WARNING 2024-04-12 16:44:39,870 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 16:46:20,998 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\admin.py changed, reloading.
+INFO 2024-04-12 16:46:22,779 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 16:46:26,453 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\models.py changed, reloading.
+INFO 2024-04-12 16:46:27,993 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 16:47:29,459 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-12 16:47:31,468 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 16:48:45,928 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 16:48:50,001 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 9961
+INFO 2024-04-12 16:48:50,021 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 16:48:52,712 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 9961
+INFO 2024-04-12 16:48:52,724 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 16:48:55,133 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 9961
+INFO 2024-04-12 16:48:55,145 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 16:48:58,221 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+WARNING 2024-04-12 16:48:58,241 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 16:49:41,944 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 13297
+INFO 2024-04-12 16:49:41,957 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 16:50:52,117 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23704
+WARNING 2024-04-12 16:50:52,152 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 16:59:42,758 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 16:59:44,271 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 16:59:54,023 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 13297
+INFO 2024-04-12 16:59:54,036 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 16:59:56,445 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+INFO 2024-04-12 17:00:25,702 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 14102
+INFO 2024-04-12 17:00:25,724 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:01:20,983 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23734
+WARNING 2024-04-12 17:01:21,020 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 17:03:26,300 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 14102
+INFO 2024-04-12 17:03:26,315 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:04:39,750 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23734
+WARNING 2024-04-12 17:04:39,791 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 17:06:34,221 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 14906
+INFO 2024-04-12 17:06:34,237 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:06:44,069 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:06:45,704 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:16:10,317 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:16:10,333 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:16:10,340 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-04-12 17:16:10,371 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-04-12 17:16:10,381 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-04-12 17:16:10,381 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-04-12 17:16:13,047 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:16:13,083 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:16:13,098 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:16:35,652 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:16:37,324 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:16:38,600 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:16:38,615 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:16:41,099 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:16:41,134 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:16:41,149 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:19:47,214 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:19:49,111 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:19:58,315 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:19:58,332 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:20:15,337 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 14906
+INFO 2024-04-12 17:20:15,355 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:20:16,568 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:20:16,594 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:20:19,678 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:20:19,702 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:20:19,717 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:21:34,204 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:21:36,684 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:21:39,386 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:21:39,401 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:21:42,607 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:21:42,646 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:21:42,666 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:22:39,025 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:22:39,053 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:22:41,530 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:22:41,556 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:22:41,571 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:22:48,537 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:22:50,358 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:25:16,578 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:25:18,569 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:25:38,985 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:25:41,024 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:25:43,966 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17974
+INFO 2024-04-12 17:25:43,982 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:25:47,208 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:25:47,249 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:25:47,264 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:29:18,548 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:29:20,334 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:29:25,229 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17982
+INFO 2024-04-12 17:29:25,252 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:29:27,836 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:29:27,881 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:29:27,896 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:32:27,341 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:32:29,644 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:32:33,696 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 200 17982
+INFO 2024-04-12 17:32:33,726 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:32:36,323 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:32:36,368 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 15172
+INFO 2024-04-12 17:32:36,385 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:05,491 basehttp "GET /admin/radioai/schedulingsongsmetadata/?o=1 HTTP/1.1" 200 15262
+INFO 2024-04-12 17:38:05,507 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:05,833 basehttp "GET /admin/radioai/schedulingsongsmetadata/2/change/?_changelist_filters=o%3D1 HTTP/1.1" 200 18062
+INFO 2024-04-12 17:38:05,853 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:05,910 basehttp - Broken pipe from ('127.0.0.1', 58204)
+INFO 2024-04-12 17:38:09,015 basehttp "GET /admin/radioai/schedulingsongsmetadata/?o=1 HTTP/1.1" 200 15262
+INFO 2024-04-12 17:38:09,044 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2024-04-12 17:38:10,042 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/?_changelist_filters=o%3D1 HTTP/1.1" 200 18062
+INFO 2024-04-12 17:38:10,066 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:12,621 basehttp "POST /admin/radioai/schedulingsongsmetadata/3/change/?_changelist_filters=o%3D1 HTTP/1.1" 302 0
+INFO 2024-04-12 17:38:12,644 basehttp "GET /admin/radioai/schedulingsongsmetadata/?o=1 HTTP/1.1" 200 15528
+INFO 2024-04-12 17:38:12,664 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:54,032 basehttp "GET /admin/radioai/schedulingsongsmetadata/?o=1 HTTP/1.1" 200 15262
+INFO 2024-04-12 17:38:54,047 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:54,958 basehttp "GET /admin/radioai/schedulingsongsmetadata/3/change/?_changelist_filters=o%3D1 HTTP/1.1" 200 18070
+INFO 2024-04-12 17:38:54,973 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:38:58,334 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\tasks.py changed, reloading.
+INFO 2024-04-12 17:39:00,271 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 17:41:19,073 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 14906
+INFO 2024-04-12 17:41:19,130 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:41:22,289 basehttp "POST /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 10447
+INFO 2024-04-12 17:41:23,723 basehttp "POST /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 302 0
+INFO 2024-04-12 17:41:23,749 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 10118
+INFO 2024-04-12 17:41:23,801 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:41:24,477 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 10204
+INFO 2024-04-12 17:41:24,493 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:41:25,619 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9949
+INFO 2024-04-12 17:41:25,643 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:41:26,213 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10331
+INFO 2024-04-12 17:41:26,228 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 17:41:26,876 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 9961
+INFO 2024-04-12 17:41:26,889 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343

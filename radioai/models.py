@@ -193,6 +193,9 @@ class SchedulingSongsMetaData(models.Model):
     sftp_password = models.CharField(max_length=255)
     sftp_playlist_folder_name = models.CharField(max_length=255)
     sftp_output_folder_name = models.CharField(max_length=255)
+    station_name = models.CharField(max_length=255,default='')
+    extra_edge = models.CharField(max_length=255,default='')
+
     is_pending = models.BooleanField(default=True)
     schedule_time = models.CharField(max_length=200)
     recurrence_type = models.CharField(
