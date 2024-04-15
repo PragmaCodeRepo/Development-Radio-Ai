@@ -11783,3 +11783,447 @@ INFO 2024-04-12 17:41:26,213 basehttp "GET /admin/radioai/schedulingtasksweather
 INFO 2024-04-12 17:41:26,228 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2024-04-12 17:41:26,876 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 9961
 INFO 2024-04-12 17:41:26,889 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-12 18:05:39,361 autoreload Watching for file changes with StatReloader
+INFO 2024-04-12 18:06:07,319 basehttp "GET /Newscasters/ HTTP/1.1" 200 18199
+WARNING 2024-04-12 18:06:07,362 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:06:41,600 basehttp "GET /Newscasters/ HTTP/1.1" 200 18197
+WARNING 2024-04-12 18:06:41,622 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:07:37,323 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10470
+INFO 2024-04-12 18:20:09,802 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-12 18:20:09,859 basehttp "GET /Newscasters/ HTTP/1.1" 200 18197
+WARNING 2024-04-12 18:20:09,957 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:21:27,878 basehttp "GET /add_newscaster/ HTTP/1.1" 200 10471
+INFO 2024-04-12 18:25:15,764 basehttp "POST /add_newscaster/ HTTP/1.1" 302 0
+INFO 2024-04-12 18:25:15,792 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-12 18:25:15,814 basehttp "GET /Newscasters/ HTTP/1.1" 200 20301
+WARNING 2024-04-12 18:25:15,881 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:25:34,865 basehttp "GET /edit_newscaster/32/ HTTP/1.1" 200 13256
+WARNING 2024-04-12 18:25:34,884 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:25:57,465 basehttp "POST /edit_newscaster/32/ HTTP/1.1" 302 0
+INFO 2024-04-12 18:25:57,484 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-12 18:25:57,504 basehttp "GET /Newscasters/ HTTP/1.1" 200 20298
+WARNING 2024-04-12 18:25:57,544 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:26:25,838 basehttp "GET /news?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!&sftp_remote_path=%2FDBB1 HTTP/1.1" 301 0
+INFO 2024-04-12 18:26:25,867 basehttp "GET /news/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 26648
+WARNING 2024-04-12 18:26:25,884 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:26:44,436 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+WARNING 2024-04-12 18:26:44,461 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-12 18:36:25,018 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1257, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-12 18:36:25,027 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 91902
+ERROR 2024-04-12 18:47:36,625 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1257, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-12 18:47:36,628 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 91901
+INFO 2024-04-12 18:47:50,616 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+WARNING 2024-04-12 18:47:50,640 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-12 18:49:02,508 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23849
+WARNING 2024-04-12 18:49:02,531 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:34:13,218 basehttp "GET /Newscasters/ HTTP/1.1" 200 20298
+WARNING 2024-04-13 20:34:16,058 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:37:50,242 basehttp "GET /Newscasters/ HTTP/1.1" 200 21162
+WARNING 2024-04-13 20:37:50,298 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:38:12,213 basehttp "GET /Newscasters/ HTTP/1.1" 200 21228
+WARNING 2024-04-13 20:38:12,229 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:39:00,204 basehttp "GET /Newscasters/ HTTP/1.1" 200 20295
+WARNING 2024-04-13 20:39:00,265 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:39:54,760 basehttp "GET /Newscasters/ HTTP/1.1" 200 21153
+WARNING 2024-04-13 20:39:54,836 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:40:46,361 basehttp "GET /Newscasters/ HTTP/1.1" 200 21153
+WARNING 2024-04-13 20:40:46,382 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:43:44,734 basehttp "GET /Newscasters/ HTTP/1.1" 200 20403
+WARNING 2024-04-13 20:43:44,751 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:45:44,930 basehttp "GET /Newscasters/ HTTP/1.1" 200 19668
+WARNING 2024-04-13 20:45:44,967 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:46:06,816 basehttp "GET /Newscasters/ HTTP/1.1" 200 18912
+WARNING 2024-04-13 20:46:06,967 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:46:15,104 basehttp "GET /Newscasters/ HTTP/1.1" 200 21153
+WARNING 2024-04-13 20:46:15,151 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:46:25,345 basehttp "GET /Newscasters/ HTTP/1.1" 200 21150
+WARNING 2024-04-13 20:46:25,362 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 20:57:17,312 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-13 20:57:17,362 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 21:15:13,193 basehttp "GET /Newscasters/ HTTP/1.1" 200 6151
+INFO 2024-04-13 21:15:28,085 basehttp "GET /Newscasters/ HTTP/1.1" 200 21150
+WARNING 2024-04-13 21:15:28,101 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-13 21:15:47,127 log Internal Server Error: /Newscasters/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 915, in newscaster_list
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 127: 'endfor'. Did you forget to register or load this tag?
+ERROR 2024-04-13 21:15:47,208 basehttp "GET /Newscasters/ HTTP/1.1" 500 160342
+ERROR 2024-04-13 21:16:15,603 log Internal Server Error: /Newscasters/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 915, in newscaster_list
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 127: 'endfor'. Did you forget to register or load this tag?
+ERROR 2024-04-13 21:16:15,724 basehttp "GET /Newscasters/ HTTP/1.1" 500 160390
+ERROR 2024-04-13 21:16:27,139 log Internal Server Error: /Newscasters/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 915, in newscaster_list
+    return render(request, 'newscasters.html', {'newscasters': newscasters})
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 130: 'else'. Did you forget to register or load this tag?
+ERROR 2024-04-13 21:16:27,145 basehttp "GET /Newscasters/ HTTP/1.1" 500 160573
+INFO 2024-04-13 21:16:35,241 basehttp "GET /Newscasters/ HTTP/1.1" 200 21153
+WARNING 2024-04-13 21:16:35,272 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 21:16:37,467 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-13 21:16:37,484 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 21:18:33,371 basehttp "GET /Newscasters/ HTTP/1.1" 200 21960
+WARNING 2024-04-13 21:18:33,388 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 21:19:18,542 basehttp "GET /Newscasters/ HTTP/1.1" 200 22113
+WARNING 2024-04-13 21:19:18,570 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 21:19:31,670 basehttp "GET /Newscasters/ HTTP/1.1" 200 22128
+WARNING 2024-04-13 21:19:31,724 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:03:46,759 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21201
+WARNING 2024-04-13 22:03:46,774 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:05:02,219 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-13 22:05:02,247 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:05:03,519 basehttp "GET /fetching-meta-data?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-13 22:05:03,528 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21201
+WARNING 2024-04-13 22:05:03,560 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:08:51,159 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-13 22:08:59,860 autoreload Watching for file changes with StatReloader
+INFO 2024-04-13 22:10:02,239 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21238
+WARNING 2024-04-13 22:10:02,655 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:20:48,087 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21344
+WARNING 2024-04-13 22:20:48,103 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:21:37,249 basehttp "GET /edit_newscaster/32/ HTTP/1.1" 200 13255
+WARNING 2024-04-13 22:21:37,301 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:24:12,851 basehttp "POST /edit_newscaster/32/ HTTP/1.1" 302 0
+INFO 2024-04-13 22:24:12,961 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-13 22:24:12,975 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-13 22:24:13,002 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:24:45,090 basehttp "GET /edit_newscaster/32/ HTTP/1.1" 200 13257
+WARNING 2024-04-13 22:24:45,107 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:24:51,583 basehttp "POST /edit_newscaster/32/ HTTP/1.1" 302 0
+INFO 2024-04-13 22:24:51,603 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-13 22:24:51,614 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-13 22:24:51,635 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:27:11,702 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21369
+WARNING 2024-04-13 22:27:11,719 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:27:40,000 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21369
+WARNING 2024-04-13 22:27:40,017 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:28:21,158 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21373
+WARNING 2024-04-13 22:28:21,258 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:28:25,898 basehttp "GET /fetching-meta-data?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-13 22:28:25,906 basehttp "GET /fetching-meta-data/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21376
+WARNING 2024-04-13 22:28:25,936 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-13 22:28:36,676 basehttp "GET /fetching-meta-data?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 301 0
+INFO 2024-04-13 22:28:36,683 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 21378
+WARNING 2024-04-13 22:28:36,712 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:44:22,965 autoreload Watching for file changes with StatReloader
+INFO 2024-04-15 15:44:30,131 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-15 15:44:30,292 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:44:30,591 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:44:34,915 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-15 15:44:34,991 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-15 15:44:35,000 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:44:35,018 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:44:38,419 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 21378
+WARNING 2024-04-15 15:44:38,434 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:45:07,078 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:45:07,096 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:45:11,244 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 21378
+WARNING 2024-04-15 15:45:11,263 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-15 15:45:34,448 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1257, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-15 15:45:34,453 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 91970
+INFO 2024-04-15 15:45:43,602 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:45:43,619 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:45:45,419 basehttp "GET /edit_newscaster/32/ HTTP/1.1" 200 13257
+WARNING 2024-04-15 15:45:45,447 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:46:07,143 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:46:07,161 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:46:08,172 basehttp "GET /fetching-meta-data/ HTTP/1.1" 200 21326
+WARNING 2024-04-15 15:46:08,190 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:47:21,400 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23642
+WARNING 2024-04-15 15:47:21,422 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:48:07,885 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:48:07,902 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:48:09,415 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 21378
+WARNING 2024-04-15 15:48:09,431 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-15 15:48:48,935 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1257, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-15 15:48:48,939 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 92009
+INFO 2024-04-15 15:50:25,081 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py changed, reloading.
+INFO 2024-04-15 15:50:26,621 autoreload Watching for file changes with StatReloader
+ERROR 2024-04-15 15:50:35,945 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1258, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-15 15:50:35,949 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 92012
+INFO 2024-04-15 15:51:40,654 basehttp "GET /Newscasters/ HTTP/1.1" 200 23015
+WARNING 2024-04-15 15:51:40,670 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:51:43,380 basehttp "GET /edit_newscaster/32/ HTTP/1.1" 200 13257
+WARNING 2024-04-15 15:51:43,401 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:51:57,382 basehttp "POST /edit_newscaster/32/ HTTP/1.1" 302 0
+INFO 2024-04-15 15:51:57,394 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-15 15:51:57,405 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 15:51:57,425 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:51:59,503 basehttp "GET /fetching-meta-data?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!&sftp_remote_path=%2FDBB1 HTTP/1.1" 301 0
+INFO 2024-04-15 15:51:59,513 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOAX45!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 21377
+WARNING 2024-04-15 15:51:59,534 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-15 15:52:17,186 log Internal Server Error: /fetching-meta-data/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 1258, in fetching_song_meta_data
+    transport.connect(username=sftp_username, password=sftp_password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1414, in connect
+    self.auth_password(username, password)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\transport.py", line 1587, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\paramiko\auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+ERROR 2024-04-15 15:52:17,189 basehttp "POST /fetching-meta-data/ HTTP/1.1" 500 92007
+INFO 2024-04-15 15:54:04,937 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23642
+WARNING 2024-04-15 15:54:04,972 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:54:34,996 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 15:54:35,012 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:54:36,732 basehttp "GET /edit_newscaster/32/ HTTP/1.1" 200 13256
+WARNING 2024-04-15 15:54:36,747 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:54:55,330 basehttp "POST /edit_newscaster/32/ HTTP/1.1" 302 0
+INFO 2024-04-15 15:54:55,343 basehttp "GET /Newscasters HTTP/1.1" 301 0
+INFO 2024-04-15 15:54:55,357 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 15:54:55,384 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:54:58,183 basehttp "GET /fetching-meta-data?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 301 0
+INFO 2024-04-15 15:54:58,191 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 21377
+WARNING 2024-04-15 15:54:58,212 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 15:56:07,394 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23642
+WARNING 2024-04-15 15:56:07,432 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:12:47,243 basehttp "GET /admin/radioai/activesession/ HTTP/1.1" 200 11072
+INFO 2024-04-15 16:12:47,487 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-04-15 16:12:48,075 log Not Found: /favicon.ico
+WARNING 2024-04-15 16:12:48,076 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-15 16:12:49,929 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 10204
+INFO 2024-04-15 16:12:49,941 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-15 16:12:51,064 basehttp "GET /admin/radioai/schedulingtasksweather/ HTTP/1.1" 200 9949
+INFO 2024-04-15 16:12:51,077 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-15 16:12:51,685 basehttp "GET /admin/radioai/schedulingtasksweatherbyzipcode/ HTTP/1.1" 200 10331
+INFO 2024-04-15 16:12:51,697 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-15 16:12:52,315 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 20138
+INFO 2024-04-15 16:12:52,327 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-15 16:12:58,235 basehttp "POST /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 11867
+INFO 2024-04-15 16:13:03,474 basehttp "POST /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 302 0
+INFO 2024-04-15 16:13:03,511 basehttp "GET /admin/radioai/schedulingsongsmetadata/ HTTP/1.1" 200 10119
+INFO 2024-04-15 16:13:03,528 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-15 16:19:48,562 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 16:19:48,578 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:19:50,039 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-15 16:19:50,065 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:19:54,323 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 16:19:54,338 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:19:55,560 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-15 16:19:55,590 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:19:57,978 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 16:19:57,995 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:19:58,848 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-15 16:19:58,869 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:20:01,849 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 16:20:01,867 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:20:03,898 basehttp "GET /weather-zipcode?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-15 16:20:03,907 basehttp "GET /weather-zipcode/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21326
+WARNING 2024-04-15 16:20:03,928 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:20:05,924 basehttp "GET /Newscasters/ HTTP/1.1" 200 23011
+WARNING 2024-04-15 16:20:05,941 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:21:17,516 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-15 16:21:17,534 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:24,353 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-15 16:22:24,370 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:30,031 basehttp "GET /edit_newscaster/30/ HTTP/1.1" 200 13266
+WARNING 2024-04-15 16:22:30,048 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:33,023 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-15 16:22:33,049 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:37,195 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-15 16:22:37,221 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:40,913 basehttp "GET /news?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-15 16:22:40,924 basehttp "GET /news/?newscaster=Pranjal&language=spanish&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27629
+WARNING 2024-04-15 16:22:40,944 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:46,704 basehttp "GET /fetching-meta-data/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21373
+WARNING 2024-04-15 16:22:46,721 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:22:52,178 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-15 16:22:52,194 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:23:48,713 basehttp "POST /news/ HTTP/1.1" 200 1349843
+INFO 2024-04-15 16:23:58,109 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-15 16:23:58,127 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:23:59,167 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-15 16:23:59,185 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-15 16:24:31,548 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 314976
+INFO 2024-04-15 16:31:49,803 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-15 16:31:49,821 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905

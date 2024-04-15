@@ -56,14 +56,14 @@
             <form method="post" action="{% url 'rss_to_audio_app:delete_all_newscaster' %}">
               {% csrf_token %}
               <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                &#128465; Delete All Newscasters
+                &#128465; Delete All Radio Dj
               </button>
             </form>
           </div>
           <div class="justify-end">
             <a href="/add_newscaster">
               <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                <span class="text-lg">&plus;</span> Add Newscaster
+                <span class="text-lg">&plus;</span> Add Radio Dj
             </button>
           </div>
             
@@ -83,9 +83,13 @@
                     <p class="text-grawhitey-700 text-base mb-4">
                         Language: {{ newscaster.language }}
                     </p>
-                    <p class="text-white-700 text-base">
+                    <p class="text-black-700 text-base">
                         Voice: {{ newscaster.voice }}
                     </p>
+                    <button onclick="redirectToSongsMeta('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">
+                      Songs Announcer
+                  </button>
+                    
                 </div>
                 <div class="px-6 pt-4 pb-2 flex items-center space-x-4">
                   <form method="post" action="{% url 'rss_to_audio_app:delete_newscaster' %}">
@@ -94,6 +98,7 @@
                       <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                         &#128465; Delete
                     </button>
+
                     
                     
                   </form>
@@ -104,14 +109,17 @@
                 
                 
                 
-                <button onclick="redirectToWeather('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                {% comment %} <button onclick="redirectToWeather('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
                   Weather
-              </button>
+              </button> {% endcomment %}
               
                   <button onclick="redirectToNews('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       News Bot
                   </button>
                   <br/>
+                  <button onclick="redirectToWeather('{{ newscaster.name }}', '{{ newscaster.language }}', '{{ newscaster.sftp_host }}', '{{ newscaster.sftp_port }}', '{{ newscaster.sftp_username }}', '{{ newscaster.sftp_password }}', '{{ newscaster.sftp_remote_path }}')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Weather
+                </button>
               <br/>
               <br/>
               </div>
@@ -158,6 +166,17 @@
           const encodedRemotePath = encodeURIComponent(sftpRemotePath);
       
           window.location.href = `/weather-zipcode?newscaster=${encodedName}&language=${encodedLanguage}&sftp_host=${encodedHost}&sftp_port=${encodedPort}&sftp_username=${encodedUsername}&sftp_password=${encodedPassword}&sftp_remote_path=${encodedRemotePath}`;
+        }
+        function redirectToSongsMeta(newscasterName, language, sftpHost, sftpPort, sftpUsername, sftpPassword, sftpRemotePath) {
+          const encodedName = encodeURIComponent(newscasterName);
+          const encodedLanguage = encodeURIComponent(language);
+          const encodedHost = encodeURIComponent(sftpHost);
+          const encodedPort = encodeURIComponent(sftpPort);
+          const encodedUsername = encodeURIComponent(sftpUsername);
+          const encodedPassword = encodeURIComponent(sftpPassword);
+          const encodedRemotePath = encodeURIComponent(sftpRemotePath);
+      
+          window.location.href = `/fetching-meta-data?newscaster=${encodedName}&language=${encodedLanguage}&sftp_host=${encodedHost}&sftp_port=${encodedPort}&sftp_username=${encodedUsername}&sftp_password=${encodedPassword}&sftp_remote_path=${encodedRemotePath}`;
         }
     </script>
     <br/>

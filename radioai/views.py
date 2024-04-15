@@ -1228,6 +1228,7 @@ def fetching_song_meta_data(request):
         stationname=request.POST.get('stationname')
         voice=request.POST.get('voice')
         sftp_port=int(sftp_port)
+        print(f"cred is{sftp_host},{sftp_port},{sftp_password},{sftp_username} ")
         print(f"The ex {extraedge}")
         print(f"The voice is ={voice}")
         obj = SchedulingSongsMetaData.objects.create(
@@ -1304,8 +1305,14 @@ def fetching_song_meta_data(request):
         # Log the total execution time
         print(f"Total execution time: {time.time() - start_time} seconds")
         return render(request, 'Songs/fetching.html', {"track_names": track_names})
-
-    return render(request, 'Songs/fetching.html')
+    news_caster = request.GET.get('newscaster', '')
+    language = request.GET.get('language', '')
+    sftp_host = request.GET.get('sftp_host', '')
+    sftp_port = request.GET.get('sftp_port', '')
+    sftp_username = request.GET.get('sftp_username', '')
+    sftp_password = request.GET.get('sftp_password', '')
+    sftp_remote_path = request.GET.get('sftp_remote_path', '')
+    return render(request, 'Songs/fetching.html',{'news_caster':news_caster,'language':language,'sftp_host':sftp_host,'sftp_port':sftp_port,'sftp_username':sftp_username,'sftp_password':sftp_password,'sftp_remote_path':sftp_remote_path})
 
 
 def empty_folder(folder_path):
