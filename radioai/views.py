@@ -1224,12 +1224,12 @@ def fetching_song_meta_data(request):
         sftp_path_output=request.POST.get('sftp_path_output')
         recurrence_type=request.POST.get('recurrence_type')
         schedule_time=request.POST.get('schedule_time')
-        extraedge=request.POST.get('extraedge')
+        # extraedge=request.POST.get('extraedge')
         stationname=request.POST.get('stationname')
         voice=request.POST.get('voice')
         sftp_port=int(sftp_port)
         print(f"cred is{sftp_host},{sftp_port},{sftp_password},{sftp_username} ")
-        print(f"The ex {extraedge}")
+        # print(f"The ex {extraedge}")
         print(f"The voice is ={voice}")
         obj = SchedulingSongsMetaData.objects.create(
             sftp_host=sftp_host,
@@ -1239,7 +1239,7 @@ def fetching_song_meta_data(request):
             sftp_playlist_folder_name=sftp_path_playlist,
             sftp_output_folder_name=sftp_path_output,
             station_name=stationname,
-            extra_edge=extraedge,
+            # extra_edge=extraedge,
             is_pending=True if schedule_time else False,
             schedule_time=schedule_time,
             recurrence_type=recurrence_type,
@@ -1281,9 +1281,9 @@ def fetching_song_meta_data(request):
                 next_track = track_names[i + 1]
                 fun_fact_current = rewrite_with_chatgpt_song_meta_data(current_track,current_track,next_track,stationname)
                 fun_fact_next = rewrite_with_chatgpt_song_meta_data(next_track,current_track,next_track,stationname)
-                extradata=extranews(extraedge)
-                print(f"the extra news is {extraedge}")
-                text = f"  {fun_fact_current}. Next song is {next_track} {fun_fact_next} {extradata}"
+                # extradata=extranews(extraedge)
+                # print(f"the extra news is {extraedge}")
+                text = f"  {fun_fact_current}. Next song is {next_track} {fun_fact_next}"
                 audio_file = f"vo{(i // 3) + 1}.mp3"
                 convert_text_to_audio_gtts(text, audio_file,'21m00Tcm4TlvDq8ikWAM')
                 upload_to_sftp_for_meta_data(audio_file, f"{sftp_path_output}/VO{(i // 3) + 1}/{audio_file}", sftp_host, sftp_port, sftp_username, sftp_password)
@@ -1390,7 +1390,7 @@ def rewrite_with_chatgpt_song_meta_data(text,current_track,next_track,stationnam
 
 
 def upload_to_sftp_for_meta_data(local_path, remote_path, sftp_host, sftp_port, sftp_username, sftp_password):
-    print("**********INSIDE UPLOAD*******************")
+    # print("**********INSIDE UPLOAD*******************")
     ssh_client = paramiko.SSHClient()
     ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 

@@ -280,7 +280,7 @@
               />
             </div>
             <div class="mb-4">
-              <label
+              {% comment %} <label
                 for="extraedge"
                 class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
                 >Enter Extra Edge:</label
@@ -290,7 +290,7 @@
                 id="extraedge"
                 name="extraedge"
                 class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
-              />
+              /> {% endcomment %}
             </div>
 
             <div class="mb-4">
@@ -348,7 +348,7 @@
               </button>
               <button
                   type="button"
-                  class="ml-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-600"
+                  class="ml-4 px-4 py-2  bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-600"
                   onclick="toggleScheduleText()"
               >
                   Schedule Task
