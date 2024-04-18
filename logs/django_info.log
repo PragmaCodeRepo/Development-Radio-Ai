@@ -12515,3 +12515,199 @@ WARNING 2024-04-18 13:35:00,884 basehttp "GET /static/your-styles.css HTTP/1.1" 
 INFO 2024-04-18 14:36:30,105 autoreload Watching for file changes with StatReloader
 INFO 2024-04-18 14:38:25,510 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\app\settings.py changed, reloading.
 INFO 2024-04-18 14:38:27,887 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:03:09,407 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:03:25,550 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-18 15:03:25,590 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:03:25,620 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:03:28,664 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-18 15:03:28,683 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:03:40,631 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 15779
+INFO 2024-04-18 15:03:40,791 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,791 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,802 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-18 15:03:40,803 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,803 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,849 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,932 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,932 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,932 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,938 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,938 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,938 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,947 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:40,947 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:41,000 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:41,000 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:41,003 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:41,004 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:41,016 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-04-18 15:03:41,025 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+WARNING 2024-04-18 15:03:41,080 log Not Found: /favicon.ico
+WARNING 2024-04-18 15:03:41,081 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-18 15:04:38,368 basehttp "GET /admin/radioai/schedulingtasks/ HTTP/1.1" 200 15779
+INFO 2024-04-18 15:04:38,486 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-04-18 15:04:38,797 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2024-04-18 15:04:38,822 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2024-04-18 15:04:38,841 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2024-04-18 15:04:38,856 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-04-18 15:04:38,856 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2024-04-18 15:04:38,886 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2024-04-18 15:04:38,916 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2024-04-18 15:04:38,926 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-04-18 15:04:38,984 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2024-04-18 15:04:38,998 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2024-04-18 15:04:39,027 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-04-18 15:04:39,035 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2024-04-18 15:04:39,051 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2024-04-18 15:04:39,116 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2024-04-18 15:04:39,146 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-04-18 15:04:39,161 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-04-18 15:04:39,161 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-04-18 15:04:39,179 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-04-18 15:04:39,185 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+WARNING 2024-04-18 15:04:39,217 log Not Found: /favicon.ico
+WARNING 2024-04-18 15:04:39,218 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-18 15:04:43,063 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-18 15:04:43,124 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:04:43,149 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:04:43,155 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 304 0
+INFO 2024-04-18 15:04:45,659 basehttp "GET /news?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 301 0
+INFO 2024-04-18 15:04:45,681 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-18 15:04:45,699 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+ERROR 2024-04-18 15:05:33,287 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 710, in _error_catcher
+    yield
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(0 bytes read, 53291 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 813, in _raw_read
+    with self._error_catcher():
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(0 bytes read, 53291 more expected)', IncompleteRead(0 bytes read, 53291 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 319, in convert_to_audio
+    root = fetch_xml_content(rss_url)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 71, in fetch_xml_content
+    response = requests.get(url)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 747, in send
+    r.content
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(0 bytes read, 53291 more expected)', IncompleteRead(0 bytes read, 53291 more expected))
+INFO 2024-04-18 15:05:33,299 basehttp - Broken pipe from ('127.0.0.1', 58601)
+ERROR 2024-04-18 15:05:51,272 log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 710, in _error_catcher
+    yield
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(0 bytes read, 53823 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 813, in _raw_read
+    with self._error_catcher():
+  File "C:\Users\pranjalchaubey\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\urllib3\response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(0 bytes read, 53823 more expected)', IncompleteRead(0 bytes read, 53823 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 319, in convert_to_audio
+    root = fetch_xml_content(rss_url)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\radioai\views.py", line 71, in fetch_xml_content
+    response = requests.get(url)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\sessions.py", line 747, in send
+    r.content
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\venv\lib\site-packages\requests\models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(0 bytes read, 53823 more expected)', IncompleteRead(0 bytes read, 53823 more expected))
+ERROR 2024-04-18 15:05:51,280 basehttp "POST /news/ HTTP/1.1" 500 151030
+INFO 2024-04-18 15:07:34,844 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:07:54,051 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:07:58,231 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-18 15:07:58,369 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:07:58,463 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+WARNING 2024-04-18 15:07:58,835 log Not Found: /favicon.ico
+WARNING 2024-04-18 15:07:58,836 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-18 15:08:00,702 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-18 15:08:00,745 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:08:41,746 basehttp "POST /news/ HTTP/1.1" 200 28995
+WARNING 2024-04-18 15:08:41,788 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:09:40,682 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:09:43,594 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:09:43,627 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:09:49,447 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:09:49,465 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:09:53,202 basehttp "GET /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 21321
+WARNING 2024-04-18 15:09:53,223 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:10:24,551 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 312050
+INFO 2024-04-18 15:13:45,536 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:14:19,232 basehttp "POST /weather-zipcode/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 324589
+INFO 2024-04-18 15:14:42,163 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:14:42,206 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:14:43,480 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-18 15:14:43,514 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:18:15,062 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 15:18:20,731 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-04-18 15:18:20,906 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 15:18:21,029 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:18:26,168 basehttp "GET /news/?newscaster=Mike&language=english&sftp_host=75.43.156.99&sftp_port=2022&sftp_username=haljordan&sftp_password=RawNotesandBeats%24!&sftp_remote_path=%2FANNOUNCEMENTS_FOLDER HTTP/1.1" 200 27624
+WARNING 2024-04-18 15:18:26,212 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 15:19:19,699 basehttp "POST /news/ HTTP/1.1" 200 757177
+INFO 2024-04-18 15:20:38,582 basehttp "POST /news/ HTTP/1.1" 200 627609
