@@ -12498,3 +12498,20 @@ INFO 2024-04-18 13:21:59,572 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
 WARNING 2024-04-18 13:22:00,335 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
 INFO 2024-04-18 13:22:01,803 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 20888
 WARNING 2024-04-18 13:22:01,831 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 13:26:30,359 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 13:28:48,897 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23485
+WARNING 2024-04-18 13:28:48,921 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 13:34:10,131 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 13:34:10,148 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 13:34:11,518 basehttp "GET /Newscasters/ HTTP/1.1" 200 22222
+WARNING 2024-04-18 13:34:11,563 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 13:34:11,665 basehttp "GET /static/images/Groundrushlabs_logo.png HTTP/1.1" 200 137526
+WARNING 2024-04-18 13:34:12,093 log Not Found: /favicon.ico
+WARNING 2024-04-18 13:34:12,094 basehttp "GET /favicon.ico HTTP/1.1" 404 8649
+INFO 2024-04-18 13:34:13,748 basehttp "GET /fetching-meta-data/?newscaster=Downtime%20Billie%20Brown&language=english&sftp_host=75.43.156.103&sftp_port=2227&sftp_username=GRUser&sftp_password=HOX45!!&sftp_remote_path=%2FDBB1 HTTP/1.1" 200 20888
+WARNING 2024-04-18 13:34:13,764 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 13:35:00,856 basehttp "POST /fetching-meta-data/ HTTP/1.1" 200 23485
+WARNING 2024-04-18 13:35:00,884 basehttp "GET /static/your-styles.css HTTP/1.1" 404 1905
+INFO 2024-04-18 14:36:30,105 autoreload Watching for file changes with StatReloader
+INFO 2024-04-18 14:38:25,510 autoreload C:\VE\Micheal Johnson\copy-django\dev-news_radio_ai\app\settings.py changed, reloading.
+INFO 2024-04-18 14:38:27,887 autoreload Watching for file changes with StatReloader
