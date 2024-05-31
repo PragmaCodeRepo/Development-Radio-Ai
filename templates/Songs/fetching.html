@@ -120,7 +120,23 @@
           Fetching Meta-data
         </h1>
       </div>
+
       {% endcomment %}
+      <div
+        class="mt-5 {% if flag %}border-dotted border-2 border-gray-400 p-4 rounded-lg{% endif %}"
+      >
+        {% if flag %}
+        <div class="flex justify-center mb-5">
+          <h1 class="text-2xl sm:text-2xl lg:text-2xl font-bold text-center">
+            Task scheduled successfully for {% if recurr_type == "weekly" %}
+            <span class="text-blue-500">Every Week</span> at {{ time_to_show }}!
+            {% elif recurr_type == "monthly" %}
+            <span class="text-green-500">Every Month</span> at {{ time_to_show}}! {% elif recurr_type == "everyhour" %}
+            <span class="text-yellow-500">Every Hour</span> at {{ time_to_show}}! {% else %} <span class="text-red-500">One time</span> at {{time_to_show }}! {% endif %}
+          </h1>
+        </div>
+        {% endif %}
+      </div>
       <a href="/upload_files">Want to upload .pls files to SFTP Folder</a>
       <div
         class="mb-4 text-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md max-w-xl mx-auto overflow-auto"
@@ -280,7 +296,23 @@
               />
             </div>
             <div class="mb-4">
-              {% comment %} <label
+              <label
+                for="stationname"
+                class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
+                >Enter final output fol intial:</label
+              >
+              <input
+                type="text"
+                id="dynamicfolder"
+                name="dynamicfolder"
+                required
+                class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
+              />
+            </div>
+
+            <div class="mb-4">
+              {% comment %}
+              <label
                 for="extraedge"
                 class="block text-white-700 dark:text-gray-300 font-semibold mb-2"
                 >Enter Extra Edge:</label
@@ -290,7 +322,8 @@
                 id="extraedge"
                 name="extraedge"
                 class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:text-black text-white bg-black"
-              /> {% endcomment %}
+              />
+              {% endcomment %}
             </div>
 
             <div class="mb-4">
@@ -299,7 +332,7 @@
               >
               <select
                 name="voice"
-                class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:border-indigo-500 focus:outline-none focus:ring-opacity-50  bg-black"
+                class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:border-indigo-500 focus:outline-none focus:ring-opacity-50 bg-black"
               >
                 {% comment %}
                 <option value="Neutral">Neutral</option>
@@ -336,49 +369,49 @@
                 {% endcomment %}
               </select>
             </div>
-            <br/>
-            
-            <br/>
-            
+            <br />
+
+            <br />
+            <div class="space-y-4">
               <button
                   type="submit"
-                  class="rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                  class="block w-full rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
               >
                   Fetch details
               </button>
               <button
                   type="button"
-                  class="ml-4 px-4 py-2  bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-600"
+                  class="block w-full rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600"
                   onclick="toggleScheduleText()"
               >
                   Schedule Task
               </button>
+          </div>
           
-          
-           
+            
 
             <div
-              class="lg  rounded-md flex space-x-40 hidden "
+              class="lg rounded-md flex space-x-40 hidden"
               id="schedule_text"
             >
-            <div class="mt-4">
-              <label
-                for="recurrence_type"
-                class="block text-sm font-medium text-white-700"
-                >Recurrence Type:</label
-              >
-              <select
-                id="recurrence_type"
-                name="recurrence_type"
-                class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
-              >
-                <option value="onetime">One time</option>
-                <option value="weekly">Weekly</option>
-                <option value="everyhour">Every Hour</option>
-                <option value="monthly">Monthly</option>
-              </select>
-            </div>
-              <div class="mb-2 ">
+              <div class="mt-4">
+                <label
+                  for="recurrence_type"
+                  class="block text-sm font-medium text-white-700"
+                  >Recurrence Type:</label
+                >
+                <select
+                  id="recurrence_type"
+                  name="recurrence_type"
+                  class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
+                >
+                  <option value="onetime">One time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="everyhour">Every Hour</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </div>
+              <div class="mb-2">
                 <label
                   for="schedule_time"
                   class="block text-sm font-medium text-white-700 mt-4"
@@ -393,11 +426,8 @@
               </div>
             </div>
           </div>
-
-          
         </div>
-        
-       
+
         {% csrf_token %}
       </form>
     </div>

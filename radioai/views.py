@@ -864,51 +864,95 @@ def mix_stories(news_items1, news_items2):
 
 # intros and outros
 def enter_intro(request):
-    suggestions = ['This is Barbara Gordon, reporting live from our news desk. Lets get you up to speed on current events ', 'Good day, folks. Barbara Gordon here, and I m here to bring you the latest news from our studio', 'Greetings, Im Barbara Gordon, and I ll be your news anchor for today, bringing you the latest updates']
-    All_data = Intros.objects.all() 
+
+    newscaster = request.GET.get('news_caster')
+    print(newscaster)
+    suggestions = genrate_ai_suggestion_intros(newscaster)
+    print(suggestions)
+
+    All_data = Intros.objects.all()
     if request.method == 'POST':
         intro_text = request.POST.get('intro_text')
-        news_caster=request.POST.get('news_caster')
-        Intros.objects.create(intros=intro_text,news_caster=news_caster)
-       
-        return redirect('/news')
+        news_caster = request.POST.get('news_caster')
+        Intros.objects.create(intros=intro_text, news_caster=news_caster)
 
-    return render(request, 'enter_intro.html',{'suggestions':suggestions})
+        return redirect('/')
+
+    return render(request, 'enter_intro.html', {'suggestions': suggestions})
 
 
 def enter_outro(request):
-    suggestions = ['Bringing you real-time updates, Im Barbara Gordon. Appreciate your attention; now, lets return to the music', 'Bringing you real-time updates, I m Barbara Gordon. Appreciate your attention; now, lets return to the music','I m Barbara Gordon, providing you with live news coverage. Thank you for being here, and lets get back to the music','For up-to-the-minute news, I m Barbara Gordon. Grateful for your audience; now, let s resume the music','This is Barbara Gordon, delivering breaking news as it happens. Your presence is appreciated; now, let s enjoy some music.' ]
+    newscaster = request.GET.get('news_caster')
+    suggestions = genrate_ai_suggestion_outros(newscaster)
     if request.method == 'POST':
         outro_text = request.POST.get('outro_text')
-        news_caster=request.POST.get('news_caster')
-        Outros.objects.create(outros=outro_text,news_caster=news_caster)
-        return redirect('/news')
+        news_caster = request.POST.get('news_caster')
+        Outros.objects.create(outros=outro_text, news_caster=news_caster)
+        return redirect('/')
 
-    return render(request, 'enter_outro.html',{'suggestions':suggestions})
+    return render(request, 'enter_outro.html', {'suggestions': suggestions})
 
 
 def enter_intro_weather(request):
-    suggestions = ['This is Barbara Gordon, reporting live from our news desk. Lets get you up to speed on current events ', 'Good day, folks. Barbara Gordon here, and I m here to bring you the latest news from our studio', 'Greetings, Im Barbara Gordon, and I ll be your news anchor for today, bringing you the latest updates']
+    newscaster = request.GET.get('news_caster')
+    suggestions = genrate_ai_suggestion_outros(newscaster)
+    print("the newscaster is ",newscaster)
     if request.method == 'POST':
         intro_text = request.POST.get('intro_text')
-        news_caster=request.POST.get('news_caster')
-        Intros.objects.create(intros=intro_text,news_caster=news_caster)
-        return redirect('/weather-zipcode')
+        news_caster = request.POST.get('news_caster')
+        Intros.objects.create(intros=intro_text, news_caster=news_caster)
+        return redirect('/')
 
-    return render(request, 'enter_intro_weather.html',{'suggestions':suggestions})
+    return render(request, 'enter_intro_weather.html', {'suggestions': suggestions})
 
 
 def enter_outro_weather(request):
-    suggestions = ['Bringing you real-time updates, Im Barbara Gordon. Appreciate your attention; now, lets return to the music', 'Bringing you real-time updates, I m Barbara Gordon. Appreciate your attention; now, lets return to the music','I m Barbara Gordon, providing you with live news coverage. Thank you for being here, and lets get back to the music','For up-to-the-minute news, I m Barbara Gordon. Grateful for your audience; now, let s resume the music','This is Barbara Gordon, delivering breaking news as it happens. Your presence is appreciated; now, let s enjoy some music.' ]
+    newscaster = request.GET.get('news_caster')
+    print("the newscaster is ",newscaster)
+    suggestions = genrate_ai_suggestion_outros(newscaster)
     if request.method == 'POST':
         outro_text = request.POST.get('outro_text')
-        news_caster=request.POST.get('news_caster')
-        Outros.objects.create(outros=outro_text,news_caster=news_caster)
-        return redirect('/weather-zipcode')
+        news_caster = request.POST.get('news_caster')
+        Outros.objects.create(outros=outro_text, news_caster=news_caster)
+        return redirect('/')
 
-    return render(request, 'enter_outro_weather.html',{'suggestions':suggestions})
+    return render(request, 'enter_outro_weather.html', {'suggestions': suggestions})
 
+def genrate_ai_suggestion_intros(text):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "system",
+            "content": "Generate news intro suggestions for a radio dj named is given and give only 5 suggetions for  intros ."
+        },
+            {
+            "role": "user",
+            "content": str(text)
+        }]
+    )
 
+    suggestions = response.choices[0].message['content'].strip().split("\n")
+    formatted_suggestions = [s.split(
+        '. "')[1][:-1] if s.startswith('"') else s.split(". ")[1] for s in suggestions]
+    return formatted_suggestions
+
+def genrate_ai_suggestion_outros(text):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "system",
+            "content": "Generate news outros suggestions for a radio dj named is given and give only 5 suggetions for  outros."
+        },
+            {
+            "role": "user",
+            "content": str(text)
+        }]
+    )
+
+    suggestions = response.choices[0].message['content'].strip().split("\n")
+    formatted_suggestions = [s.split(
+        '. "')[1][:-1] if s.startswith('"') else s.split(". ")[1] for s in suggestions]
+    return formatted_suggestions
 
 def newscaster_list(request):
     newscasters = Newscaster.objects.all()
@@ -964,6 +1008,7 @@ def edit_newscaster(request, newscaster_id):
         newscaster.sftp_username = request.POST['sftp_username']
         newscaster.sftp_password = request.POST['sftp_password']
         newscaster.sftp_remote_path = request.POST['sftp_remote_path']
+        
 
 
         newscaster.save()
@@ -1190,161 +1235,207 @@ def translate_to_spanish(text):
 
 #Speech to Speech
 
-def speech_to_speech(request):
-    return render(request, 'speech_to_speech.html')
 
 
+# AZURACAST THINGS
 
+def azuracast(request):
+    local_path = "3xsFSX1n7vykbalA6vhp.mp3"
+    sftp_host = request.POST.get('sftp_host')
+    sftp_port = request.POST.get('sftp_port')
+    sftp_username = request.POST.get('sftp_username')
+    sftp_password = request.POST.get('sftp_password')
+    remote_path = request.POST.get('remote_path')
+    voice = request.POST.get('voice')
+    newscaster = request.POST.get('news_caster')
+    start_date = request.POST.get('start_date')
+    end_date = request.POST.get('end_date')
+    shift_start_time=request.POST.get('shift_start_time','')
+    shift_end_time=request.POST.get('shift_end_time','')
+    remote_sftp_path = f'{remote_path}/3xsFSX1n7vykbalA6vhp.mp3'
+    print(
+        f"the value is {local_path,sftp_host,sftp_port,sftp_username,sftp_password,remote_sftp_path}")
+    # remote_path = "/Stacey"
+    # sftp_host = "75.43.156.100"
+    # sftp_port = 2022
+    # sftp_username = "pranjal"
+    # sftp_password = "BackTrackFM"
 
+    url = 'https://streams2.groundrushlabs.com/api/station/19/queue'
+    api_key = '4b3c5d2fbd786707:b668e41a777a7a8d80f7b682423f6fcf'
+    headers = {'Authorization': f'Bearer {api_key}'}
+    newscasterdj = request.GET.get('newscaster', '')
+    newscaster_sftphost = request.GET.get('newscaster_sftphost', '')
+    newscaster_sftpport = request.GET.get('newscaster_sftpport', '')
+    newscaster_sftpusername = request.GET.get('newscaster_sftpusername', '')
+    newscaster_sftppassword = request.GET.get('newscaster_sftppassword', '')
+    newscaster_sftpremotepath = request.GET.get(
+        'newscaster_sftpremotepath', '')
+    response = requests.get(url, headers=headers)
+    data = response.json()
+    print(f"the caster is {newscasterdj}")
+    print(f"the caster is {newscaster}")
 
-
-
-
-#Meta Song data 
-import os
-import paramiko
-from datetime import datetime
-from django.shortcuts import render
-import concurrent.futures
-import time
-
-def fetching_song_meta_data(request):
-    track_names = []
-    if request.method == 'POST':
-        # Start the timer for profiling
-        start_time = time.time()
-        print("************INSIDE META DATA SONG************")
-
-        # SFTP server credentials
-        sftp_host = request.POST.get('sftp_host')
-        sftp_port = request.POST.get('sftp_port')
-        sftp_username = request.POST.get('sftp_username')
-        sftp_password = request.POST.get('sftp_password')
-        sftp_path_playlist=request.POST.get('sftp_path_playlist')
-        sftp_path_output=request.POST.get('sftp_path_output')
-        recurrence_type=request.POST.get('recurrence_type')
-        schedule_time=request.POST.get('schedule_time')
-        # extraedge=request.POST.get('extraedge')
-        stationname=request.POST.get('stationname')
-        voice=request.POST.get('voice')
-        sftp_port=int(sftp_port)
-        print(f"cred is{sftp_host},{sftp_port},{sftp_password},{sftp_username} ")
-        # print(f"The ex {extraedge}")
-        print(f"The voice is ={voice}")
-        obj = SchedulingSongsMetaData.objects.create(
+    above_artist = None
+    below_artist = None
+    rss_url="https://moxie.foxnews.com/google-publisher/latest.xml"
+    if start_date:
+        
+        obj = Azuracast.objects.create(
             sftp_host=sftp_host,
             sftp_port=sftp_port,
             sftp_password=sftp_password,
             sftp_username=sftp_username,
-            sftp_playlist_folder_name=sftp_path_playlist,
-            sftp_output_folder_name=sftp_path_output,
-            station_name=stationname,
-            # extra_edge=extraedge,
-            is_pending=True if schedule_time else False,
-            schedule_time=schedule_time,
-            recurrence_type=recurrence_type,
+            news_caster=newscaster,
+            remote_path=remote_path,
+            start_date=start_date,
+            end_date=end_date,
+            shift_start_time=shift_start_time,
+            shift_end_time=shift_end_time,
+            voice=voice,
+            is_pending=True if start_date else False,
+            
         )
         obj.save()
 
-        # Construct the remote path based on the current date
-        today_date = datetime.now().strftime('%m%d%y')
-        sftp_remote_path = f'/{sftp_path_playlist}/{today_date}/'
-        print(f"SFTP remote path: {sftp_remote_path}")
+        return HttpResponse("Task Scheduled Successfully")
+    root = fetch_xml_content_azuracast_extra_edge(rss_url)
+    news_items = extract_news_items_azuracast_extra_edge(root, 1)
+    print(news_items)
+    if response.status_code == 200:
+        for i, song in enumerate(data):
+            # Check if it's the second song and its title matches 'stacey' or 'stacy'
+            if i == 1 and song and song.get('song') and newscaster and newscaster.lower() in song['song']['title'].lower():
+                # if i == 1 and ('stacey' in song['song']['title'].lower() or 'Stacy' in song['song']['title'].lower()):
+                # Get artist names of the songs above and below
+                if i > 0:
+                    above_artist = data[i - 1]['song']['artist']
+                if i < len(data) - 1:
+                    below_artist = data[i + 1]['song']['artist']
+                print(
+                    f"Artist above: {above_artist}, Artist below: {below_artist}")
+                text = f"the artist 1 which song was played is {above_artist} and next song artist is {below_artist} and the latest news is {news_items}"
+                res = rewrite_with_chatgpt_azuracast(
+                    text, above_artist, below_artist,news_items)
+                print(f"final result={res}")
+                convert_text_to_audio_gtts(
+                    res, "3xsFSX1n7vykbalA6vhp.mp3", voice)
+                upload_to_sftp_for_meta_data_azuracast(
+                    local_path, remote_sftp_path, sftp_host, sftp_port, sftp_username, sftp_password)
 
-        media_folder = os.path.join(BASE_DIR, "media")
+                break  # Exit the loop once a match is found
 
-        # Connect to the SFTP server
-        transport = paramiko.Transport((sftp_host, sftp_port))
-        transport.connect(username=sftp_username, password=sftp_password)
-        sftp = paramiko.SFTPClient.from_transport(transport)
+    else:
+        print("Error fetching queue:", response.status_code)
 
-        # List files in the specific folder
-        folder_files = sftp.listdir(sftp_remote_path)
-
-        # Determine the name of the .pls file based on the current hour
-        current_hour = datetime.now().hour
-        pls_file_name = f"{(current_hour + 1):02}.pls"
-        print(f"Expected .pls file based on current hour: {pls_file_name}")
-
-        # Check if the .pls file exists in the folder
-        if pls_file_name in folder_files:
-            remote_file_path = os.path.join(sftp_remote_path, pls_file_name)
-            local_file_path = os.path.join(media_folder, pls_file_name)
-            os.makedirs(os.path.dirname(local_file_path), exist_ok=True)
-            sftp.get(remote_file_path, local_file_path)
-            track_names = get_track_names(local_file_path)
-
-            # Function to process each track
-            def process_track(i):
-                # print("*******INSIDE PROCESS TRACK*************")
-                current_track = track_names[i]
-                next_track = track_names[i + 1]
-                fun_fact_current = rewrite_with_chatgpt_song_meta_data(current_track,current_track,next_track,stationname)
-                fun_fact_next = rewrite_with_chatgpt_song_meta_data(next_track,current_track,next_track,stationname)
-                # extradata=extranews(extraedge)
-                # print(f"the extra news is {extraedge}")
-                text = f"  {fun_fact_current}. Next song is {next_track} {fun_fact_next}"
-                audio_file = f"vo{(i // 3) + 1}.mp3"
-                convert_text_to_audio_gtts(text, audio_file,'21m00Tcm4TlvDq8ikWAM')
-                upload_to_sftp_for_meta_data(audio_file, f"{sftp_path_output}/VO{(i // 3) + 1}/{audio_file}", sftp_host, sftp_port, sftp_username, sftp_password)
-                print(f"Processed track: {current_track}, Next track: {next_track}")
-
-            # Use ThreadPoolExecutor for parallel processing
-            with concurrent.futures.ThreadPoolExecutor() as executor:
-                executor.map(process_track, range(2, len(track_names) - 1, 3))
-            # for i in range(2, len(track_names) - 1, 3):
-                # process_track(i)
-
-        # Close the SFTP connection
-        sftp.close()
-        transport.close()
-
-        # Clean up the local media folder
-        empty_folder(media_folder)
-
-        # Log the total execution time
-        print(f"Total execution time: {time.time() - start_time} seconds")
-        return render(request, 'Songs/fetching.html', {"track_names": track_names})
-    news_caster = request.GET.get('newscaster', '')
-    language = request.GET.get('language', '')
-    sftp_host = request.GET.get('sftp_host', '')
-    sftp_port = request.GET.get('sftp_port', '')
-    sftp_username = request.GET.get('sftp_username', '')
-    sftp_password = request.GET.get('sftp_password', '')
-    sftp_remote_path = request.GET.get('sftp_remote_path', '')
-    return render(request, 'Songs/fetching.html',{'news_caster':news_caster,'language':language,'sftp_host':sftp_host,'sftp_port':sftp_port,'sftp_username':sftp_username,'sftp_password':sftp_password,'sftp_remote_path':sftp_remote_path})
+    return render(request, 'azuracast.html', {
+        'newscasterdj': newscasterdj,
+        'newscaster_sftphost': newscaster_sftphost,
+        'newscaster_sftpport': newscaster_sftpport,
+        'newscaster_sftpusername': newscaster_sftpusername,
+        'newscaster_sftppassword': newscaster_sftppassword,
+        'newscaster_sftpremotepath': newscaster_sftpremotepath
+    })
 
 
-def empty_folder(folder_path):
-    # List all files and subdirectories in the folder
-    for root, dirs, files in os.walk(folder_path):
-        # Remove files
-        for file in files:
-            os.remove(os.path.join(root, file))
-        # Remove subdirectories
-        for dir in dirs:
-            os.rmdir(os.path.join(root, dir))
+def rewrite_with_chatgpt_azuracast(text, above_artist, below_artist, news_items):
+    # truncated_text = text[:4096]
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "system",
+            "content": (
+                f"You are a radio DJ on BackTrackFM, the 'all 80s, all the time' station. "
+                f"The last song played was by {above_artist} and the next song will be by {below_artist}. "
+                f"Introduce the previous song by {above_artist}, then introduce the next song artist {below_artist}. "
+                f"If either artist is not provided, introduce the songs in a different way, such as 'a surprise artist'. "
+                f"Additionally, provide the latest news updates: {news_items}."
+            )
+        },
+        {
+            "role": "user",
+            "content": str(text)
+        }],
+        temperature=0.2,
+    )
+
+    return response.choices[0].message['content'].strip()
 
 
-def get_track_names(path):
-    track_names = []
 
-    # Open the file with the correct encoding
-    with open(path, "r", encoding="latin-1") as file:
-        # Read the lines of the file
-        lines = file.readlines()
+# def convert_text_to_audio_gtts_azuracast(text, output_file ):
+#     try:
+#         # Determine language based on voice gender
+#         language = 'en-us'
 
-        # Iterate over each line
-        for line in lines:
-            # Check if the line starts with "TrackName"
-            if line.startswith("TrackName"):
-                # Split the line by "=" and get the second part (the value)
-                track_name = line.split("=")[1].strip()
-                # Append the track name to the list
-                track_names.append(track_name)
+#         # Initialize gTTS with the text and language
+#         tts = gTTS(text=text, lang=language)
 
-    # Print the list of track names
-    return track_names
+#         # Save the audio to the output file
+#         tts.save(output_file)
+
+#     except Exception as e:
+#         print(f"An error occurred: {str(e)}")
+
+
+def upload_to_sftp_for_meta_data_azuracast(local_path, remote_path, sftp_host, sftp_port, sftp_username, sftp_password):
+    ssh_client = paramiko.SSHClient()
+    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    print(
+        f"the value of {sftp_host},{sftp_port},{sftp_username},{sftp_password},{remote_path}")
+    try:
+        ssh_client.connect(
+            hostname=sftp_host, port=sftp_port, username=sftp_username, password=sftp_password
+
+        )
+
+        with ssh_client.open_sftp() as sftp:
+            sftp.put(local_path, remote_path)
+
+    except Exception as e:
+        print(f"Error uploading file via SFTP: {e}")
+    finally:
+        ssh_client.close()
+
+
+
+
+
+# extra edge on azuracast fetching from rss feed
+def fetch_xml_content_azuracast_extra_edge(url):
+    response = requests.get(url)
+    return ET.fromstring(response.content)
+
+
+
+def extract_news_items_azuracast_extra_edge(root, limit, previous_news_items=[]):
+    print(f"the limit in extract_news function is {limit}")
+    news_items = []
+
+    # Shuffle the list of items to introduce randomness
+    shuffled_items = root.findall(".//item")
+    random.shuffle(shuffled_items)
+
+    for item in shuffled_items[:limit]:
+        description = item.find('description').text
+        content_element = item.find(
+            ".//content:encoded", namespaces={'content': 'http://purl.org/rss/1.0/modules/content/'})
+
+        if content_element is not None:
+            content = content_element.text
+        else:
+            content = None
+
+        # Check if the news item is different from the previous ones
+        if (description, content) not in previous_news_items:
+            news_items.append((description, content))
+
+    return news_items
+
+
+
+
+
 
 
 def convert_text_to_audio_gtts(text, output_file, voice_id):
@@ -1372,151 +1463,3 @@ def convert_text_to_audio_gtts(text, output_file, voice_id):
             print(f"Failed to convert text to audio with Eleven Labs. Status code: {response.status_code}")
     except RequestException as e:
         print(f"An error occurred with Eleven Labs: {str(e)}")
-def rewrite_with_chatgpt_song_meta_data(text,current_track,next_track,stationname):
-    # truncated_text = text[:4096]
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[{
-            "role": "system",
-            "content": f"You are a radio dj female named Payton Brooks on {stationname} best country is the tag line  and you are backselling out of {current_track} song while giving a  bit of fun information then I would like you to front sell of this this {next_track} did give fun information about this song aor artist also.and keep it small"
-        },
-            {
-            "role": "user",
-            "content": str(text)
-        }]
-    )
-    
-    return response.choices[0].message['content'].strip()
-
-
-def upload_to_sftp_for_meta_data(local_path, remote_path, sftp_host, sftp_port, sftp_username, sftp_password):
-    # print("**********INSIDE UPLOAD*******************")
-    ssh_client = paramiko.SSHClient()
-    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-    try:
-        ssh_client.connect(
-            hostname=sftp_host, port=sftp_port, username=sftp_username, password=sftp_password
-        )
-
-        with ssh_client.open_sftp() as sftp:
-            sftp.put(local_path, remote_path)
-        print("************upload successfully*************")
-
-    except Exception as e:
-        print(f"Error uploading file via SFTP: {e}")
-    finally:
-        ssh_client.close()
-# import re
-# import os
-# def fetching_song_meta_data(request):
-#     if request.method == 'POST':
-#         print("************INSIDE META DATA SONG************")
-#         # SFTP server credentials
-#         sftp_host = '75.43.156.103'
-#         sftp_port = 2227  # or any other port your SFTP server is running on
-#         sftp_username = 'GRUser'
-#         sftp_password = 'HOX45!!'
-#         sftp_remote_path = '/Playlist/022224/'
-#         # Connect to the SFTP server
-#         transport = paramiko.Transport((sftp_host, sftp_port))
-#         transport.connect(username=sftp_username, password=sftp_password)
-#         sftp = paramiko.SFTPClient.from_transport(transport)
-#         # List files in the specific folder
-#         folder_files = sftp.listdir(sftp_remote_path)
-#         # Read the .pls file from the folder
-#         pls_file = None
-#         for file_name in folder_files:
-#             if file_name.endswith('.pls'):
-#                 pls_file = file_name
-#                 break
-#         print(f"{pls_file}")
-#         if pls_file:
-#             pls_file_path = os.path.join(sftp_remote_path, pls_file)
-#             pls_content = read_pls(pls_file_path)
-#             # # Read the contents of the .pls file
-#             # with sftp.open(pls_file_path, 'r') as file:
-#             #  try:
-#             #     pls_content = file.read().decode('utf-8')
-#             #  except UnicodeDecodeError:
-#             #     pls_content = file.read().decode('latin-1')
-#             # Close SFTP connection
-#             sftp.close()
-#             transport.close()
-#             # Extract 'TrackName' values from the .pls file content
-#             print(f"pls content{pls_content}")
-#             track_names = re.findall(r'TrackName\d+=(.*)', pls_content)
-#             print(f" Track names is {track_names}")
-#             track_names_list = [name.strip() for name in track_names]
-#             # Pass track names to the template
-#             return render(request, 'Songs/fetching.html', {
-#                 'track_names_list': track_names_list
-#             })
-#         else:
-#             # If no .pls file found in the folder
-#             return render(request, 'Songs/no_pls_file.html')
-#     return render(request, 'Songs/fetching.html')
-
-
-def read_pls(file_path):
-    print("file path = ", file_path)
-    playlist = {}
-    with open(file_path, 'r') as f:
-        lines = f.readlines()
-        print("lines = ", lines)
-        for line in lines:
-            line = line.strip()
-            if line.startswith("File"):
-                parts = line.split("=")
-                if len(parts) == 2:
-                    file_index = int(parts[0].split("File")[1].strip())
-                    file_path = parts[1].strip()
-                    playlist[file_index] = file_path
-    return playlist
-
-
-def extranews(text):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[{
-            "role": "system",
-            "content": f"The text is as follows: {text}. Please read it and respond accordingly. Keep your reply concise."
-        },
-            {
-            "role": "user",
-            "content": str(text)
-        }]
-    )
-    
-    return response.choices[0].message['content'].strip()        
-
-
-def upload_files(request):
-    SFTP_HOST = '75.43.156.103'
-    SFTP_PORT = 2227
-    SFTP_USERNAME = 'GRUser'
-    SFTP_PASSWORD = 'HOX45!!'
-    SFTP_FOLDER = '/Test'
-
-    if request.method == 'POST' and request.FILES.getlist('files'):
-        try:
-            transport = paramiko.Transport((SFTP_HOST, SFTP_PORT))
-            transport.connect(username=SFTP_USERNAME, password=SFTP_PASSWORD)
-            sftp = paramiko.SFTPClient.from_transport(transport)
-
-            for file in request.FILES.getlist('files'):
-                filename = file.name
-                sftp.putfo(file, f'{SFTP_FOLDER}/{filename}')
-
-            sftp.close()
-            transport.close()
-
-            return render(request, 'Songs/success.html')
-        except Exception as e:
-            return render(request, 'Songs/error.html', {'error': str(e)})
-    return render(request, 'Songs/uploading_files.html')    
-
-
-
-
-

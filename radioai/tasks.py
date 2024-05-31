@@ -460,7 +460,8 @@ def schedulingfetching_song_meta_data(request_data):
     sftp_playlist_folder_name = request_data.get('sftp_playlist_folder_name ')
     sftp_output_folder_name = request_data.get('sftp_output_folder_name')
     station_name = request_data.get('station_name')
-    extra_edge = request_data.get('extra_edge')
+    # extra_edge = request_data.get('extra_edge')
+    dynamicfolder=request_data.get('dynamicfolder')
     schedule_time = request_data.get('schedule_time')
     recurrence_type = request_data.get('recurrence_type')
     # Construct the remote path based on the current date
@@ -501,13 +502,13 @@ def schedulingfetching_song_meta_data(request_data):
                 current_track, current_track, next_track, station_name)
             fun_fact_next = rewrite_with_chatgpt_song_meta_data(
                 next_track, current_track, next_track, station_name)
-            extradata = extranews(extra_edge)
-            text = f"  {fun_fact_current}. Next song is {next_track} {fun_fact_next} {extradata}"
+            # extradata = extranews(extra_edge)
+            text = f"  {fun_fact_current}. Next song is {next_track} {fun_fact_next}"
             audio_file = f"vo{(i // 3) + 1}.mp3"
             convert_text_to_audio_gtts(
                 text, audio_file, '21m00Tcm4TlvDq8ikWAM')
             upload_to_sftp_for_meta_data(
-                audio_file, f"{sftp_output_folder_name}/VO{(i // 3) + 1}/{audio_file}", sftp_host, sftp_port, sftp_username, sftp_password)
+                audio_file, f"{sftp_output_folder_name}/{dynamicfolder}{(i // 3) + 1}/{audio_file}", sftp_host, sftp_port, sftp_username, sftp_password)
             print(
                 f"Processed track: {current_track}, Next track: {next_track}")
 
@@ -577,7 +578,8 @@ def schedulingmetadataofsongs():
                     'sftp_playlist_folder_name ': task.sftp_playlist_folder_name,
                     'sftp_output_folder_name': task.sftp_output_folder_name,
                     'station_name': task.station_name,
-                    'extra_edge': task.extra_edge,
+                    'dynamicfolder': task.dynamicfolder,
+                    # 'extra_edge': task.extra_edge,
                     'schedule_time': task.schedule_time,
                     'recurrence_type': task.recurrence_type,
 
@@ -608,3 +610,128 @@ def schedulingmetadataofsongs():
                         f"Unknown recurrence type: {task.recurrence_type} for task {task.id}")
         else:
             print("Schedule time is empty or task is not pending:", task.id)
+# ***********Azuracast Scheduling*************************************
+from django.utils import timezone
+def schedulingofazuracast():
+    data = Azuracast.objects.all()
+    print("data = ", data)
+    for task in data:
+        print("Task = ", task)
+        print(f"the start date is", task.start_date)
+        print(f"the end date is", task.end_date)
+        
+        start_date = task.start_date
+        end_date = task.end_date
+        shift_start_time = task.shift_start_time
+        shift_end_time = task.shift_end_time
+
+        # Combine date from current_time with time components from shift_start_time and shift_end_time
+        current_time_combined = timezone.make_aware(
+            timezone.datetime.combine(timezone.now().date(), timezone.now().time()),
+            timezone.get_current_timezone()
+        )
+
+        # Compare with current time
+        current_time = timezone.now()
+        print(f"the current time combined is {current_time_combined}")
+        
+        if start_date <= current_time <= end_date:
+            if shift_start_time <= current_time_combined.time() <= shift_end_time and task.is_pending:
+                print("current time", current_time)
+                request_data = {
+                    'sftp_host': task.sftp_host,
+                    'sftp_port': task.sftp_port,
+                    'sftp_username': task.sftp_username,
+                    'sftp_password': task.sftp_password,
+                    'start_date': task.start_date,
+                    'end_date': task.end_date,
+                    'shift_start_time': task.start_date,
+                    'shift_end_time': task.shift_end_time,
+                    'remote_path': task.remote_path,
+                    'voice': task.voice,
+                    'newscaster': task.news_caster,
+                }
+                print(f'the intial remote path is',task.remote_path)
+                fetching_azuracast(request_data)
+                
+                # Update task status based on your logic
+                
+                print(f"Task {task.id} processed and marked as pending.")
+            else:
+                task.is_pending = True
+                task.save()
+                print(f"Shift hours are not valid. Condition not satisfied for Task {task.id}.")
+        else:
+            task.is_pending = False
+            task.save()
+            print(f"condn not lying between start and end date. Condition not satisfied for Task {task.id}.")
+
+
+
+def fetching_azuracast(request_data):
+    from .views import rewrite_with_chatgpt_azuracast,convert_text_to_audio_gtts,upload_to_sftp_for_meta_data_azuracast,extract_news_items_azuracast_extra_edge,fetch_xml_content_azuracast_extra_edge
+
+    
+    # remote_path = "/Stacey"
+    # sftp_host = "75.43.156.100"
+    # sftp_port = 2022
+    # sftp_username = "pranjal"
+    # sftp_password = "BackTrackFM"
+
+    url = 'https://streams2.groundrushlabs.com/api/station/19/queue'
+    api_key = '4b3c5d2fbd786707:b668e41a777a7a8d80f7b682423f6fcf'
+    headers = {'Authorization': f'Bearer {api_key}'}
+    local_path = "3xsFSX1n7vykbalA6vhp.mp3"
+    newscasterdj = request_data.get('newscaster', '')
+    sftp_host = request_data.get('sftp_host', '')
+    sftp_port = request_data.get('sftp_port', '')
+    sftp_username = request_data.get('sftp_username', '')
+    sftp_password = request_data.get('sftp_password', '')
+    remote_path = request_data.get('remote_path', ''),
+    start_date=request_data.get('start_date'),
+    end_date=request_data.get('end_date'),
+    shift_start_time=request_data.get('shift_start_time'),
+    shift_end_time=request_data.get('shift_end_time'),
+    remote_path=request_data.get('remote_path','')
+    voice=request_data.get('voice')
+    # voice = str(request_data.get('voice'))  # Convert to string
+    remote_sftp_path = f'{remote_path}/3xsFSX1n7vykbalA6vhp.mp3'
+    print(f'the remote semi final path is ',remote_path)
+    print(f'the remote final path is ',remote_sftp_path)
+    response = requests.get(url, headers=headers)
+    data = response.json()
+    print(f"the caster is {newscasterdj}")
+    print(f"the caster is {newscasterdj}")
+
+    above_artist = None
+    below_artist = None
+    rss_url="https://moxie.foxnews.com/google-publisher/latest.xml"
+    root = fetch_xml_content_azuracast_extra_edge(rss_url)
+    news_items = extract_news_items_azuracast_extra_edge(root, 1)
+    if response.status_code == 200:
+        for i, song in enumerate(data):
+            # Check if it's the second song and its title matches 'stacey' or 'stacy'
+            if i == 1 and song and song.get('song') and newscasterdj and newscasterdj.lower() in song['song']['title'].lower():
+                # if i == 1 and ('stacey' in song['song']['title'].lower() or 'Stacy' in song['song']['title'].lower()):
+                # Get artist names of the songs above and below
+                if i > 0:
+                    above_artist = data[i - 1]['song']['artist']
+                if i < len(data) - 1:
+                    below_artist = data[i + 1]['song']['artist']
+                print(
+                    f"Artist above: {above_artist}, Artist below: {below_artist}")
+                text = f"the artist 1 which song was played is {above_artist} and next song artist is {below_artist} and the latest news is {news_items}"
+                res = rewrite_with_chatgpt_azuracast(
+                    text, above_artist, below_artist,news_items)
+                print(f"the final thing which is goinging to live is {res}")
+                convert_text_to_audio_gtts(
+                    res, "3xsFSX1n7vykbalA6vhp.mp3", voice)
+                upload_to_sftp_for_meta_data_azuracast(
+                    local_path, remote_sftp_path, sftp_host, sftp_port, sftp_username, sftp_password)
+
+                break  # Exit the loop once a match is found
+
+    else:
+        print("Error fetching queue:", response.status_code)
+
+   

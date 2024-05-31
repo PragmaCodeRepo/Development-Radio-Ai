@@ -57,6 +57,24 @@
         document.querySelector('textarea[name="intro_text"]').value = suggestion;
       }
     </script>
-    <script src="index.js"></script>
+
+    <script>
+      // Update the current year dynamically
+      document.getElementById('dropdown-button').addEventListener('click', function () {
+        var menu = document.getElementById('dropdown-menu');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('block');
+    });
+    
+    document.addEventListener('click', function (event) {
+        var menu = document.getElementById('dropdown-menu');
+        var button = document.getElementById('dropdown-button');
+    
+        if (!menu.contains(event.target) && !button.contains(event.target)) {
+            menu.classList.add('hidden');
+            menu.classList.remove('block');
+        }
+    });
+    </script>
   </body>
 </html>

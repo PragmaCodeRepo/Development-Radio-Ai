@@ -29,7 +29,6 @@
       .boxx {
         width: 50rem;
       }
-      
 
       /* Add more dark mode styles as needed */
     </style>
@@ -54,9 +53,14 @@
           <div class="flex justify-center mb-5">
             <h1 class="text-2xl sm:text-2xl lg:text-2xl font-bold text-center">
               Task scheduled successfully for {% if recurr_type == "weekly" %}
-              <span class="text-blue-500">Every Week</span> at {{ time_to_show}}! {% elif recurr_type == "monthly" %}
-              <span class="text-green-500">Every Month</span> at {{ time_to_show}}! {% elif recurr_type == "everyhour" %}
-              <span class="text-yellow-500">Every Hour</span> at {{ time_to_show}}! {% else %} <span class="text-red-500">One time</span> at {{time_to_show }}! {% endif %}
+              <span class="text-blue-500">Every Week</span> at {{
+              time_to_show}}! {% elif recurr_type == "monthly" %}
+              <span class="text-green-500">Every Month</span> at {{
+              time_to_show}}! {% elif recurr_type == "everyhour" %}
+              <span class="text-yellow-500">Every Hour</span> at {{
+              time_to_show}}! {% else %}
+              <span class="text-red-500">One time</span> at {{time_to_show }}!
+              {% endif %}
             </h1>
           </div>
           {% endif %}
@@ -92,9 +96,11 @@
                 <option value="Neutral">Neutral</option>
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
+                {% endcomment %} {% comment %}
+                <option value="Female">Female</option>
+                {% endcomment %} {% comment %}
+                <option value="Male">Male</option>
                 {% endcomment %}
-                {% comment %} <option value="Female">Female</option> {% endcomment %}
-                {% comment %} <option value="Male">Male</option>  {% endcomment %}
                 <option value="21m00Tcm4TlvDq8ikWAM">Rachel</option>
                 <option value="29vD33N1CtxCmqQRPOHJ">Drew</option>
                 <option value="2EiwWnXFnvU5JabPnv8n">Clyde</option>
@@ -114,25 +120,22 @@
                 <option value="TX3LPaxmHKxFdv7VOQHJ">Liam</option>
                 <option value="ThT5KcBeYPX3keUQqHPh">Dorothy</option>
                 <option value="TxGEqnHWrfWFTfGW9XjX">Josh</option>
-                
               </select>
             </div>
 
             {% include "select_intro_outro.html" %}
 
-            <div class="flex justify-center mb-4">
+            <div class="flex justify-center mt-5 mb-5 text-black">
               <a
-                href="/intro-text-weather"
+                href="{% url 'radioai:enter_intro_weather' %}?news_caster={{ news_caster }}"
                 class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 transition duration-300"
+                ><p class="text-white">Edit Your Intros</p></a
               >
-                <p class="text-white">Edit Your Intros</p>
-              </a>
               <a
-                href="/outro-text-weather"
+                href="{% url 'radioai:enter_outro_weather' %}?news_caster={{ news_caster }}"
                 class="ml-4 inline-block px-4 py-2 bg-green-500 rounded hover:bg-green-600 transition duration-300"
+                ><p class="text-white">Edit Your Outros</p></a
               >
-                <p class="text-white">Edit Your Outros</p>
-              </a>
             </div>
 
             <div class="flex flex-col space-y-4">
@@ -244,7 +247,6 @@
                 required
                 class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-black"
                 value="{{ language }}"
-                
               />
             </div>
 
@@ -255,54 +257,71 @@
               Fetch Weather
             </button>
 
-            
-          
-              <button
-                  type="button"
-                  class="mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-300"
-                  onclick="toggleScheduleText()"
-              >
-                  Schedule Task
-              </button>
-          
-              <div id="schedule_text" class="hidden text-white-700">
-                  <!-- Your schedule task text goes here -->
-                  <div class="flex flex-col space-y-4">
-                    <label for="schedule_time" class="block text-sm font-medium text-white-700">Schedule Time:</label>
-                    <input type="datetime-local" id="schedule_time" name="schedule_time" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black" />
-                
-                    <label for="recurrence_type" class="block text-sm font-medium text-black-700">Recurrence Type:</label>
-                    <select id="recurrence_type" name="recurrence_type" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black">
-                        <option value="onetime">One time</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="everyhour">Every Hour</option>
-                        <option value="monthly">Monthly</option>
-                    </select>
+            <button
+              type="button"
+              class="mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-300"
+              onclick="toggleScheduleText()"
+            >
+              Schedule Task
+            </button>
+
+            <div id="schedule_text" class="hidden text-white-700">
+              <!-- Your schedule task text goes here -->
+              <div class="flex flex-col space-y-4">
+                <label
+                  for="schedule_time"
+                  class="block text-sm font-medium text-white-700"
+                  >Schedule Time:</label
+                >
+                <input
+                  type="datetime-local"
+                  id="schedule_time"
+                  name="schedule_time"
+                  class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
+                />
+
+                <label
+                  for="recurrence_type"
+                  class="block text-sm font-medium text-black-700"
+                  >Recurrence Type:</label
+                >
+                <select
+                  id="recurrence_type"
+                  name="recurrence_type"
+                  class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
+                >
+                  <option value="onetime">One time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="everyhour">Every Hour</option>
+                  <option value="monthly">Monthly</option>
+                </select>
               </div>
-          </div>
+            </div>
           </div>
         </form>
       </div>
     </div>
     <script>
       function toggleScheduleText() {
-          var scheduleText = document.getElementById("schedule_text");
-          scheduleText.classList.toggle("hidden");
+        var scheduleText = document.getElementById("schedule_text");
+        scheduleText.classList.toggle("hidden");
       }
-      document.getElementById('dropdown-button').addEventListener('click', function () {
-        var menu = document.getElementById('dropdown-menu');
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('block');
-    });
-      document.addEventListener('click', function (event) {
-        var menu = document.getElementById('dropdown-menu');
-        var button = document.getElementById('dropdown-button');
-  
+      document
+        .getElementById("dropdown-button")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("dropdown-menu");
+          menu.classList.toggle("hidden");
+          menu.classList.toggle("block");
+        });
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("dropdown-menu");
+        var button = document.getElementById("dropdown-button");
+
         if (!menu.contains(event.target) && !button.contains(event.target)) {
-            menu.classList.add('hidden');
-            menu.classList.remove('block');
+          menu.classList.add("hidden");
+          menu.classList.remove("block");
         }
-    });
-  </script>
+      });
+    </script>
   </body>
 </html>

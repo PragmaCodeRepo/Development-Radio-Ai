@@ -221,8 +221,8 @@
                 {% include "select_intro_outro.html" %}
                 
                 <div class="flex justify-center mt-5 mb-5 text-black">
-                  <a href="/intro-text" class="inline-block px-4 py-2  bg-blue-500 rounded hover:bg-blue-600 transition duration-300"><p class="text-white">Edit Your Intros</p></a>
-                  <a href="/outro-text" class="ml-4 inline-block px-4 py-2  bg-green-500 rounded hover:bg-green-600 transition duration-300"><p class="text-white">Edit Your Outros</p></a>
+                  <a href="{% url 'radioai:enter_intro' %}?news_caster={{ news_caster }}"  class="inline-block px-4 py-2  bg-blue-500 rounded hover:bg-blue-600 transition duration-300"><p class="text-white">Edit Your Intros</p></a>
+                  <a href="{% url 'radioai:enter_outro' %}?news_caster={{ news_caster }}" class="ml-4 inline-block px-4 py-2  bg-green-500 rounded hover:bg-green-600 transition duration-300"><p class="text-white">Edit Your Outros</p></a>
               </div>
               
               

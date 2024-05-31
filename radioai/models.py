@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 class ActiveSession(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -173,6 +174,7 @@ class Newscaster(models.Model):
     sftp_username = models.CharField(max_length=255,default="")
     sftp_password = models.CharField(max_length=255,default="")
     sftp_remote_path = models.CharField(max_length=255,default="")
+    
     # ... add other fields as necessary
 
     def __str__(self):
@@ -194,6 +196,7 @@ class SchedulingSongsMetaData(models.Model):
     sftp_playlist_folder_name = models.CharField(max_length=255)
     sftp_output_folder_name = models.CharField(max_length=255)
     station_name = models.CharField(max_length=255,default='')
+    dynamicfolder= models.CharField(max_length=255,default='')
     # extra_edge = models.CharField(max_length=255,default='')
 
     is_pending = models.BooleanField(default=True)
@@ -202,3 +205,17 @@ class SchedulingSongsMetaData(models.Model):
         max_length=20, choices=RECURRENCE_CHOICES, default='onetime'
     )
    
+
+class Azuracast(models.Model):
+    sftp_host = models.CharField(max_length=100)
+    sftp_port = models.IntegerField()
+    sftp_username = models.CharField(max_length=100)
+    sftp_password = models.CharField(max_length=100)
+    remote_path = models.CharField(max_length=100)
+    voice = models.CharField(max_length=50)
+    news_caster = models.CharField(max_length=100)
+    start_date = models.DateTimeField(default=timezone.now)
+    end_date = models.DateTimeField(default=timezone.now)
+    shift_start_time = models.TimeField()
+    shift_end_time = models.TimeField()
+    is_pending = models.BooleanField(default=True)   

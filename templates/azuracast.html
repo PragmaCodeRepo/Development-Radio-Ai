@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Artist Names</title>
+    <!-- Tailwind CSS CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="mb-20">
+    {% include 'navbar.html' %}
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 ">
+        <div class="w-full max-w-md mt-10">
+            <form method="post" action="{% url 'rss_to_audio_app:azuracast' %}"
+                class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                {% csrf_token %}
+                <div class="text-center mb-6">
+                    <h1 class="text-3xl font-bold">Automation of Meta Data of Queue</h1>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="mb-4">
+                        <label for="sftp_host" class="block text-gray-700 text-sm font-bold mb-2">SFTP Host:</label>
+                        <input type="text" id="sftp_host" name="sftp_host" required
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            placeholder="Enter SFTP Host"
+                            value="{{ newscaster_sftphost }}" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="sftp_port" class="block text-gray-700 text-sm font-bold mb-2">SFTP Port:</label>
+                        <input type="text" id="sftp_port" name="sftp_port" required
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            placeholder="Enter SFTP Port"
+                            value="{{ newscaster_sftpport }}" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="sftp_username"
+                            class="block text-gray-700 text-sm font-bold mb-2">SFTP Username:</label>
+                        <input type="text" id="sftp_username" name="sftp_username" required
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            placeholder="Enter SFTP Username"
+                            value="{{ newscaster_sftpusername }}" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="sftp_password"
+                            class="block text-gray-700 text-sm font-bold mb-2">SFTP Password:</label>
+                        <input type="password" id="sftp_password" name="sftp_password" required
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            placeholder="Enter SFTP Password"
+                            value="{{ newscaster_sftppassword }}" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="remote_path" class="block text-gray-700 text-sm font-bold mb-2">Remote
+                            path:</label>
+                        <input type="remote_path" id="remote_path" name="remote_path" required
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            value="{{ newscaster_sftpremotepath }}"
+                            placeholder="Enter SFTP Remote Path (add /in initials)" 
+                            />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Select Voice:</label>
+                        <select name="voice"
+                            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                            <option value="Matthew">Matthew</option>
+                            <option value="Amy">Amy</option>
+                            <option value="Ruth">Ruth</option>
+                        </select>
+                    </div>
+                </div>
+                <div class=" mb-4">
+                    <label for="newscaster" class="block text-gray-700 text-sm font-bold mb-2">Newscaster</label>
+                    <input type="text" id="news_caster" name="news_caster" required class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" value="{{ newscasterdj }}">
+                </div>
+                <div class="mb-4">
+                    <label for="start_date" class="block text-gray-700 text-sm font-bold mb-2">Start Date:</label>
+                    <input type="datetime-local" id="start_date" name="start_date" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" />
+                </div>
+                <div class="mb-4">
+                    <label for="end_date" class="block text-gray-700 text-sm font-bold mb-2">End Date:</label>
+                    <input type="datetime-local" id="end_date" name="end_date" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" />
+                </div>
+                
+                <div class="mb-4">
+                    <label for="shift_start_time" class="block text-gray-700 text-sm font-bold mb-2">Shift Start Time:</label>
+                    <input type="time" id="shift_start_time" name="shift_start_time" required
+                           class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                           placeholder="Enter Shift Start Time" />
+                </div>
+                <div class="mb-4">
+                    <label for="shift_end_time" class="block text-gray-700 text-sm font-bold mb-2">Shift End Time:</label>
+                    <input type="time" id="shift_end_time" name="shift_end_time" required
+                           class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                           placeholder="Enter Shift End Time" />
+                </div>
+                
+                <div class="flex items-center justify-center md:justify-end">
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit
+                        Details</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

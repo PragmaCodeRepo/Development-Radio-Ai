@@ -86,7 +86,14 @@ admin.site.register(Newscaster,Newscasteradmin)
 
 #Meta Song
 class MetaSongadmin(admin.ModelAdmin):
-     list_display = ('sftp_host','sftp_port','sftp_username','sftp_password','sftp_playlist_folder_name','sftp_output_folder_name','station_name','schedule_time','recurrence_type','is_pending')
+     list_display = ('sftp_host','sftp_port','sftp_username','sftp_password','sftp_playlist_folder_name','sftp_output_folder_name','station_name','schedule_time','recurrence_type','is_pending','dynamicfolder')
 
 
 admin.site.register(SchedulingSongsMetaData,MetaSongadmin)
+
+
+
+class Azuracastadmin(admin.ModelAdmin):
+     list_display = ('sftp_host','sftp_port','sftp_username','sftp_password','remote_path','voice','news_caster','start_date','end_date','shift_start_time','shift_end_time','is_pending')
+
+admin.site.register(Azuracast,Azuracastadmin)
